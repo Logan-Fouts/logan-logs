@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import "./../globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import SearchBar from "./searchBar.client.jsx";
+import SearchBar from "./SearchBar.client.jsx";
 
-export default function Navbar() {
+export default function NavBar() {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [buttonColor, setButtonColor] = useState("text-black");
 
