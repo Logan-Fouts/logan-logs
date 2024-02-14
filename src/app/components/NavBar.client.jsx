@@ -32,7 +32,7 @@ export default function NavBar() {
         <a href="/projects" className="text-xl mb-5 sm:m-0 sm:mr-4">
           Projectsˇ
         </a>
-        <a href="/blog" className="text-xl mb-20 sm:m-0">
+        <a href="/blog" className="text-xl mb-20 sm:m-0 sm:mr-8">
           Blogˇ
         </a>
         <div className="ml-auto mr-4">
