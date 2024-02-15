@@ -11,7 +11,7 @@ export default function SearchBar({ onSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("# Searching for " + searchQuery)
+    console.log("# Searching for " + searchQuery);
     // onSearch(searchQuery);
   };
 
