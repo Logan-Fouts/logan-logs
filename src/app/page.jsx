@@ -11,7 +11,7 @@ export default function Home() {
           <img src="/logo.png" alt="Logan Logs Logo" className="h-40"></img>
         </div>
         <h2 className="mt-4 text-center">
-          Here I compile my software and tech knowledge and experiences.
+          Here I compile my software/tech knowledge and experiences.
         </h2>
         <div className="text-center mt-12 z-20">
           <h1 className="font-black text-green-800 text-3xl mb-2">My Links</h1>
@@ -27,7 +27,7 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="https://se.linkedin.com/"
+                href="https://google.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

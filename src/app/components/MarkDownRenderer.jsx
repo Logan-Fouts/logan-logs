@@ -16,7 +16,7 @@ const MarkdownRenderer = ({ filePath }) => {
 
   return (
     <div
-      className="bg-white text-black p-16 prose max-w-full"
+      className="bg-white dark:bg-gray-900 dark:prose-invert dark:text-white text-black p-16 prose max-w-none"
       dangerouslySetInnerHTML={renderMarkdown()}
     ></div>
   );

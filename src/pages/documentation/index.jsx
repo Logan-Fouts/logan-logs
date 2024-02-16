@@ -73,7 +73,7 @@ function RenderDirectory({ structure, basePath = "", onFileSelect }) {
         return (
           <li
             key={item.name}
-            className={`text-blue-400 ${basePath ? "m-2" : ""}`}
+            className={`text-green-800 ${basePath ? "m-2" : ""}`}
           >
             {item.type === "directory" ? (
               <>

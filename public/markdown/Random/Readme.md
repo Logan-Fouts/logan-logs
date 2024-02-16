@@ -22,6 +22,6 @@ The Random section is a collection of topics and content that don't neatly fit i
 
 ## Get in Touch
 
-I love connecting with fellow tech enthusiasts, students, and professionals. If you'd like to reach out, discuss any of the content you've found here, or just say hi, feel free to follow me on [GitHub](https://github.com/yourusername) or connect with me on [LinkedIn](https://www.linkedin.com/in/yourusername). I'm always open to making new connections and exploring collaborative opportunities.
+I love connecting with fellow tech enthusiasts, students, and professionals. If you'd like to reach out, discuss any of the content you've found here, or just say hi, feel free to follow me on [GitHub](https://github.com/Logan-Fouts) or connect with me on [LinkedIn](https://www.linkedin.com/in/yourusername). I'm always open to making new connections and exploring collaborative opportunities.
 
 Thank you for visiting my documentation page. I hope you find the information helpful and inspiring!
