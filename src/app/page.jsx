@@ -11,11 +11,11 @@ export default function Home() {
           <img src="/logo.png" alt="Logan Logs Logo" className="h-40"></img>
         </div>
         <h2 className="mt-4 text-center">
-          Here I compile software and tech knowledge and experiences.
+          Here I compile my software and tech knowledge and experiences.
         </h2>
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 z-20">
           <h1 className="font-black text-green-800 text-3xl mb-2">My Links</h1>
-          <ul className="list-none list-disc text-white">
+          <ul className="list-none list-disc text-white z-20">
             <li>
               <a
                 href="https://github.com/Logan-Fouts"

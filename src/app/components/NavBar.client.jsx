@@ -11,12 +11,19 @@ export default function NavBar() {
 
   function handleHamburgerClick() {
     setIsNavVisible(!isNavVisible);
+
+    var container = document.getElementById("container");
+    var z = container.style.zIndex;
+    container.style.zIndex = "15";
   }
 
   const navClasses = `${isNavVisible ? "flex" : "hidden"} bg-black text-white flex-col w-2/3 h-3/5 p-4 pt-16 m-0 sm:h-16 sm:w-screen sm:flex-row sm:p-0 sm:items-center sm:flex`;
 
   return (
-    <div className="w-screen h-screen m-0 p-0 flex justify-start absolute left-0 top-0">
+    <div
+      id="container"
+      className="z-5 w-screen h-screen m-0 p-0 flex justify-start absolute left-0 top-0"
+    >
       <div
         className="sm:hidden text-3xl m-4 absolute"
         onClick={handleHamburgerClick}
@@ -25,7 +32,7 @@ export default function NavBar() {
       </div>
       <nav className={navClasses}>
         <Link href="/">
-          <img src="./../favicon.ico" className="w-16 mb-5 sm:m-0 sm:mr-6" />
+          <img src="/logo.png" className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4" />
         </Link>
         <Link href="/documentation" className="text-xl mb-5 sm:m-0 sm:mr-6">
           Documentationˇ
