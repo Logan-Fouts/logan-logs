@@ -4,5 +4,5 @@ module.exports = {
   assetPrefix: isProd ? "/logan-logs/" : "",
   basePath: isProd ? "/logan-logs" : "",
   trailingSlash: true,
-  output: 'export',
+  output: "export",
 };
