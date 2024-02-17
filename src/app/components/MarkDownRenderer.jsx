@@ -3,6 +3,7 @@ import { marked } from "marked";
 
 const MarkdownRenderer = ({ filePath }) => {
   const [markdown, setMarkdown] = useState("");
+  console.log("Fetching:" + filePath);
 
   useEffect(() => {
     fetch(filePath)

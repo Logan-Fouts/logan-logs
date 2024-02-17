@@ -26,7 +26,7 @@ export async function getStaticProps() {
           return {
             name: entry.name,
             type: "file",
-            path: entryPath.substring(6),
+            path: entryPath.substring(7),
           };
         }
       }),
@@ -46,10 +46,12 @@ export default function Documentation({ fileTree }) {
 
   return (
     <div className="app">
-      <NavBar />
+      <NavBar imgSrc="logo.png" />
       <div className="flex flex-row w-screen pt-16">
         <FileTree fileTree={fileTree} />
-        {!selectedFile && <MarkdownRenderer filePath="/markdown/Random/Readme.md" />}
+        {!selectedFile && (
+          <MarkdownRenderer filePath="markdown/Random/Readme.md" />
+        )}
         {selectedFile && <MarkdownRenderer filePath={selectedFile} />}
       </div>
     </div>

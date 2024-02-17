@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Link from "next/link";
 import SearchBar from "./SearchBar.client.jsx";
 
-export default function NavBar() {
+export default function NavBar({ imgSrc }) {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   function handleHamburgerClick() {
@@ -31,7 +31,7 @@ export default function NavBar() {
       </div>
       <nav className={navClasses}>
         <Link href="/">
-          <img src="/logo.png" className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4" />
+          <img src={imgSrc} className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4" />
         </Link>
         <Link href="/documentation" className="text-xl mb-5 sm:m-0 sm:mr-6">
           Documentationˇ
