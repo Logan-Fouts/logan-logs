@@ -1,5 +1,4 @@
 import React from "react";
-import "./../../app/globals.css";
 
 const Project = ({ title, heading1, intro, heading2, mainText, imgSrc }) => {
   return (

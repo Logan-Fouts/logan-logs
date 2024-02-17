@@ -2,9 +2,12 @@ import MarkdownRenderer from "@/app/components/MarkDownRenderer";
 import FileTree from "@/app/components/FileTree";
 import { promises as fs } from "fs";
 import path from "path";
+import { useFileSelection } from "@/app/components/FileSelectionContext";
+import NavBar from "@/app/components/NavBar.client";
 
 export async function getStaticProps() {
-  const markdownDir = path.join(process.cwd(), "public", "markdown");
+  const markdownDir = path.join("public", "markdown");
+  console.log(markdownDir);
   const fileTree = await buildFileTree(markdownDir);
 
   async function buildFileTree(directoryPath) {
@@ -12,6 +15,7 @@ export async function getStaticProps() {
     const tree = await Promise.all(
       entries.map(async (entry) => {
         const entryPath = path.join(directoryPath, entry.name);
+
         if (entry.isDirectory()) {
           return {
             name: entry.name,
@@ -22,7 +26,7 @@ export async function getStaticProps() {
           return {
             name: entry.name,
             type: "file",
-            path: entryPath,
+            path: entryPath.substring(6),
           };
         }
       }),
@@ -38,9 +42,16 @@ export async function getStaticProps() {
 }
 
 export default function Documentation({ fileTree }) {
+  const { selectedFile } = useFileSelection();
+
   return (
-    <div>
-      <FileTree fileTree={fileTree} />
+    <div className="app">
+      <NavBar />
+      <div className="flex flex-row w-screen pt-16">
+        <FileTree fileTree={fileTree} />
+        {!selectedFile && <MarkdownRenderer filePath="/markdown/Random/Readme.md" />}
+        {selectedFile && <MarkdownRenderer filePath={selectedFile} />}
+      </div>
     </div>
   );
 }

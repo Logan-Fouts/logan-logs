@@ -1,6 +1,5 @@
 import Navbar from "/src/app/components/NavBar.client";
 import { Project, Project2 } from "/src/app/components/Project";
-import "./../app/globals.css";
 
 export default function Projects() {
   return (

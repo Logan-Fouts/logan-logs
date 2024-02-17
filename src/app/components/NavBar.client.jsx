@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import "./../globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Link from "next/link";
 import SearchBar from "./SearchBar.client.jsx";
@@ -22,7 +21,7 @@ export default function NavBar() {
   return (
     <div
       id="container"
-      className="z-5 w-screen h-screen m-0 p-0 flex justify-start absolute left-0 top-0"
+      className="w-screen m-0 p-0 flex justify-start absolute left-0 top-0"
     >
       <div
         className="sm:hidden text-3xl m-4 absolute"
