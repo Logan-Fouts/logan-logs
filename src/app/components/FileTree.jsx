@@ -1,11 +1,9 @@
 import React from "react";
-import MarkdownRenderer from "./MarkDownRenderer";
 import { useFileSelection } from "./FileSelectionContext";
 
 const Directory = ({ directory }) => {
   const [collapsed, setCollapsed] = React.useState(false);
   const { selectFile } = useFileSelection();
-  // selectFile("markdown/Random/Readme.md")
 
   return (
     <div>

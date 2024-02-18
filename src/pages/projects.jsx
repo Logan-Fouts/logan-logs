@@ -4,7 +4,7 @@ import { Project, Project2 } from "/src/app/components/Project";
 export default function Projects() {
   return (
     <div className="pb-4 flex flex-col items-center justify-center bg-black">
-      <Navbar imgSrc="logo.png" />
+      <Navbar />
       <h1 className="text-5xl text-center font-black text-green-800 mt-16">
         Project Blog
       </h1>
@@ -26,7 +26,7 @@ export default function Projects() {
               Assembling this keyboard becomes a dynamic journey, where each
               component contributes to a seamlessly integrated and
               technologically advanced solution for an enriched user experience."
-        imgSrc="streamdeck.jpg"
+        imgSrc="/streamdeck.jpg"
       />
 
       <Project2
@@ -41,7 +41,7 @@ export default function Projects() {
         TensorFlow for enhanced efficiency. The script offers both a
         command-line interface and a user-friendly GUI for seamless
         utilization."
-        imgSrc="picpurge.gif"
+        imgSrc="/picpurge.gif"
       />
     </div>
   );

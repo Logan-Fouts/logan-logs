@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Project = ({ title, heading1, intro, heading2, mainText, imgSrc }) => {
   return (
@@ -6,8 +7,10 @@ const Project = ({ title, heading1, intro, heading2, mainText, imgSrc }) => {
       <h1 className="font-black text-black dark:text-white text-2xl mb-4">
         {title}
       </h1>
-      <img
+      <Image
         src={imgSrc}
+        width={1000}
+        height={300}
         alt={title}
         className="w-full h-96 object-cover object-center rounded-lg"
       />
@@ -29,8 +32,10 @@ const Project2 = ({ title, heading1, intro, heading2, mainText, imgSrc }) => {
   return (
     <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden p-2 mt-8 mb-8 mx-auto w-3/4 dark:bg-gray-800 dark:text-white">
       <div className="md:w-1/2 dark:text-white">
-        <img
+        <Image
           src={imgSrc}
+          width={700}
+          height={700}
           alt={title}
           className="w-full h-full object-cover rounded-l-lg"
         />

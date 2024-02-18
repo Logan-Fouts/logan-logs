@@ -7,7 +7,6 @@ import NavBar from "@/app/components/NavBar.client";
 
 export async function getStaticProps() {
   const markdownDir = path.join("public", "markdown");
-  console.log(markdownDir);
   const fileTree = await buildFileTree(markdownDir);
 
   async function buildFileTree(directoryPath) {
@@ -26,6 +25,7 @@ export async function getStaticProps() {
           return {
             name: entry.name,
             type: "file",
+             // Ugly way to fix file path 
             path: entryPath.substring(7),
           };
         }
@@ -46,7 +46,7 @@ export default function Documentation({ fileTree }) {
 
   return (
     <div className="app">
-      <NavBar imgSrc="logo.png" />
+      <NavBar />
       <div className="flex flex-row w-screen pt-16">
         <FileTree fileTree={fileTree} />
         {!selectedFile && (

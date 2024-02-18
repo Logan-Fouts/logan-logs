@@ -4,16 +4,13 @@ import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Link from "next/link";
 import SearchBar from "./SearchBar.client.jsx";
+import Image from "next/image.js";
 
-export default function NavBar({ imgSrc }) {
+export default function NavBar() {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   function handleHamburgerClick() {
     setIsNavVisible(!isNavVisible);
-
-    var container = document.getElementById("container");
-    var z = container.style.zIndex;
-    container.style.zIndex = "15";
   }
 
   const navClasses = `${isNavVisible ? "flex" : "hidden"} bg-black text-white flex-col w-2/3 h-3/5 p-4 pt-16 m-0 sm:h-16 sm:w-screen sm:flex-row sm:p-0 sm:items-center sm:flex`;
@@ -31,7 +28,7 @@ export default function NavBar({ imgSrc }) {
       </div>
       <nav className={navClasses}>
         <Link href="/">
-          <img src={imgSrc} className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4" />
+          <Image src="/logo.png" alt="small logo" width={20} height={40} className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4" />
         </Link>
         <Link href="/documentation" className="text-xl mb-5 sm:m-0 sm:mr-6">
           Documentationˇ

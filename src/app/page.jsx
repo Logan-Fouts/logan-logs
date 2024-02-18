@@ -1,13 +1,14 @@
 import Navbar from "./components/NavBar.client";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col w-screen h-screen justify-center items-center">
-      <Navbar imgSrc="logan-logs/logo.png" />
+      <Navbar />
       <div className="flex w-full h-5/5 flex-col justify-center">
         <div className="flex flex-row items-center justify-center">
           <h1 className="font-black text-5xl ml-4">Welcome To Logan Logs</h1>
-          <img src="logan-logs/logo.png" alt="Logan Logs Logo" className="h-40"></img>
+          <Image src="/logo.png" width={100} height={200} alt="Logan Logs Logo" className="h-auto w-auto"></Image>
         </div>
         <h2 className="mt-4 text-center">
           Here I compile my software/tech knowledge and experiences.
@@ -26,7 +27,7 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="https://google.com/"
+                href="https://www.linkedin.com/in/logan-fouts-aab33b230/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
