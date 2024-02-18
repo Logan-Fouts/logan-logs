@@ -28,7 +28,13 @@ export default function NavBar() {
       </div>
       <nav className={navClasses}>
         <Link href="/">
-          <Image src="/logo.png" alt="small logo" width={20} height={40} className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4" />
+          <Image
+            src="/logo.png"
+            alt="small logo"
+            width={20}
+            height={40}
+            className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4"
+          />
         </Link>
         <Link href="/documentation" className="text-xl mb-5 sm:m-0 sm:mr-6">
           Documentationˇ

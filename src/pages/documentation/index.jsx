@@ -25,7 +25,7 @@ export async function getStaticProps() {
           return {
             name: entry.name,
             type: "file",
-             // Ugly way to fix file path 
+            // Ugly way to fix file path
             path: entryPath.substring(7),
           };
         }

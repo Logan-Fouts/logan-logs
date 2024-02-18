@@ -8,7 +8,13 @@ export default function Home() {
       <div className="flex w-full h-5/5 flex-col justify-center">
         <div className="flex flex-row items-center justify-center">
           <h1 className="font-black text-5xl ml-4">Welcome To Logan Logs</h1>
-          <Image src="/logo.png" width={100} height={200} alt="Logan Logs Logo" className="h-auto w-auto"></Image>
+          <Image
+            src="/logo.png"
+            width={100}
+            height={200}
+            alt="Logan Logs Logo"
+            className="h-auto w-auto"
+          ></Image>
         </div>
         <h2 className="mt-4 text-center">
           Here I compile my software/tech knowledge and experiences.
