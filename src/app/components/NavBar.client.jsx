@@ -41,14 +41,15 @@ export default function NavBar() {
         </Link>
         <Link href="/projects" className="text-xl mb-5 sm:m-0 sm:mr-6">
           Projectsˇ
-        </Link>
-        <Link href="/blog" className="text-xl mb-20 sm:m-0 sm:mr-8">
-          Blogˇ
-        </Link>
+        </Link> 
         <div className="ml-auto mr-4">
-          <SearchBar />
         </div>
       </nav>
     </div>
   );
 }
+
+// <Link href="/blog" className="text-xl mb-20 sm:m-0 sm:mr-8">
+//           Blogˇ
+//         </Link>
+//         <SearchBar />

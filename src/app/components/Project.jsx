@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Project = ({ title, heading1, intro, heading2, mainText, imgSrc }) => {
   return (
-    <div className="text-center max-full w-3/4 p-5 bg-white rounded-lg shadow-lg mt-8 mb-8 dark:bg-gray-800 dark:text-white">
+    <div className="text-center max-full w-3/4 max-w-6xl p-5 bg-white rounded-lg shadow-lg mt-8 mb-8 dark:bg-gray-800 dark:text-white">
       <h1 className="font-black text-black dark:text-white text-2xl mb-4">
         {title}
       </h1>
@@ -30,7 +30,7 @@ const Project = ({ title, heading1, intro, heading2, mainText, imgSrc }) => {
 
 const Project2 = ({ title, heading1, intro, heading2, mainText, imgSrc }) => {
   return (
-    <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden p-2 mt-8 mb-8 mx-auto w-3/4 dark:bg-gray-800 dark:text-white">
+    <div className="flex flex-col max-w-6xl md:flex-row bg-white rounded-lg shadow-lg overflow-hidden p-2 mt-8 mb-8 mx-auto w-3/4 dark:bg-gray-800 dark:text-white">
       <div className="md:w-1/2 dark:text-white">
         <Image
           src={imgSrc}
