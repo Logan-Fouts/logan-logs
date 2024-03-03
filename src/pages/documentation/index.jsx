@@ -1,9 +1,9 @@
-import MarkdownRenderer from "@/app/components/MarkDownRenderer";
-import FileTree from "@/app/components/FileTree";
+import MarkdownRenderer from "/src/app/components/MarkDownRenderer";
+import FileTree from "/src/app/components/FileTree";
 import { promises as fs } from "fs";
 import path from "path";
-import { useFileSelection } from "@/app/components/FileSelectionContext";
-import NavBar from "@/app/components/NavBar.client";
+import { useFileSelection } from "/src/app/components/FileSelectionContext";
+import NavBar from "/src/app/components/NavBar.client";
 
 export async function getStaticProps() {
   const markdownDir = path.join("public", "markdown");

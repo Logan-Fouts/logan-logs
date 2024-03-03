@@ -1,4 +1,4 @@
-import { FileSelectionProvider } from "@/app/components/FileSelectionContext";
+import { FileSelectionProvider } from "/src/app/components/FileSelectionContext";
 import "/styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
