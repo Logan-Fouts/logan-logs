@@ -17,7 +17,25 @@ export default function Projects() {
         imgSrc1="/heimdall.png"
         imgSrc2="/servers.png"
         imgSrc3="/pi.png"
+        linkUrl="https://www.thingiverse.com/thing:6040912"
       />
+
+      <Project2
+        title="PicPurge"
+        heading1="Why"
+        intro="The driving factor behind this project was the fact that my Mom has at least 5 near duplicate copies of every image and it takes up a huge amoung of extra space. I wanted a way for Near-Duplicate image detection and removal automaticcally."
+        heading2="Whats it do"
+        mainText="A Python script that facilitates the identification and removal of
+        duplicate images within a designated directory, as well as image
+        sorting using Machine Learning. This script utilizes image hashing for
+        comparison purposes and now incorporates sorting functionality using
+        TensorFlow for enhanced efficiency. The script offers both a
+        command-line interface and a user-friendly GUI for seamless
+        utilization."
+        imgSrc="/picpurge.gif"
+        linkUrl="https://github.com/Logan-Fouts/PicPurge"
+      /> 
+
       <Project
         title="Custom Keyboard Endeavour"
         heading1="Intro"
@@ -37,22 +55,8 @@ export default function Projects() {
               component contributes to a seamlessly integrated and
               technologically advanced solution for an enriched user experience."
         imgSrc="/streamdeck.jpg"
+        linkUrl="https://www.thingiverse.com/thing:6267112"
       />
-
-      <Project2
-        title="PicPurge"
-        heading1="Why"
-        intro="The driving factor behind this project was the fact that my Mom has at least 5 near duplicate copies of every image and it takes up a huge amoung of extra space. I wanted a way for Near-Duplicate image detection and removal automaticcally."
-        heading2="Whats it do"
-        mainText="A Python script that facilitates the identification and removal of
-        duplicate images within a designated directory, as well as image
-        sorting using Machine Learning. This script utilizes image hashing for
-        comparison purposes and now incorporates sorting functionality using
-        TensorFlow for enhanced efficiency. The script offers both a
-        command-line interface and a user-friendly GUI for seamless
-        utilization."
-        imgSrc="/picpurge.gif"
-      /> 
     </div>
   );
 }

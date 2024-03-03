@@ -50,7 +50,7 @@ export default function Documentation({ fileTree }) {
       <div className="flex flex-row w-screen pt-16">
         <FileTree fileTree={fileTree} />
         {!selectedFile && (
-          <MarkdownRenderer filePath="markdown/Random/Readme.md" />
+          <MarkdownRenderer filePath="markdown/Etc/Readme.md" />
         )}
         {selectedFile && <MarkdownRenderer filePath={selectedFile} />}
       </div>

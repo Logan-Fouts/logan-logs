@@ -13,18 +13,18 @@ export default function NavBar() {
     setIsNavVisible(!isNavVisible);
   }
 
-  const navClasses = `${isNavVisible ? "flex" : "hidden"} bg-black text-white flex-col w-2/3 h-3/5 p-4 pt-16 m-0 sm:h-16 sm:w-screen sm:flex-row sm:p-0 sm:items-center sm:flex`;
+  const navClasses = `${isNavVisible ? "flex" : "hidden"} opacity-85 bg-black text-white flex-col w-2/3 h-3/5 p-4 pt-16 m-0 sm:h-16 sm:w-screen sm:flex-row sm:p-0 sm:items-center z-30`;
 
   return (
     <div
       id="container"
-      className="w-screen m-0 p-0 flex justify-start absolute left-0 top-0"
+      className="w-screen m-0 p-0 flex justify-start absolute left-0 top-0 z-40"
     >
       <div
-        className="sm:hidden text-3xl m-4 absolute"
+        className="sm:hidden text-3xl m-4 absolute z-40"
         onClick={handleHamburgerClick}
       >
-        <i className={`fas fa-bars tex-white cursor-pointer`}></i>
+        <i className={`fas fa-bars text-white cursor-pointer`}></i>
       </div>
       <nav className={navClasses}>
         <Link href="/">
@@ -48,8 +48,3 @@ export default function NavBar() {
     </div>
   );
 }
-
-// <Link href="/blog" className="text-xl mb-20 sm:m-0 sm:mr-8">
-//           Blogˇ
-//         </Link>
-//         <SearchBar />
