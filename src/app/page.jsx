@@ -1,5 +1,4 @@
 import Navbar from "./components/NavBar.client";
-import WavyBackground from "./components/wavy-background.tsx"
 import GlowingStarsBackgroundCard from "./components/glowing-stars.tsx"
 import Image from "next/image";
 
