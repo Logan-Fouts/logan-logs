@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar.client.jsx";
 import Image from "next/image.js";
 
 export default function NavBar() {
-  const [isNavVisible, setIsNavVisible] = useState(false);
+  const [isNavVisible, setIsNavVisible] = useState(true);
 
   function handleHamburgerClick() {
     setIsNavVisible(!isNavVisible);
