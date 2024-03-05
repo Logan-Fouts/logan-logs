@@ -34,28 +34,28 @@ export default function Projects() {
         utilization."
         imgSrc="/picpurge.gif"
         linkUrl="https://github.com/Logan-Fouts/PicPurge"
-      /> 
+      />
 
       <Project
         title="Custom Keyboard Endeavour"
         heading1="Intro"
         intro="This all started when I decided I did not like current small keyboards and standard ones were too large. I wanted a medium to small keyboard with a custom layout including all the keys I need and none of the ones I don't"
         heading2="Description"
-        mainText="Crafting the ideal keyboard setup was a more challenging process then expected,
-              particularly when tailored for compatibility with the Ender 3 3D
-              printer. This envisioned configuration prioritizes adaptability,
-              featuring a Stream Deck mount designed for effortless removal. M3
-              screws and heated inserts provide structural stability, while the
-              integration of a Raspberry Pi Pico adds a smart dimension,
-              enabling customization and automation. The synergy between 3D
-              printing technology and thoughtful design not only ensures
-              practicality but also infuses a creative touch, allowing users to
-              personalize their workspace with precision and innovation.
-              Assembling this keyboard becomes a dynamic journey, where each
-              component contributes to a seamlessly integrated and
-              technologically advanced solution for an enriched user experience."
+        mainText="In order to make my idea real I started off working in freecad. I worked for quite a while to come up with a nice 3D model that I could print. While I came up with the model I tried to make sure that the intedned micro control (raspberry pico) would be able to handle the necessary amount of pins. Then, after I printed it all out I got to hand wiring which took quite a while but was a satisfying process. Finally I used kmk to make the keyboard work."
         imgSrc="/streamdeck.jpg"
         linkUrl="https://www.thingiverse.com/thing:6267112"
+      />
+
+      <Project3
+        title="Linux Transition"
+        heading1="Why Switch?"
+        intro="When I stared hosting my own services I found I need to become comfortable with the terminal and linux/unix."
+        heading2="How It's Going"
+        mainText="Its been around 3 years now that I have been mainly using Linux (I only use windows for any gaming despite protons progress). I started like most on ubuntu since I heard it was a just works distro. This was my experience; however, just works does not mean you cant break it. I found this out quickly having to troublshoot my system. In all those hours I learned a lot about managing a linux system. Nowadays I have switch to Arch btw ;). I found it interesting to read the wiki and go through the whole install process. It was a great way to learn how arch works and allowed for easy customization. So far, I really enjoy the AUR and the bleeding edge packages. Also, all this use of the terminal and specifically vim, I decided I wanted to fully commit to swtiching from vscode to neovim. Its not so much for me that its lighter weight or anything, personally I just enjoy ricing and learning new things. As of now I actually think my workflow is already faster then in vscode since I have jammed most of the useful key motions into my brain."
+        imgSrc1="/Linux Tree.png"
+        imgSrc2="/ubuntu.png"
+        imgSrc3="/Arch.png"
+        linkUrl="https://www.thingiverse.com/thing:6040912"
       />
     </div>
   );

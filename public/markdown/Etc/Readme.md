@@ -8,17 +8,13 @@ Hello! Welcome to my personal documentation page. Here, you'll find a wealth of 
 
 In the Linux section, you'll discover a range of tutorials and insights covering everything from basic command line operations to advanced system administration. Whether you're new to Linux or looking to deepen your understanding of this powerful operating system, there's something here for you.
 
-### School
-
-The School section is dedicated to academic excellence, offering study tips, resources, and guides to help students navigate their educational journey. From time management strategies to specific subject help, this section aims to support students in achieving their academic goals.
-
 ### Electronics
 
 For hobbyists and professionals alike, the Electronics section covers a variety of projects and tutorials. Dive into topics such as circuit design, microcontrollers, and DIY electronics projects that you can try at home. Whether you're building your first circuit or exploring complex electronic systems, there's plenty to learn and discover.
 
-### Random
+### Etc
 
-The Random section is a collection of topics and content that don't neatly fit into the other categories. Here, you'll find a mixed bag of interesting articles, guides, and tutorials on a wide range of subjects. It's the perfect place to explore when you're looking for something new and unexpected.
+The Etc section is a collection of topics and content that don't neatly fit into the other categories. Here, you'll find a mixed bag of interesting articles, guides, and tutorials on a wide range of subjects. It's the perfect place to explore when you're looking for something new and unexpected.
 
 ## Get in Touch
 

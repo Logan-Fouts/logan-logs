@@ -36,14 +36,13 @@ export default function NavBar() {
             className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4"
           />
         </Link>
+        <Link href="/projects" className="text-xl mb-5 sm:m-0 sm:mr-6">
+          Projectsˇ
+        </Link>
         <Link href="/documentation" className="text-xl mb-5 sm:m-0 sm:mr-6">
           Documentationˇ
         </Link>
-        <Link href="/projects" className="text-xl mb-5 sm:m-0 sm:mr-6">
-          Projectsˇ
-        </Link> 
-        <div className="ml-auto mr-4">
-        </div>
+        <div className="ml-auto mr-4"></div>
       </nav>
     </div>
   );
