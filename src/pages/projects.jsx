@@ -55,7 +55,7 @@ export default function Projects() {
         imgSrc1="/Linux Tree.png"
         imgSrc2="/ubuntu.png"
         imgSrc3="/Arch.png"
-        linkUrl="https://www.thingiverse.com/thing:6040912"
+        linkUrl="https://www.lpi.org/pt-br/blog/2021/10/05/eleven-reasons-switch-windows-linux/"
       />
     </div>
   );
