@@ -8,6 +8,31 @@ export default function Projects() {
       <h1 className="text-5xl text-center font-black text-green-800 mt-16">
         Project Blog
       </h1>
+
+      <Project
+        title="Multi-Method NDI Detection Framework"
+        heading1="Intro"
+        intro="In an increasingly digital world, managing the immense volume of image content is crucial. This thesis addresses the challenge of near-duplicate image (NDI) detection by proposing a layered architecture framework that combines multiple algorithms for enhanced flexibility and simplicity."
+        heading2="Description"
+        mainText="Complex problems often require complex solutions, but they don't always have to. By integrating multiple NDI detection algorithms in a layered approach, this framework aims to retain the benefits of each method while simplifying the overall process. The research involved extensive testing and tuning of various algorithm combinations to find the best performance across different image datasets. The results indicate that this approach maintains impressive accuracy and adaptability, making NDI detection systems more efficient and easier to customize."
+        imgSrc="/thesis.png"
+        linkUrl="https://github.com/Logan-Fouts/Thesis"
+      />
+
+      <Project2
+        title="Py-Deck"
+        heading1="Why"
+        intro="I enjoy running linux on my computers but my elgato stream deck was not supported."
+        heading2="Whats it do"
+        mainText="I found an open source project that is working on support for the stream decks. This worked for me out
+        the box but I wanted a gui to manage it more easily. So I wrote a quick gui using tkinter that interfaces with the
+        code through json files. This turned out to be more powerful then I had previosuly expected because it enabled me
+        to run terminal commands with the press of a button. My favorite command I set up was a command to start up an old
+        dell poweredge server I have in my closet."
+        imgSrc="/gui.png"
+        linkUrl="https://github.com/Logan-Fouts/Py-Deck"
+      />
+
       <Project3
         title="Self Hosting"
         heading1="How'd it start"

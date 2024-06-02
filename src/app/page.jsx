@@ -1,5 +1,5 @@
 import Navbar from "./components/NavBar.client";
-import GlowingStarsBackgroundCard from "./components/glowing-stars.tsx"
+import GlowingStarsBackgroundCard from "./components/glowing-stars.tsx";
 import Image from "next/image";
 
 export default function Home() {
@@ -22,7 +22,9 @@ export default function Home() {
             Here I compile my software/tech knowledge and experiences.
           </h2>
           <div className="text-center mt-12 z-20">
-            <h1 className="font-black text-green-800 text-3xl mb-2">My Links</h1>
+            <h1 className="font-black text-green-800 text-3xl mb-2">
+              My Links
+            </h1>
             <ul className="list-none list-disc text-white z-20">
               <li>
                 <a

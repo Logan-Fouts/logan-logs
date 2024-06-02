@@ -1,7 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-const Project = ({ title, heading1, intro, heading2, mainText, imgSrc, linkUrl}) => {
+const Project = ({
+  title,
+  heading1,
+  intro,
+  heading2,
+  mainText,
+  imgSrc,
+  linkUrl,
+}) => {
   return (
     <div className="z-30 text-center max-full w-3/4 max-w-6xl p-5 bg-white rounded-lg shadow-lg mt-8 mb-8 dark:bg-gray-800 dark:text-white">
       <a href={linkUrl} target="_blank" rel="noopener noreferrer">
@@ -9,13 +17,13 @@ const Project = ({ title, heading1, intro, heading2, mainText, imgSrc, linkUrl})
           {title}
         </h1>
       </a>
-        <Image
-          src={imgSrc}
-          width={1000}
-          height={300}
-          alt={title}
-          className="w-full h-96 object-cover object-center rounded-lg"
-        />
+      <Image
+        src={imgSrc}
+        width={1000}
+        height={300}
+        alt={title}
+        className="w-full h-96 object-cover object-center rounded-lg"
+      />
       <div className="p-5 dark:text-white">
         <h2 className="text-black text-xl font-black dark:text-white">
           {heading1}
@@ -30,10 +38,17 @@ const Project = ({ title, heading1, intro, heading2, mainText, imgSrc, linkUrl})
   );
 };
 
-const Project2 = ({ title, heading1, intro, heading2, mainText, imgSrc, linkUrl }) => {
+const Project2 = ({
+  title,
+  heading1,
+  intro,
+  heading2,
+  mainText,
+  imgSrc,
+  linkUrl,
+}) => {
   return (
     <div className="z-30 flex flex-col max-w-6xl md:flex-row bg-white rounded-lg shadow-lg overflow-hidden p-2 mt-8 mb-8 mx-auto w-3/4 dark:bg-gray-800 dark:text-white">
-      
       <div className="md:w-1/2 dark:text-white">
         <Image
           src={imgSrc}
@@ -66,9 +81,19 @@ const Project2 = ({ title, heading1, intro, heading2, mainText, imgSrc, linkUrl 
   );
 };
 
-const Project3 = ({ title, heading1, intro, heading2, mainText, imgSrc1, imgSrc2, imgSrc3, linkUrl }) => {
+const Project3 = ({
+  title,
+  heading1,
+  intro,
+  heading2,
+  mainText,
+  imgSrc1,
+  imgSrc2,
+  imgSrc3,
+  linkUrl,
+}) => {
   return (
-    <div className="z-30 flex flex-col md:flex-row max-w-6xl rounded-lg shadow-lg overflow-hidden mt-8 mb-8 mx-auto w-3/4 dark:bg-gray-800 dark:text-white">      
+    <div className="z-30 flex flex-col md:flex-row max-w-6xl rounded-lg shadow-lg overflow-hidden mt-8 mb-8 mx-auto w-3/4 dark:bg-gray-800 dark:text-white">
       <div className="md:w-3/5 dark:text-white">
         <Image
           src={imgSrc1}
