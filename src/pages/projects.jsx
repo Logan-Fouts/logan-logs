@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <div className="p-4 bg-black">
       <Navbar />
-      <h1 className="text-5xl text-center font-black text-green-800 mt-12">
+      <h1 className="text-5xl text-center font-black text-green-800 mt-12 mb-4">
         Project Blog
       </h1>
 
@@ -34,18 +34,6 @@ export default function Projects() {
           linkUrl="https://github.com/Logan-Fouts/Py-Deck"
         />
 
-        <Project3
-          title="Self Hosting"
-          heading1="How'd it start"
-          intro="It all started because I wanted to move away from relying on and paying for cloud services. However, when I started all this I definetly did not have the technical skill in order to do it easily. After the past 3 years of cosplaying as a sys-admin I can say that I have a decent bit of experience managing and hosting servers."
-          heading2="What Am I Hosting"
-          mainText="I have some old pc parts hosting Truenas which has nextcloud, plex, and collabra. I use nextcloud mainly for syncing up my machine but the web interface is also nice to access my files. Plex has my media collection, and collabra works with nextcloud for document editing. I also was gifted an old dell server. Since it is so loud and just inside my closet it is off most of the time. But, when my girlfriend is away I spin it up to do any number of testing with proxmox as the hyper visor. It does a nice job of warming up our apartment ;). Finally, in order to access all of my resources when I am away I have a mini rack I designed and printed that holds a mini switch, hard drive, and a raspberry pi. The pi is running wire guard so I can vpn into my network from anywhere."
-          imgSrc1="/heimdall.png"
-          imgSrc2="/servers.png"
-          imgSrc3="/pi.png"
-          linkUrl="https://www.thingiverse.com/thing:6040912"
-        />
-
         <Project2
           title="PicPurge"
           heading1="Why"
@@ -70,6 +58,18 @@ export default function Projects() {
           mainText="In order to make my idea real I started off working in freecad. I worked for quite a while to come up with a nice 3D model that I could print. While I came up with the model I tried to make sure that the intedned micro control (raspberry pico) would be able to handle the necessary amount of pins. Then, after I printed it all out I got to hand wiring which took quite a while but was a satisfying process. Finally I used kmk to make the keyboard work."
           imgSrc="/streamdeck.jpg"
           linkUrl="https://www.thingiverse.com/thing:6267112"
+        />
+
+        <Project3
+          title="Self Hosting"
+          heading1="How'd it start"
+          intro="It all started because I wanted to move away from relying on and paying for cloud services. However, when I started all this I definetly did not have the technical skill in order to do it easily. After the past 3 years of cosplaying as a sys-admin I can say that I have a decent bit of experience managing and hosting servers."
+          heading2="What Am I Hosting"
+          mainText="I have some old pc parts hosting Truenas which has nextcloud, plex, and collabra. I use nextcloud mainly for syncing up my machine but the web interface is also nice to access my files. Plex has my media collection, and collabra works with nextcloud for document editing. I also was gifted an old dell server. Since it is so loud and just inside my closet it is off most of the time. But, when my girlfriend is away I spin it up to do any number of testing with proxmox as the hyper visor. It does a nice job of warming up our apartment ;). Finally, in order to access all of my resources when I am away I have a mini rack I designed and printed that holds a mini switch, hard drive, and a raspberry pi. The pi is running wire guard so I can vpn into my network from anywhere."
+          imgSrc1="/heimdall.png"
+          imgSrc2="/servers.png"
+          imgSrc3="/pi.png"
+          linkUrl="https://www.thingiverse.com/thing:6040912"
         />
 
         <Project3
