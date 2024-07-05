@@ -28,7 +28,7 @@ const Directory = ({ directory }) => {
                 style={{ cursor: "pointer" }}
                 onClick={() => selectFile(child.path)}
               >
-                {"- " + child.name}
+                {"- " + child.name.slice(0, -3)}
               </li>
             ),
           )}

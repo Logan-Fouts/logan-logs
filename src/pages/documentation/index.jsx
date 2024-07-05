@@ -47,7 +47,7 @@ export default function Documentation({ fileTree }) {
   return (
     <div className="app">
       <NavBar />
-      <div className="flex flex-row w-screen pt-16">
+      <div className="flex flex-row w-screen pt-16 max-w-1/3">
         <FileTree fileTree={fileTree} />
         {!selectedFile && (
           <MarkdownRenderer filePath="markdown/Etc/Readme.md" />

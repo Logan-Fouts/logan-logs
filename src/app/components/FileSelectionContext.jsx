@@ -9,7 +9,6 @@ export const FileSelectionProvider = ({ children }) => {
   const [selectedFile, setSelectedFile] = React.useState(null);
 
   const selectFile = (filePath) => {
-    console.log(filePath);
     setSelectedFile(filePath);
   };
 
