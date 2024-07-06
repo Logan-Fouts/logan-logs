@@ -1,49 +1,89 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Link from "next/link";
-import SearchBar from "./SearchBar.client.jsx";
-import Image from "next/image.js";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function NavBar() {
-  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [isNavVisible, setIsNavVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+      if (window.innerWidth >= 640) {
+        setIsNavVisible(true);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   function handleHamburgerClick() {
     setIsNavVisible(!isNavVisible);
   }
 
-  const navClasses = `${isNavVisible ? "flex" : "hidden"} opacity-85 bg-black text-white flex-col w-2/3 h-3/5 p-4 pt-16 m-0 sm:h-16 sm:w-screen sm:flex-row sm:p-0 sm:items-center z-30`;
+  const navVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
-    <div
-      id="container"
-      className="w-screen m-0 p-0 flex justify-start absolute left-0 top-0 z-40"
-    >
-      <div
-        className="sm:hidden text-3xl m-4 absolute z-40"
-        onClick={handleHamburgerClick}
-      >
-        <i className={`fas fa-bars text-white cursor-pointer`}></i>
+    <header className="fixed w-full top-0 left-0 z-50 bg-black bg-opacity-90 shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={35}
+              height={50}
+              className="h-12"
+            />
+          </Link>
+
+          <button
+            className="sm:hidden text-white focus:outline-none"
+            onClick={handleHamburgerClick}
+          >
+            <i
+              className={`fas fa-${isNavVisible ? "times" : "bars"} text-2xl`}
+            ></i>
+          </button>
+
+          <AnimatePresence>
+            {(isNavVisible || !isMobile) && (
+              <motion.nav
+                className="absolute sm:relative top-full left-0 w-full sm:w-auto bg-black sm:bg-transparent"
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={navVariants}
+                transition={{ duration: 0.3 }}
+              >
+                <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 py-4 sm:py-0">
+                  <NavItem href="/projects">Projects</NavItem>
+                  <NavItem href="/documentation">Documentation</NavItem>
+                </ul>
+              </motion.nav>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
-      <nav className={navClasses}>
-        <Link href="/">
-          <Image
-            src="/logo.png"
-            alt="small logo"
-            width={20}
-            height={40}
-            className="w-8 mb-5 sm:m-0 sm:mr-6 sm:ml-4"
-          />
-        </Link>
-        <Link href="/projects" className="text-xl mb-5 sm:m-0 sm:mr-6">
-          Projectsˇ
-        </Link>
-        <Link href="/documentation" className="text-xl mb-5 sm:m-0 sm:mr-6">
-          Documentationˇ
-        </Link>
-        <div className="ml-auto mr-4"></div>
-      </nav>
-    </div>
+    </header>
   );
 }
+
+const NavItem = ({ href, children }) => (
+  <li>
+    <Link
+      href={href}
+      className="text-white hover:text-gray-300 transition-colors duration-200"
+    >
+      {children}
+    </Link>
+  </li>
+);

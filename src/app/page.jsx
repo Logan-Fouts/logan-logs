@@ -1,54 +1,86 @@
+"use client";
+import React, { createContext } from "react";
 import Navbar from "./components/NavBar.client";
 import GlowingStarsBackgroundCard from "./components/glowing-stars.tsx";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen">
-      <GlowingStarsBackgroundCard />
-      <div className="flex flex-col w-screen h-screen justify-center items-center">
-        <div className="flex w-full h-5/5 flex-col justify-center z-30">
-          <div className="flex flex-row items-center justify-center">
-            <h1 className="font-black text-5xl ml-4">Welcome To Logan Logs</h1>
-            <Image
-              src="/logo.png"
-              width={100}
-              height={200}
-              alt="Logan Logs Logo"
-              className="h-auto w-auto"
-            ></Image>
-          </div>
-          <h2 className="mt-4 text-center">
-            Here I compile my software/tech knowledge and experiences.
-          </h2>
-          <div className="text-center mt-12 z-20">
-            <h1 className="font-black text-green-800 text-3xl mb-2">
-              My Links
-            </h1>
-            <ul className="list-none list-disc text-white z-20">
-              <li>
-                <a
-                  href="https://github.com/Logan-Fouts"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/logan-fouts-aab33b230/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Linkedin
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div className="relative w-screen h-screen overflow-hidden bg-black text-white">
+      <GlowingStarsBackgroundCard className="z-1" />
       <Navbar />
+
+      <main className="flex flex-col items-center justify-center h-full px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <div className="flex items-center justify-center mb-6">
+            <h1 className="font-black text-4xl sm:text-6xl mr-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 p-4">
+              Welcome To Logan Logs
+            </h1>
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            >
+              <Image
+                src="/logo.png"
+                width={80}
+                height={80}
+                alt="Logan Logs Logo"
+                className=""
+              />
+            </motion.div>
+          </div>
+
+          <p className="text-lg sm:text-xl mb-12 max-w-2xl mx-auto">
+            Here I compile my software/tech knowledge and experiences.
+          </p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            <h2 className="font-bold text-2xl sm:text-3xl mb-6 text-green-400">
+              Socials
+            </h2>
+            <div className="flex justify-center space-x-6">
+              <SocialLink
+                href="https://github.com/Logan-Fouts"
+                icon={<FaGithub className="w-8 h-8" />}
+                label="GitHub"
+              />
+              <SocialLink
+                href="https://www.linkedin.com/in/logan-fouts-aab33b230/"
+                icon={<FaLinkedin className="w-8 h-8" />}
+                label="LinkedIn"
+              />
+            </div>
+          </motion.div>
+        </motion.div>
+      </main>
     </div>
   );
 }
+
+const SocialLink = ({ href, icon, label }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center group"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <div className="p-3 bg-white bg-opacity-10 rounded-full group-hover:bg-opacity-20 transition-all duration-300 z-30">
+      {icon}
+    </div>
+    <span className="mt-2 text-sm">{label}</span>
+  </motion.a>
+);

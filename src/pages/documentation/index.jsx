@@ -1,3 +1,4 @@
+import React from "react";
 import MarkdownRenderer from "/src/app/components/MarkDownRenderer";
 import FileTree from "/src/app/components/FileTree";
 import { promises as fs } from "fs";
@@ -14,7 +15,6 @@ export async function getStaticProps() {
     const tree = await Promise.all(
       entries.map(async (entry) => {
         const entryPath = path.join(directoryPath, entry.name);
-
         if (entry.isDirectory()) {
           return {
             name: entry.name,
@@ -25,7 +25,6 @@ export async function getStaticProps() {
           return {
             name: entry.name,
             type: "file",
-            // Ugly way to fix file path
             path: entryPath.substring(7),
           };
         }
@@ -45,14 +44,26 @@ export default function Documentation({ fileTree }) {
   const { selectedFile } = useFileSelection();
 
   return (
-    <div className="app">
+    <div className="min-h-screen bg-gray-100 dark:bg-black pt-8">
       <NavBar />
-      <div className="flex flex-row w-screen pt-16 max-w-1/3">
-        <FileTree fileTree={fileTree} />
-        {!selectedFile && (
-          <MarkdownRenderer filePath="markdown/Etc/Readme.md" />
-        )}
-        {selectedFile && <MarkdownRenderer filePath={selectedFile} />}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-col md:flex-row gap-8">
+          <aside className="w-full md:w-1/4 bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+            <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">
+              File Structure
+            </h2>
+            <div className="max-h-[70vh] overflow-y-auto">
+              <FileTree fileTree={fileTree} />
+            </div>
+          </aside>
+          <main className="w-full md:w-3/4 bg-white dark:bg-gray-800 rounded-lg shadow-md md:p-6 sm:p-0">
+            {!selectedFile ? (
+              <MarkdownRenderer filePath="markdown/Etc/Readme.md" />
+            ) : (
+              <MarkdownRenderer filePath={selectedFile} />
+            )}
+          </main>
+        </div>
       </div>
     </div>
   );

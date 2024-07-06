@@ -1,53 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFileSelection } from "./FileSelectionContext";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaFolder, FaFolderOpen, FaFile } from "react-icons/fa";
 
 const Directory = ({ directory }) => {
-  const [collapsed, setCollapsed] = React.useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const { selectFile } = useFileSelection();
 
+  const toggleCollapse = (e) => {
+    e.stopPropagation();
+    setCollapsed(!collapsed);
+  };
+
   return (
-    <div className="z-20 text-left">
+    <div className="mb-2">
       <div
-        onClick={() => setCollapsed(!collapsed)}
-        style={{ cursor: "pointer", fontWeight: "bold" }}
-        className="text-green-800 text-lg z-20"
+        onClick={toggleCollapse}
+        className="flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded transition-colors duration-200"
       >
-        {directory.name} {collapsed ? "+" : "-"}
+        {collapsed ? (
+          <FaFolder className="text-yellow-500 mr-2" />
+        ) : (
+          <FaFolderOpen className="text-yellow-500 mr-2" />
+        )}
+        <span className="text-gray-800 dark:text-gray-200 font-medium">
+          {directory.name}
+        </span>
       </div>
-      {!collapsed && (
-        <ul className="z-20">
-          {directory.children.map((child) =>
-            child.type === "directory" ? (
-              <li key={child.name} className="ml-4 z-20 text-xs sm:text-xl">
-                <Directory directory={child} />
-              </li>
-            ) : (
-              <li
-                className="sm:ml-8"
-                key={child.name}
-                style={{ cursor: "pointer" }}
-                onClick={() => selectFile(child.path)}
-              >
-                {"- " + child.name.slice(0, -3)}
-              </li>
-            ),
-          )}
-        </ul>
-      )}
+      <AnimatePresence>
+        {!collapsed && (
+          <motion.ul
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="ml-4"
+          >
+            {directory.children.map((child) =>
+              child.type === "directory" ? (
+                <li key={child.name}>
+                  <Directory directory={child} />
+                </li>
+              ) : (
+                <li key={child.name}>
+                  <FileItem file={child} selectFile={selectFile} />
+                </li>
+              ),
+            )}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
-export { Directory };
+const FileItem = ({ file, selectFile }) => (
+  <div
+    className="flex items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+    onClick={() => selectFile(file.path)}
+  >
+    <FaFile className="text-gray-500 mr-2" />
+    <span className="text-gray-700 dark:text-gray-300">
+      {file.name.slice(0, -3)}
+    </span>
+  </div>
+);
 
 const FileTree = ({ fileTree }) => {
   return (
-    <div className="w-3/12 sm:w-1/5 mr-4 sm:ml-4 z-20 mr-8 overflow-auto text-center text-xs sm:text-lg">
+    <div className="w-full bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 overflow-auto max-h-[calc(100vh-200px)]">
       {fileTree.map((item) =>
         item.type === "directory" ? (
           <Directory key={item.name} directory={item} />
         ) : (
-          <div key={item.name}>{item.name}</div>
+          <FileItem key={item.name} file={item} />
         ),
       )}
     </div>
