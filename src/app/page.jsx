@@ -20,20 +20,24 @@ export default function Home() {
           className="text-center"
         >
           <div className="flex items-center justify-center mb-6">
-            <h1 className="font-black text-4xl sm:text-6xl mr-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 p-4">
+            <h1 className="font-black text-4xl sm:text-6xl mr-4 bg-clip-text text-transparent text-green-500 p-4">
               Welcome To Logan Logs
             </h1>
             <motion.div
               initial={{ rotate: 0 }}
-              animate={{ rotate: 30 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              animate={{ rotate: [-30, 30] }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
             >
               <Image
                 src="/logo.png"
                 width={80}
                 height={80}
                 alt="Logan Logs Logo"
-                className=""
               />
             </motion.div>
           </div>

@@ -34,7 +34,7 @@ export default function Projects() {
         variants={staggerChildren}
       >
         <motion.h1
-          className="p-2 text-6xl text-center font-black bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 mb-12"
+          className="p-2 text-6xl text-center font-black bg-clip-text text-transparent text-green-500 mb-12"
           variants={fadeInUp}
         >
           Project Blog
