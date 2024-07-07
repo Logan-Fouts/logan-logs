@@ -25,8 +25,8 @@ export default function Home() {
             </h1>
             <motion.div
               initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              animate={{ rotate: 30 }}
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             >
               <Image
                 src="/logo.png"
