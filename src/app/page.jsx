@@ -20,7 +20,7 @@ export default function Home() {
           className="text-center"
         >
           <div className="flex items-center justify-center mb-6">
-            <h1 className="font-black text-4xl sm:text-6xl mr-4 bg-clip-text text-transparent text-green-500 p-4">
+            <h1 className="text-4xl sm:text-6xl mr-4 bg-clip-text text-transparent text-green-500 p-4">
               Welcome To Logan Logs
             </h1>
             <motion.div
