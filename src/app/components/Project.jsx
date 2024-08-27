@@ -146,4 +146,29 @@ const Project3 = ({
   );
 };
 
-export { Project, Project2, Project3 };
+const Project4 = ({
+  title,
+  heading1,
+  content1,
+  heading2,
+  content2,
+  heading3,
+  content3,
+  linkUrl,
+}) => {
+  return (
+    <ProjectCard>
+        <div className="overflow-auto hover:scrollbar-thumb-[#1f2836] active:scrollbar-thumb-sky-400 scrollbar scrollbar-thin scrollbar-thumb-[#1f2836] scrollbar-track-slate-200 dark:scrollbar-track-slate-700">
+          <ProjectTitle href={linkUrl}>{title}</ProjectTitle>
+          <ProjectHeading>{heading1}</ProjectHeading>
+          <ProjectParagraph>{content1}</ProjectParagraph>
+          <ProjectHeading>{heading2}</ProjectHeading>
+          <ProjectParagraph>{content2}</ProjectParagraph>
+          <ProjectHeading>{heading3}</ProjectHeading>
+          <ProjectParagraph>{content3}</ProjectParagraph>
+        </div>
+    </ProjectCard>
+  );
+};
+
+export { Project, Project2, Project3, Project4 };
