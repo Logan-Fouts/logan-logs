@@ -57,7 +57,7 @@ export default function Projects() {
               heading2="Implementation"
               mainText="This project served as a practical playground for exploring React's ecosystem within an Electron environment. I leveraged Next.js for its powerful rendering capabilities and routing system, building the UI with React components and utilizing hooks for state management. One of the most exciting aspects was using Electron's Inter-Process Communication (IPC) to access the filesystem. This allowed me to create a seamless interface between the React frontend and native system capabilities, enabling operations like reading local repositories and saving configurations directly to disk. I integrated D3.js to create an interactive Git graph, which provided valuable experience in combining React with data visualization libraries. The project also involved working with the Octokit REST API for GitHub integration. Throughout the development process, I focused on React best practices, component reusability, and optimizing performance in the context of a desktop application. The combination of React, Electron, and IPC opened up exciting possibilities for creating powerful, cross-platform desktop apps with web technologies."
               imgSrc="/gitrekt-react-components.png"
-              linkUrl="https://github.com/yourusername/gitrekt"
+              linkUrl="https://github.com/Logan-Fouts/GitRekt"
             />
           </ProjectWrapper>
 
@@ -82,7 +82,7 @@ export default function Projects() {
               content2="At its core, Bot_DVR leverages several cutting-edge technologies. The system uses machine learning for image-to-text conversion, allowing it to 'read' what's on the screen. It listens for specific sound cues to identify the start and end of programs, utilizing audio processing techniques. The recording process is handled through integration with OBS (Open Broadcaster Software), which Bot_DVR controls programmatically. To keep users informed, the system sends updates and notifications through a custom Discord bot. The project required diving deep into audio analysis libraries, machine learning frameworks for optical character recognition (OCR), OBS's API for recording automation, and Discord's bot development kit."
               heading3="Challenges and Learnings"
               content3="Developing Bot_DVR presented several unique challenges. Accurately detecting sound cues in various audio environments required extensive testing and refinement of the audio processing algorithms. Training the machine learning model to reliably convert on-screen text to machine-readable format across different TV formats and resolutions was another significant hurdle. Integrating all these components - audio detection, OCR, OBS control, and Discord notifications - into a seamless, autonomous system demanded careful architecture design and robust error handling. Throughout the development process, I gained valuable experience in working with asynchronous programming, API integrations, and the intricacies of building a system that operates continuously and autonomously. This project not only enhanced my technical skills but also deepened my understanding of how AI and automation can be applied to solve real-world problems in innovative ways."
-              linkUrl="https://github.com/yourusername/Bot_DVR"
+              linkUrl="https://github.com/Logan-Fouts/BOT_DVR"
             />
           </ProjectWrapper>
 
