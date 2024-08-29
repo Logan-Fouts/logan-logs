@@ -2,13 +2,14 @@
 import React, { createContext } from "react";
 import Navbar from "./components/NavBar.client";
 import GlowingStarsBackgroundCard from "./components/glowing-stars.tsx";
+import { FaDownload } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-black text-white">
+    <div className="relative w-screen h-screen overflow-auto bg-black text-white">
       <GlowingStarsBackgroundCard className="z-1" />
       <Navbar />
 
@@ -65,6 +66,23 @@ export default function Home() {
                 alt="Logan Logs Logo"
               />
             </motion.div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="relative h-80 w-64 mb-4">
+              <Image
+                src="/cv.png"
+                layout="fill"
+                alt="CV Preview"
+              />
+            </div>
+            <a
+              href="/CV.pdf"
+              download="Logan_Fouts_CV.pdf"
+              className="flex items-center px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors z-10"
+            >
+              <FaDownload className="mr-2" />
+              Download CV
+            </a>
           </div>
         </motion.div>
       </main>
