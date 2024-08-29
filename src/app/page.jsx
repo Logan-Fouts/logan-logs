@@ -13,7 +13,7 @@ export default function Home() {
       <GlowingStarsBackgroundCard className="z-1" />
       <Navbar />
 
-      <main className="flex flex-col items-center justify-center h-full px-4 pt-20 md:pt-0">
+      <main className="flex flex-col items-center justify-center h-full px-4 pt-40 mt-0 md:mt-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
