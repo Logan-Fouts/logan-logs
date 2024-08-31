@@ -35,6 +35,7 @@ export default function NavBar() {
     <header className="fixed w-full top-0 left-0 z-50 bg-black bg-opacity-90 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+
           <Link href="/">
             <Image
               src="/logo.png"
@@ -67,6 +68,7 @@ export default function NavBar() {
                 <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 py-4 sm:py-0">
                   <NavItem href="/projects">Projects</NavItem>
                   <NavItem href="/documentation">Documentation</NavItem>
+                  <NavItem href="/test_blog">Test Blog</NavItem>
                 </ul>
               </motion.nav>
             )}
