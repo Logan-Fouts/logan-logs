@@ -45,7 +45,7 @@ export default function NavBar() {
                 className="h-12"
               />
             </Link>
-            <h1 className="text-5xl font-bold">Logan Fouts <hr></hr></h1>
+            <h1 className="text-2xl sm:text-5xl font-bold">Logan Fouts <hr></hr></h1>
           </div>
 
           <button
