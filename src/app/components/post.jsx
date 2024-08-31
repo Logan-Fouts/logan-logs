@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Navbar from "/src/app/components/NavBar.client";
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Post({
   snippet,
@@ -12,7 +13,7 @@ export default function Post({
   imgDescription,
   summary,
   content,
-  slug
+  slug,
 }) {
   const Snippet = () => {
     return (
@@ -20,10 +21,10 @@ export default function Post({
         <h1 className="text-4xl font-semibold">{title}</h1>
         <p className="font-thin text-sm">{date}</p>
         <p>{tagLine}</p>
-        <div>
-          <Image src={imgSrc} alt="Snippet Image" width={500} height={300} layout="responsive" />
-          <p className="italic text-sm">{imgDescription}</p>
+        <div className="flex flex-col items-center">
+          <img src={imgSrc} alt="Snippet Image" className="max-h-[700px]" />
         </div>
+        <p className="italic text-sm text-left">{imgDescription} ^</p>
         <p>{summary}</p>
         <Link href={`/${slug}`}>
           <p className="text-blue-600 hover:text-blue-800 hover:underline">
@@ -36,24 +37,27 @@ export default function Post({
 
   const FullPost = () => {
     return (
-      <div className="w-3/4 space-y-4">
+      <div className="p-8 md:p-0 md:w-7/12 space-y-4 mt-20">
+        <Navbar />
+        <Link href={`/projects`}>
+          <p className="text-blue-600 hover:text-blue-800 hover:underline">
+            Go back
+          </p>
+        </Link>
         <h1 className="text-4xl font-semibold">{title}</h1>
         <p className="font-thin text-sm">{date}</p>
         <p className="text-xl">{tagLine}</p>
-        <div>
-          <Image src={imgSrc} alt="Post Image" width={800} height={400} layout="responsive" />
-          <p className="italic text-sm mt-2">{imgDescription}</p>
+        <div className="flex flex-col items-center">
+          <img src={imgSrc} alt="Post Image" className="max-h-[700px]" />
         </div>
-        <div className="prose prose-invert lg:prose-xl">
-          {content}
-        </div>
+        <p className="italic text-sm mt-2">{imgDescription}</p>
+        <div className="w-4/4">{content}</div>
       </div>
     );
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen text-white mt-10">
-      <Navbar />
+    <div className="flex flex-col items-center text-white">
       {snippet ? <Snippet /> : <FullPost />}
     </div>
   );
