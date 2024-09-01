@@ -1,3 +1,54 @@
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect } from "react";
+import {
+  Camera,
+  Layers,
+  Zap,
+  Hammer,
+  Tv,
+  Terminal,
+  Eraser,
+  Keyboard,
+  Server,
+  Computer,
+  Github,
+} from "lucide-react";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-python";
+
+const Heading = ({ size, children }) => {
+  let content;
+  switch (size) {
+    case "h1":
+      content = <h1 className="text-2xl font-bold mb-4">{children}</h1>;
+      break;
+    case "h2":
+      content = <h2 className="text-xl font-bold mb-4">{children}</h2>;
+      break;
+    case "h3":
+      content = <h3 className="text-lg font-semibold mb-2">{children}</h3>;
+      break;
+    default:
+      content = (
+        <h1 className="text-3xl text-red-600">Error invalid heading size!</h1>
+      );
+  }
+  return content;
+};
+
+const CodeBlock = ({ code, language }) => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [code]);
+
+  return (
+    <pre className="p-2 rounded-md overflow-x-auto scrollbar-none">
+      <code className={`language-${language}`}>{code}</code>
+    </pre>
+  );
+};
+
 export const posts = [
   {
     slug: "multi-method-ndi-detection-framework",
@@ -5,9 +56,115 @@ export const posts = [
     date: "March 24, 2024",
     tagLine: "Enhancing near-duplicate image detection with a layered approach",
     imgSrc: "/thesis.png",
-    imgDescription: "Diagram of the Multi-Method NDI Detection Framework",
-    summary: "This thesis project addresses the challenge of near-duplicate image (NDI) detection by proposing a layered architecture framework that combines multiple algorithms for enhanced flexibility and simplicity.",
-    content: "In an increasingly digital world, managing the immense volume of image content is crucial. This thesis addresses the challenge of near-duplicate image (NDI) detection by proposing a layered architecture framework that combines multiple algorithms for enhanced flexibility and simplicity. Complex problems often require complex solutions, but they don't always have to. By integrating multiple NDI detection algorithms in a layered approach, this framework aims to retain the benefits of each method while simplifying the overall process. The research involved extensive testing and tuning of various algorithm combinations to find the best performance across different image datasets. The results indicate that this approach maintains impressive accuracy and adaptability, making NDI detection systems more efficient and easier to customize."
+    imgDescription:
+      "Component Diagram of the Multi-Method NDI Detection Framework",
+    summary:
+      "This thesis project addresses the challenge of near-duplicate image (NDI) detection by proposing a layered architecture framework that combines multiple algorithms for enhanced flexibility and simplicity.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          Revolutionizing Image Management: A Multi-Method NDI Detection
+          Framework
+        </Heading>
+
+        <p className="italic text-gray-600">
+          This project formed as part of my bachelor&apos;s thesis, marking the
+          completion of my software technology degree.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Camera className="inline-block mr-2" /> The Digital Dilemma
+          </Heading>
+          <p>
+            In our increasingly digital world, we&apos;re drowning in a sea of
+            images. From social media to professional archives, the sheer volume
+            of visual content is staggering. But within this lies a hidden
+            challenge: near-duplicate images (NDIs). These
+            similar-but-not-identical pictures clutter our storage, confuse our
+            searches, and complicate our content management. How do we tackle
+            this dilemma?
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> A Layered Solution to a
+            Complex Problem
+          </Heading>
+          <p>
+            Enter the Multi-Method NDI Detection Framework. This approach
+            doesn&apos;t just use one algorithm—it harnesses the power of
+            multiple detection methods in a layered architecture. Think of it as
+            a team of experts, each bringing their unique strengths to the
+            table, working in harmony to spot those elusive NDIs. Some are
+            faster but less accurate and other the opposite.
+          </p>
+          <img src="/thesis_model.png" alt="Thesis model" className="w-2/3" />
+          <ul className="list-disc list-inside space-y-2">
+            <li>Combines multiple algorithms for enhanced flexibility</li>
+            <li>
+              Retains the benefits of each method while simplifying the overall
+              process
+            </li>
+            <li>Adaptable to various image datasets and use cases</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> From Theory to Practice
+          </Heading>
+          <p>
+            But a framework is only as good as its results. That&apos;s why we
+            put our Multi-Method approach through its paces:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Extensive testing across diverse image datasets</li>
+            <li>
+              Fine-tuning of algorithm combinations for optimal performance
+            </li>
+            <li>Rigorous accuracy and adaptability assessments</li>
+          </ul>
+          <p>
+            The verdict? Impressive accuracy, remarkable adaptability, and a
+            system that&apos;s both more efficient and easier to customize.
+            We&apos;ve turned a complex problem into a streamlined solution,
+            proving that sometimes, the best way to solve a puzzle is to look at
+            it from multiple angles.
+          </p>
+          <Heading size="h3">
+            This is how simple it is to build using this system
+          </Heading>
+          <CodeBlock
+            code={`# Import modules
+from Layers.layers import Layers
+from Phash.phash import Phash
+from SURF.surf import SURF
+from SIFT.sift import SIFT
+
+image_paths = get_image_paths(path)
+
+layers = [Phash(), SURF(), SIFT()]
+layered_architecture = Layers(raw_layers=layers, accuracy_calculator=None)
+
+layered_architecture.run(test_paths)`}
+            language="python"
+          />
+        </section>
+        <section className="space-y-4">
+          <Heading size={"h2"}>
+            <Hammer className="inline-block mr-2" /> Areas of improvement
+          </Heading>
+          <p>
+            While this framework tends to lead to less resource heavy detection
+            models, still for a large amount of images a lot of RAM at least and
+            maybe much time aswell are needed since image hashes are stored in
+            RAM.
+          </p>
+        </section>
+      </div>
+    ),
   },
   {
     slug: "bot-dvr-ai-powered-series-recording",
@@ -16,8 +173,78 @@ export const posts = [
     tagLine: "Revolutionizing TV series recording with AI and automation",
     imgSrc: "/bot-dvr-screenshot.png",
     imgDescription: "Bot_DVR interface showing automated recording schedule",
-    summary: "Bot_DVR is an intelligent, autonomous system that identifies, captures, and organizes TV content without human intervention, combining audio processing, machine learning, and automation.",
-    content: "Bot_DVR emerged from a vision to revolutionize how we record and catalog TV series. The goal was to create an intelligent, autonomous system that could identify, capture, and organize content without human intervention. This project combines audio processing, machine learning, and automation to transform the traditional DVR experience into something more advanced and hands-off. At its core, Bot_DVR leverages several cutting-edge technologies. The system uses machine learning for image-to-text conversion, allowing it to 'read' what's on the screen. It listens for specific sound cues to identify the start and end of programs, utilizing audio processing techniques. The recording process is handled through integration with OBS (Open Broadcaster Software), which Bot_DVR controls programmatically. To keep users informed, the system sends updates and notifications through a custom Discord bot. The project required diving deep into audio analysis libraries, machine learning frameworks for optical character recognition (OCR), OBS's API for recording automation, and Discord's bot development kit. Developing Bot_DVR presented several unique challenges. Accurately detecting sound cues in various audio environments required extensive testing and refinement of the audio processing algorithms. Training the machine learning model to reliably convert on-screen text to machine-readable format across different TV formats and resolutions was another significant hurdle. Integrating all these components - audio detection, OCR, OBS control, and Discord notifications - into a seamless, autonomous system demanded careful architecture design and robust error handling. Throughout the development process, I gained valuable experience in working with asynchronous programming, API integrations, and the intricacies of building a system that operates continuously and autonomously. This project not only enhanced my technical skills but also deepened my understanding of how AI and automation can be applied to solve real-world problems in innovative ways."
+    summary:
+      "Bot_DVR is an intelligent, autonomous system that identifies, captures, and organizes TV content without human intervention, combining audio processing, machine learning, and automation.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          Bot_DVR: The AI-Powered TV Series Recording Revolution
+        </Heading>
+
+        <p className="italic text-gray-600">
+          Imagine a world where your favorite shows are always recorded,
+          perfectly organized, and waiting for you - without you lifting a
+          finger. Welcome to the future of TV watching with Bot_DVR.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Tv className="inline-block mr-2" /> The Vision: Beyond Traditional
+            DVR
+          </Heading>
+          <p>
+            Bot_DVR was born from a simple yet ambitious idea: What if we could
+            create a DVR system that thinks for itself? No more missed episodes,
+            no more cluttered recordings, just pure, effortless TV enjoyment.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> The Tech Behind the Magic
+          </Heading>
+          <p>
+            At its core, Bot_DVR is a symphony of cutting-edge technologies:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              Machine Learning for image-to-text conversion (OCR on steroids!)
+            </li>
+            <li>Audio processing to detect show intros and outros</li>
+            <li>Integration with OBS for flawless recording</li>
+            <li>A custom Discord bot for real-time updates</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Hammer className="inline-block mr-2" /> Overcoming Challenges
+          </Heading>
+          <p>
+            Building Bot_DVR was like teaching a robot to watch TV - fun, but
+            not without its hurdles:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Fine-tuning audio detection across various TV formats</li>
+            <li>Training our OCR model to read on-screen text like a pro</li>
+            <li>
+              Orchestrating all components into a seamless, autonomous system
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> The Learning Curve
+          </Heading>
+          <p>This project was a deep dive into the world of:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>API integrations (making different technologies play nice)</li>
+            <li>Building systems that run 24/7 without human intervention</li>
+          </ul>
+        </section>
+      </div>
+    ),
   },
   {
     slug: "py-deck-linux-stream-deck-gui",
@@ -26,28 +253,272 @@ export const posts = [
     tagLine: "Extending Stream Deck support to Linux with a custom GUI",
     imgSrc: "/gui.png",
     imgDescription: "Py-Deck GUI interface for Stream Deck configuration",
-    summary: "Py-Deck is a custom GUI application developed to manage Stream Deck on Linux, enabling easy configuration and powerful command execution capabilities.",
-    content: "I enjoy running Linux on my computers but my Elgato Stream Deck was not supported. I found an open source project that is working on support for the stream decks. This worked for me out of the box, but I wanted a GUI to manage it more easily. So I wrote a quick GUI using tkinter that interfaces with the code through JSON files. This turned out to be more powerful than I had previously expected because it enabled me to run terminal commands with the press of a button. My favorite command I set up was a command to start up an old Dell PowerEdge server I have in my closet."
+    summary:
+      "Py-Deck is a custom GUI application developed to manage Stream Deck on Linux, enabling easy configuration and powerful command execution capabilities.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          Py-Deck: Bringing Stream Deck Magic to Linux
+        </Heading>
+
+        <p className="italic text-gray-600">
+          When Linux love meets Stream Deck dreams, Py-Deck is born - a GUI that
+          bridges the gap between open-source passion and productivity
+          powerhouse.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> The Linux Dilemma
+          </Heading>
+          <p>
+            As a die-hard Linux user, I faced a common problem: my beloved
+            Elgato Stream Deck sat unused, unsupported by my OS of choice. But
+            in the true spirit of open-source, I wasn&apos;t about to let that
+            stop me.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> From CLI to GUI: A Journey
+          </Heading>
+          <p>
+            I discovered an open-source project that brought basic Stream Deck
+            functionality to Linux. It was a start, but I craved more - a
+            user-friendly interface to unlock the full potential of this
+            button-laden beast.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> Crafting the Solution
+          </Heading>
+          <p>
+            Enter Py-Deck: a GUI built with tkinter, interfacing seamlessly with
+            the underlying Stream Deck code through JSON files. But it became so
+            much more than just pretty buttons:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              Easy configuration for Stream Deck newbies and veterans alike
+            </li>
+            <li>
+              The power to execute terminal commands at the push of a button
+            </li>
+            <li>
+              A bridge between the tactile world of hardware and the flexibility
+              of Linux
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Server className="inline-block mr-2" /> Unexpected Power
+          </Heading>
+          <p>
+            The true &quot;aha!&quot; moment? Setting up a button to wake my old
+            Dell PowerEdge server from its closet slumber. Suddenly, Py-Deck
+            wasn&apos;t just a Stream Deck interface - it was a control center
+            for my entire home tech ecosystem.
+          </p>
+        </section>
+
+        <p>
+          Py-Deck is more than just a project - it&apos;s a testament to the
+          Linux community&apos;s ingenuity and the unexpected joy of making
+          hardware dance to the Linux tune. Who knew that a few lines of Python
+          could bridge worlds and bring a smile every time I press that
+          custom-configured button?
+        </p>
+      </div>
+    ),
   },
   {
     slug: "gitrekt-react-electron-app",
     title: "GitRekt: A React-Electron Git Management Tool",
     date: "August 18, 2024",
-    tagLine: "Exploring React and Electron integration for desktop app development",
+    tagLine:
+      "Exploring React and Electron integration for desktop app development",
     imgSrc: "/gitrekt-react-components.png",
     imgDescription: "GitRekt application interface showing React components",
-    summary: "GitRekt, a Git management tool, was developed to deepen understanding of React and modern web development practices. This project combines React, Electron, and D3.js to create a powerful desktop application for Git visualization and management.",
-    content: "GitRekt was primarily conceived as a project to deepen my understanding of React and modern web development practices. By creating a Git management tool, I aimed to challenge myself with complex state management and real-time updates. This project served as a practical playground for exploring React's ecosystem within an Electron environment. I leveraged Next.js for its powerful rendering capabilities and routing system, building the UI with React components and utilizing hooks for state management. One of the most exciting aspects was using Electron's Inter-Process Communication (IPC) to access the filesystem. This allowed me to create a seamless interface between the React frontend and native system capabilities, enabling operations like reading local repositories and saving configurations directly to disk. I integrated D3.js to create an interactive Git graph, which provided valuable experience in combining React with data visualization libraries. The project also involved working with the Octokit REST API for GitHub integration. Throughout the development process, I focused on React best practices, component reusability, and optimizing performance in the context of a desktop application. The combination of React, Electron, and IPC opened up exciting possibilities for creating powerful, cross-platform desktop apps with web technologies."
+    summary:
+      "GitRekt, a Git management tool, was developed to deepen understanding of React and modern web development practices. This project combines React, Electron, and D3.js to create a powerful desktop application for Git visualization and management.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          GitRekt: Where React Meets Electron for Git Mastery
+        </Heading>
+
+        <p className="italic text-gray-600">
+          Dive into the fusion of web technologies and desktop power with
+          GitRekt - a journey through React, Electron, and the art of Git
+          visualization.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Github className="inline-block mr-2" /> The Genesis of GitRekt
+          </Heading>
+          <p>
+            GitRekt was a challenge. A test for myself to combine React&apos;s
+            flexibility with Electron&apos;s desktop capabilities. The mission?
+            Create a Git management tool.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> Building Blocks of
+            Innovation
+          </Heading>
+          <p>Our toolkit was a web developer&apos;s dream:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>React and Next.js for a robust, responsive UI</li>
+            <li>Electron for bridging the web-desktop divide</li>
+            <li>D3.js for bringing Git graphs to life</li>
+            <li>
+              Electron&apos;s IPC for seamless frontend-system communication
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> Overcoming the Challenges
+          </Heading>
+          <p>
+            Building GitRekt was like solving a complex puzzle, with each piece
+            presenting its own unique challenge:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Mastering state management in a desktop environment</li>
+            <li>
+              Crafting a seamless user experience across different operating
+              systems
+            </li>
+            <li>Optimizing performance for large Git repositories</li>
+            <li>Integrating D3.js visualizations with React components</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> The Power of IPC
+          </Heading>
+          <p>
+            One of the most exciting breakthroughs was harnessing
+            Electron&apos;s Inter-Process Communication (IPC). This opened up a
+            world of possibilities:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Reading local Git repositories directly from the filesystem</li>
+            <li>
+              Saving user configurations to disk for a persistent experience
+            </li>
+            <li>
+              Executing Git commands with the power of a native application
+            </li>
+          </ul>
+        </section>
+
+        <p>
+          GitRekt isn&apos;t just an application; it&apos;s a testament to the
+          power of modern web technologies in desktop development. It stands as
+          proof that with the right tools and a bit of creativity, we can create
+          powerful, cross-platform applications that bring the best of both
+          worlds - web and desktop - together.
+        </p>
+      </div>
+    ),
   },
   {
     slug: "picpurge-duplicate-image-detection",
     title: "PicPurge: Intelligent Duplicate Image Detection and Sorting",
     date: "June 4, 2023",
-    tagLine: "Automating image organization with ML-powered duplicate detection",
+    tagLine:
+      "Automating image organization with ML-powered duplicate detection",
     imgSrc: "/picpurge.gif",
-    imgDescription: "PicPurge interface demonstrating duplicate image detection",
-    summary: "PicPurge is a Python script that facilitates the identification and removal of duplicate images within a designated directory, as well as image sorting using Machine Learning.",
-    content: "The driving factor behind this project was the fact that my Mom has at least 5 near duplicate copies of every image and it takes up a huge amount of extra space. I wanted a way for Near-Duplicate image detection and removal automatically. PicPurge is a Python script that facilitates the identification and removal of duplicate images within a designated directory, as well as image sorting using Machine Learning. This script utilizes image hashing for comparison purposes and now incorporates sorting functionality using TensorFlow for enhanced efficiency. The script offers both a command-line interface and a user-friendly GUI for seamless utilization."
+    imgDescription:
+      "PicPurge interface demonstrating duplicate image detection",
+    summary:
+      "PicPurge is a Python script that facilitates the identification and removal of duplicate images within a designated directory, as well as image sorting using Machine Learning.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          PicPurge: Taming the Wild West of Digital Photo Libraries
+        </Heading>
+
+        <p className="italic text-gray-600">
+          Born from my wish to help and a programmer&apos;s frustration,
+          PicPurge is the answer to the age-old question: &quot;Why do I have 5
+          copies of the same photo?&quot;
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Eraser className="inline-block mr-2" /> The Digital Clutter
+            Conundrum
+          </Heading>
+          <p>
+            It all started with my mom&apos;s photo collection - a digital
+            hoarder&apos;s dream (or nightmare). Duplicates upon duplicates,
+            eating up precious storage space and making finding that one perfect
+            shot like searching for a needle in a haystack... made of more
+            needles.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> Enter PicPurge: The Duplicate
+            Destroyer
+          </Heading>
+          <p>
+            PicPurge isn&apos;t just a script; it&apos;s a one-stop shop for
+            bringing order to chaos:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              Intelligent duplicate detection using advanced image hashing
+            </li>
+            <li>
+              Machine Learning-powered image sorting (because why stop at just
+              finding duplicates?)
+            </li>
+            <li>A user-friendly GUI for those who fear the command line</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> The Tech Behind the Magic
+          </Heading>
+          <p>
+            Building PicPurge was like creating a Swiss Army knife for photo
+            management:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Python: The backbone of our duplicate-busting operation</li>
+            <li>TensorFlow: Bringing AI smarts to image sorting</li>
+            <li>
+              Image hashing algorithms: For finding those sneaky near-duplicates
+            </li>
+            <li>Tkinter: Making it all accessible with a sleek GUI</li>
+          </ul>
+        </section>
+
+        <p>
+          PicPurge isn&apos;t just about clearing space; it&apos;s about
+          rediscovering lost memories, bringing order to digital chaos, and
+          maybe, just maybe, saving a few family relationships along the way.
+          Because let&apos;s face it, nobody needs 5 copies of that blurry
+          holiday photo - but the one perfect shot? That&apos;s worth keeping.
+        </p>
+      </div>
+    ),
   },
   {
     slug: "custom-keyboard-endeavour",
@@ -56,18 +527,172 @@ export const posts = [
     tagLine: "Designing and building a personalized keyboard from scratch",
     imgSrc: "/streamdeck.jpg",
     imgDescription: "Custom-designed and 3D-printed keyboard",
-    summary: "This project involved designing, 3D printing, and programming a custom keyboard to create a medium to small keyboard with a personalized layout.",
-    content: "This all started when I decided I did not like current small keyboards and standard ones were too large. I wanted a medium to small keyboard with a custom layout including all the keys I need and none of the ones I don't. In order to make my idea real I started off working in FreeCAD. I worked for quite a while to come up with a nice 3D model that I could print. While I came up with the model I tried to make sure that the intended microcontroller (Raspberry Pi Pico) would be able to handle the necessary amount of pins. Then, after I printed it all out I got to hand wiring which took quite a while but was a satisfying process. Finally I used KMK to make the keyboard work."
+    summary:
+      "This project involved designing, 3D printing, and programming a custom keyboard to create a medium to small keyboard with a personalized layout.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          The Custom Keyboard Chronicles: A Tale of Keys and 3D Printing
+        </Heading>
+
+        <p className="italic text-gray-600">
+          When off-the-shelf just won&apos;t cut it, sometimes you have to take
+          matters into your own hands... or should I say, under your own
+          fingertips?
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Keyboard className="inline-block mr-2" /> The Quest for the Perfect
+            Keyboard
+          </Heading>
+          <p>
+            It began with a simple realization: small keyboards lacked keys I
+            needed, and standard ones were too bulky. Thus began my quest for
+            the Goldilocks of keyboards - not too big, not too small, but just
+            right.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> From Digital to Physical:
+            The Design Process
+          </Heading>
+          <p>
+            Armed with FreeCAD and a dream, I set out to design my perfect
+            keyboard:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Crafting the ideal layout for maximum efficiency</li>
+            <li>Ensuring compatibility with the mighty Raspberry Pi Pico</li>
+            <li>
+              Designing for 3D printability (because who doesn&apos;t love the
+              smell of melted plastic in the morning?)
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Hammer className="inline-block mr-2" /> Bringing It to Life: The
+            Build Process
+          </Heading>
+          <p>
+            With the design complete, it was time to bring this keyboard into
+            the real world:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              3D printing the chassis (and learning the true meaning of
+              patience)
+            </li>
+            <li>
+              Hand-wiring each key (a meditative process, if you ignore the
+              occasional burnt finger)
+            </li>
+            <li>Programming with KMK, because even keyboards need a brain</li>
+          </ul>
+        </section>
+
+        <p>
+          The result? A keyboard that&apos;s more than just a input device -
+          it&apos;s a reflection of my workflow, a testament to DIY spirit, and
+          a conversation starter all rolled into one. Plus, it&apos;s the only
+          keyboard in the world that&apos;s exactly &apos;my type&apos;.
+        </p>
+      </div>
+    ),
   },
   {
     slug: "self-hosting-journey",
     title: "My Self-Hosting Journey",
     date: "September 17, 2022",
-    tagLine: "Building a personal cloud infrastructure for independence from commercial services",
+    tagLine:
+      "Building a personal cloud infrastructure for independence from commercial services",
     imgSrc: "/heimdall.png",
     imgDescription: "Heimdall dashboard showing self-hosted services",
-    summary: "This post chronicles a three-year journey of self-hosting various services, from file syncing and media streaming to experimenting with virtualization and VPN setups.",
-    content: "It all started because I wanted to move away from relying on and paying for cloud services. However, when I started all this I definitely did not have the technical skill in order to do it easily. After the past 3 years of cosplaying as a sys-admin I can say that I have a decent bit of experience managing and hosting servers. I have some old PC parts hosting TrueNAS which has Nextcloud, Plex, and Collabora. I use Nextcloud mainly for syncing up my machine but the web interface is also nice to access my files. Plex has my media collection, and Collabora works with Nextcloud for document editing. I also was gifted an old Dell server. Since it is so loud and just inside my closet it is off most of the time. But, when my girlfriend is away I spin it up to do any number of testing with Proxmox as the hypervisor. It does a nice job of warming up our apartment ;). Finally, in order to access all of my resources when I am away I have a mini rack I designed and printed that holds a mini switch, hard drive, and a Raspberry Pi. The Pi is running WireGuard so I can VPN into my network from anywhere."
+    summary:
+      "This post chronicles a three-year journey of self-hosting various services, from file syncing and media streaming to experimenting with virtualization and VPN setups.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          The Self-Hosting Saga: Breaking Free from the Cloud
+        </Heading>
+
+        <p className="italic text-gray-600">
+          Three years ago, I embarked on a journey to liberate myself from the
+          shackles of commercial cloud services. Little did I know, I was about
+          to become a part-time sys-admin, full-time tech enthusiast.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Server className="inline-block mr-2" /> From Novice to Know-How
+          </Heading>
+          <p>
+            Starting with more enthusiasm than expertise, I dove headfirst into
+            the world of self-hosting. It was a baptism by fire, filled with
+            late nights, configuration files, and the occasional accidental
+            server crash.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> Building My Digital Empire
+          </Heading>
+          <p>
+            Over time, my self-hosted setup grew into a veritable smorgasbord of
+            services:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>TrueNAS: The foundation of my digital fortress</li>
+            <li>
+              Nextcloud: Because why use Dropbox when you can drop it on your
+              own box?
+            </li>
+            <li>Plex: Turning my media collection into my personal Netflix</li>
+            <li>
+              Proxmox on an old Dell server: Because who needs peace and quiet
+              when you can have a mini data center in your closet?
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> The Challenges and Triumphs
+          </Heading>
+          <p>
+            Self-hosting isn&apos;t always smooth sailing. There were
+            challenges:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Battling with port forwarding (and winning, mostly)</li>
+            <li>
+              Learning the art of quiet cooling for servers in small spaces
+            </li>
+            <li>
+              Explaining to my girlfriend why the closet sounds like a jet
+              engine
+            </li>
+            <li>
+              Setting up a VPN for secure access, because paranoia is just good
+              sense in IT
+            </li>
+          </ul>
+        </section>
+
+        <p>
+          Today, my self-hosted setup is more than just services - it&apos;s a
+          testament to digital independence, a playground for continuous
+          learning, and yes, sometimes still a source of unexpected 3 AM wake-up
+          calls. But would I trade it for the simplicity of commercial cloud
+          services? Not a chance.
+        </p>
+      </div>
+    ),
   },
   {
     slug: "linux-transition-journey",
@@ -76,13 +701,89 @@ export const posts = [
     tagLine: "From Windows to Ubuntu to Arch: A personal Linux evolution",
     imgSrc: "/Arch.png",
     imgDescription: "Customized Arch Linux desktop environment",
-    summary: "This post details a three-year journey of transitioning to Linux, starting with Ubuntu and eventually settling on Arch, along with a switch to Neovim for development.",
-    content: "When I started hosting my own services I found I needed to become comfortable with the terminal and Linux/Unix. It's been around 3 years now that I have been mainly using Linux (I only use Windows for any gaming despite Proton's progress). I started like most on Ubuntu since I heard it was a 'just works' distro. This was my experience; however, 'just works' does not mean you can't break it. I found this out quickly having to troubleshoot my system. In all those hours I learned a lot about managing a Linux system. Nowadays I have switched to Arch btw ;). I found it interesting to read the wiki and go through the whole install process. It was a great way to learn how Arch works and allowed for easy customization. So far, I really enjoy the AUR and the bleeding edge packages. Also, with all this use of the terminal and specifically vim, I decided I wanted to fully commit to switching from VSCode to Neovim. It's not so much for me that it's lighter weight or anything, personally I just enjoy ricing and learning new things. As of now I actually think my workflow is already faster than in VSCode since I have jammed most of the useful key motions into my brain."
-  }
+    summary:
+      "This post details a three-year journey of transitioning to Linux, starting with Ubuntu and eventually settling on Arch, along with a switch to Neovim for development.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          The Linux Chronicles: From Windows Exile to Arch Enlightenment
+        </Heading>
+
+        <p className="italic text-gray-600">
+          Three years ago, I took my first step into the world of Linux. Little
+          did I know, I was embarking on a journey that would transform not just
+          my operating system, but my entire approach to computing.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Computer className="inline-block mr-2" /> The Ubuntu Initiation
+          </Heading>
+          <p>
+            Like many Linux newcomers, I started with Ubuntu. &quot;It just
+            works,&quot; they said. And it did... until I broke it. But in
+            breaking it, I learned more about Linux than any tutorial could
+            teach me.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> The Arch Ascension
+          </Heading>
+          <p>
+            As my skills grew, so did my curiosity. Enter Arch Linux - a distro
+            that doesn&apos;t hold your hand; it practically dares you to make
+            it work. The installation process was less like following a recipe
+            and more like conducting a symphony of command-line instructions.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              Embracing the AUR (Arch User Repository) - a treasure trove of
+              packages
+            </li>
+            <li>Living on the bleeding edge with rolling releases</li>
+            <li>Customizing every aspect of my system (because why not?)</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> The Neovim Nirvana
+          </Heading>
+          <p>
+            But why stop at the operating system? I decided to go all-in and
+            switch from VSCode to Neovim. It wasn&apos;t about being a
+            minimalist; it was about pushing my limits:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              Mastering Vim motions 
+            </li>
+            <li>
+              Customizing my Neovim setup
+            </li>
+            <li>
+              Realizing that, somehow, typing :wq feels more satisfying than
+              clicking a save button
+            </li>
+          </ul>
+        </section>
+
+        <p>
+          Today, my Arch Linux system, with its meticulously crafted Neovim
+          setup, isn&apos;t just a development environment - it&apos;s a
+          reflection of my journey, a testament to the power of open-source, and
+          a daily reminder that in the world of tech, learning never stops. And
+          yes, I do use Arch, btw.
+        </p>
+      </div>
+    ),
+  },
 ];
 
 export function getPostBySlug(slug) {
-  return posts.find(post => post.slug === slug);
+  return posts.find((post) => post.slug === slug);
 }
 
 export function getAllPosts() {

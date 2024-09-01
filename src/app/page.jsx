@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="relative w-screen h-screen overflow-auto bg-black text-white">
       <GlowingStarsBackgroundCard className="z-1" />
-      <Navbar />
+      <Navbar isLanding="true" />
 
       <main className="flex flex-col items-center justify-center h-full px-4 pt-40 mt-0 md:mt-20">
         <motion.div
