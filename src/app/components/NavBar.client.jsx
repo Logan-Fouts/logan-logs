@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function NavBar() {
+export default function NavBar(props) {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -45,7 +45,9 @@ export default function NavBar() {
                 className="h-12"
               />
             </Link>
-            <h1 className="text-2xl sm:text-5xl font-bold">Logan Fouts <hr></hr></h1>
+            {props.isLanding == undefined ? (
+            <h2 className="text-2xl sm:text-5xl font-bold">Logan Fouts <hr></hr></h2>
+            ) : null}
           </div>
 
           <button
