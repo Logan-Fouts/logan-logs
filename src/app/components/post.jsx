@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React from 'react';
 import Navbar from "/src/app/components/NavBar.client";
 import Link from "next/link";
-import Image from "next/image";
+import Comments from "./Comments";
 
 export default function Post({
   snippet,
@@ -52,6 +51,7 @@ export default function Post({
         </div>
         <p className="italic text-sm mt-2">{imgDescription}</p>
         <div className="w-4/4">{content}</div>
+        <Comments slug={slug} />
       </div>
     );
   };
