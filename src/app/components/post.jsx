@@ -17,7 +17,7 @@ export default function Post({
 }) {
   const Snippet = () => {
     return (
-      <div className="w-3/4 space-y-2 max-w-[1000px]">
+      <div className="w-full md:w-3/4 p-2 md:p-0 space-y-2 max-w-[1000px]">
         <h1 className="text-4xl font-semibold">{title}</h1>
         <p className="font-thin text-sm">{date}</p>
         <p>{tagLine}</p>
@@ -37,7 +37,7 @@ export default function Post({
 
   const FullPost = () => {
     return (
-      <div className="p-8 w-11/12 max-w-[1000px] md:p-0 md:w-7/12 space-y-4 mt-20">
+      <div className="w-screen md:w-11/12 p-2 md:p-8 max-w-[1000px] md:p-0 space-y-4 mt-20">
         <Navbar />
         <Link href={`/projects`}>
           <p className="text-blue-600 hover:text-blue-800 hover:underline">
