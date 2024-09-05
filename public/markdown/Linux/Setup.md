@@ -9,6 +9,7 @@ I use Arch Linux as my primary operating system, coupled with the GNOME desktop 
 - **Just Perfection**: Allows fine-tuning of the GNOME desktop.
 - **PaperWM**: Turns GNOME into a tiling window manager.
 - **User Themes**: Enables user-defined themes.
+
 ## Neovim Configuration
 
 For my text editing and development needs, I use Neovim with the following setup:

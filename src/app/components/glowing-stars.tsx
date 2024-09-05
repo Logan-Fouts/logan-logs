@@ -15,14 +15,9 @@ const GlowingStarsBackgroundCard = ({
 
   return (
     <div
-      onMouseEnter={() => {
-      }}
-      onMouseLeave={() => {
-      }}
-      className={cn(
-        "h-full w-full fixed top-0 left-0",
-        className
-      )}
+      onMouseEnter={() => {}}
+      onMouseLeave={() => {}}
+      className={cn("h-full w-full fixed top-0 left-0", className)}
     >
       <div className="flex justify-center items-center">
         <Illustration mouseEnter={mouseEnter} />
@@ -71,7 +66,7 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       highlightedStars.current = Array.from({ length: 5 }, () =>
-        Math.floor(Math.random() * stars)
+        Math.floor(Math.random() * stars),
       );
       setGlowingStars([...highlightedStars.current]);
     }, 3000);
@@ -156,4 +151,4 @@ const Glow = ({ delay }: { delay: number }) => {
   );
 };
 
-export default GlowingStarsBackgroundCard
+export default GlowingStarsBackgroundCard;

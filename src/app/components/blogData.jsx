@@ -757,12 +757,8 @@ layered_architecture.run(test_paths)`}
             minimalist; it was about pushing my limits:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>
-              Mastering Vim motions 
-            </li>
-            <li>
-              Customizing my Neovim setup
-            </li>
+            <li>Mastering Vim motions</li>
+            <li>Customizing my Neovim setup</li>
             <li>
               Realizing that, somehow, typing :wq feels more satisfying than
               clicking a save button

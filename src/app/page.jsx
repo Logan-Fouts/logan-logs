@@ -69,11 +69,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center">
             <div className="relative h-80 w-64 mb-4">
-              <Image
-                src="/cv.png"
-                layout="fill"
-                alt="CV Preview"
-              />
+              <Image src="/cv.png" layout="fill" alt="CV Preview" />
             </div>
             <a
               href="/CV.pdf"

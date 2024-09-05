@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "/src/app/components/NavBar.client";
 import Post from "../app/components/post";
 import { motion } from "framer-motion";
-import { getAllPosts } from "../app/components/blogData"
+import { getAllPosts } from "../app/components/blogData";
 
 export default function Projects() {
   const posts = getAllPosts();
@@ -18,10 +18,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Post
-              snippet={true}
-              {...post}
-            />
+            <Post snippet={true} {...post} />
           </motion.div>
         ))}
       </div>

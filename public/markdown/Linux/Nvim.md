@@ -3,13 +3,20 @@
 Here I will detail how I setup my NVim as my main IDE. It is 90% the same as Josean Martinez's but I just wanted to document how I have it mainly for myself.
 
 As I add more to my setup and change it I will update this document.
+
 ## Intro
+
 As I have said in my projects page, I got bored of using Vscode, so I decided to switch over to Nvim. At first I was using NvChad but I felt it had some areas in which it was lacking.
+
 ## Starting By Using Josean's Config
+
 - To start off and do most of the leg work you can copy [this](https://github.com/josean-dev/dev-environment-files)config setup into your .config file.
 - I recommend looking at the key maps in the config to begin understanding all the functionalities and binding. Otherwise which key is very helpful to explore the key motions available.
+
 ### The Plugins
+
 #### Core Functions and UI Enhancements
+
 - **alpha-nvim.lua**: Provides an attractive start screen for Neovim, offering quick access to recent files, sessions, and more.
 - **bufferline.lua**: Enhances the buffer line at the top of the window, allowing for easy navigation and organization of open files.
 - **colorizer.lua**: Automatically colorizes color codes (hex, RGB, etc.) in your code, making them easy to visualize.
@@ -26,15 +33,21 @@ As I have said in my projects page, I got bored of using Vscode, so I decided to
 - **toggleterm.lua**: Provides the ability to easily toggle terminal windows on and off, integrating smoothly into your Neovim workflow.
 - **vim-maximizer.lua**: Maximizes and restores the current window in Neovim to focus on the content without distractions.
 - **which-key.lua**: Displays a popup with possible keybindings following a keystroke, making it easier to learn and remember shortcuts.
+
 #### Language Support and Coding Enhancements
+
 - **comment.lua**: Simplifies commenting code, allowing for quick toggling of comments in various programming languages.
 - **formatting.lua** and **linting.lua**: Likely custom or third-party plugins for code formatting and linting, integrating with LSP or other tools to ensure code quality and consistency.
 - **lsp (lspconfig.lua, mason.lua, none-ls.lua)**: Integrates the Language Server Protocol (LSP) for powerful IDE-like features such as auto-completion, go-to definition, and real-time linting and diagnostics.
 
 ### Modifying and Adding Plugins
+
 #### nv-terminal
+
 I like to add this plugin to have a nice floating terminal inside nvim.
+
 - Add a file named nv-terminal.lua to the plugins folder and add the following config to it.
+
 ```lua
 return {
   "NvChad/nvterm",
@@ -68,8 +81,10 @@ return {
   end,
 }
 ```
+
 - Add in the keybind
-	- Add the following to the keymaps.lua file
+  - Add the following to the keymaps.lua file
+
 ```lua
 keymap.set(
   "n",
@@ -80,4 +95,5 @@ keymap.set(
 
 keymap.set("t", "<C-x>", "<C-\\><C-n>", { desc = "Exit terminal mode" }) --  Exit terminal mode
 ```
+
 - Then Finally restart nvim and use :Lazy to install the new plugin.

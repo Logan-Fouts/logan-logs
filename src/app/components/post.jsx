@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Navbar from "/src/app/components/NavBar.client";
 import Link from "next/link";
 import Comments from "./Comments";
