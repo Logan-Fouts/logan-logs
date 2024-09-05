@@ -46,7 +46,9 @@ export default function NavBar(props) {
               />
             </Link>
             {props.isLanding == undefined ? (
-            <h2 className="text-2xl sm:text-5xl font-bold">Logan Fouts <hr></hr></h2>
+              <h2 className="text-2xl sm:text-5xl font-bold">
+                Logan Fouts <hr></hr>
+              </h2>
             ) : null}
           </div>
 

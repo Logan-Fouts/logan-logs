@@ -1,7 +1,7 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import Post from '../app/components/post';
-import { getPostBySlug } from '../app/components/blogData';
+import React from "react";
+import { useRouter } from "next/router";
+import Post from "../app/components/post";
+import { getPostBySlug } from "../app/components/blogData";
 
 export default function PostPage() {
   const router = useRouter();

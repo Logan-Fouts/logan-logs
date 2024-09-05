@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Filter } from 'bad-words';
+import React, { useState, useEffect } from "react";
+import { Filter } from "bad-words";
 
 const filter = new Filter();
 
 export default function Comments({ slug }) {
   const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState({ user: '', comment: '' });
+  const [newComment, setNewComment] = useState({ user: "", comment: "" });
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -15,34 +15,34 @@ export default function Comments({ slug }) {
   const fetchComments = async () => {
     try {
       const res = await fetch(`/api/comments?slug=${slug}`);
-      if (!res.ok) throw new Error('Failed to fetch comments');
+      if (!res.ok) throw new Error("Failed to fetch comments");
       setComments(await res.json());
     } catch (err) {
-      setError('Error loading comments. Please try again later.');
+      setError("Error loading comments. Please try again later.");
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (filter.isProfane(newComment.comment)) {
-      setError('Please keep comments appropriate and respectful.');
+      setError("Please keep comments appropriate and respectful.");
       return;
     }
     try {
-      const res = await fetch('/api/comments', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/comments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...newComment,
           comment: filter.clean(newComment.comment),
-          post_slug: slug
+          post_slug: slug,
         }),
       });
-      if (!res.ok) throw new Error('Failed to add comment');
-      setNewComment({ user: '', comment: '' });
+      if (!res.ok) throw new Error("Failed to add comment");
+      setNewComment({ user: "", comment: "" });
       fetchComments();
     } catch (err) {
-      setError('Failed to post comment. Please try again.');
+      setError("Failed to post comment. Please try again.");
     }
   };
 
@@ -54,7 +54,9 @@ export default function Comments({ slug }) {
         {comments.map((comment, index) => (
           <li key={index} className="bg-slate-800 p-3 rounded shadow-sm">
             <p className="font-medium">{comment.user}</p>
-            <p className="text-xs text-gray-400 mt-1">{new Date(comment.date).toLocaleString()}</p>
+            <p className="text-xs text-gray-400 mt-1">
+              {new Date(comment.date).toLocaleString()}
+            </p>
             <p className="text-sm mt-1">{comment.comment}</p>
           </li>
         ))}
@@ -63,19 +65,26 @@ export default function Comments({ slug }) {
         <input
           type="text"
           value={newComment.user}
-          onChange={(e) => setNewComment({ ...newComment, user: e.target.value })}
+          onChange={(e) =>
+            setNewComment({ ...newComment, user: e.target.value })
+          }
           placeholder="Your Name"
           className="w-full p-2 rounded bg-slate-800"
           required
         />
         <textarea
           value={newComment.comment}
-          onChange={(e) => setNewComment({ ...newComment, comment: e.target.value })}
+          onChange={(e) =>
+            setNewComment({ ...newComment, comment: e.target.value })
+          }
           placeholder="Your Comment"
           className="w-full p-2 rounded bg-slate-800"
           required
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm hover:bg-blue-600 transition">
+        <button
+          type="submit"
+          className="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm hover:bg-blue-600 transition"
+        >
           Post Comment
         </button>
       </form>

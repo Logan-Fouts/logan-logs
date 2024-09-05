@@ -107,4 +107,3 @@ print([set1 - set2, set2 - set1])
 #### Queues
 
 - `pop()` is O(n) while `popleft()` is O(1)
-
