@@ -1,40 +1,58 @@
-"use client";
-import React, { createContext } from "react";
+/* eslint-disable @next/next/no-img-element */
+"use client"
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "./components/NavBar.client";
 import GlowingStarsBackgroundCard from "./components/glowing-stars.tsx";
-import { FaDownload } from "react-icons/fa";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+const SocialLink = ({ href, icon, label }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center group"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <div className="p-3 bg-white bg-opacity-10 rounded-full group-hover:bg-opacity-20 transition-all duration-300">
+      {icon}
+    </div>
+    <span className="mt-2 text-sm">{label}</span>
+  </motion.a>
+);
 
 export default function Home() {
   return (
     <div className="relative w-screen h-screen overflow-auto bg-black text-white">
-      <GlowingStarsBackgroundCard className="z-1" />
-      <Navbar isLanding="true" />
-
-      <main className="flex flex-col items-center justify-center h-full px-4 pt-40 mt-0 md:mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <div className="md:translate-x-20 flex items-center justify-center mb-6">
-            <h1 className="font-black text-4xl sm:text-6xl mr-4 bg-clip-text text-green-500 p-4">
-              Welcome To Logan Logs
-              <p className="font-normal text-white pt-5 text-lg sm:text-xl mb-12 max-w-2xl mx-auto">
+      <GlowingStarsBackgroundCard className="z-0" />
+      <Navbar isLanding={true} />
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center md:text-left"
+            >
+              <h1 className="font-black text-5xl sm:text-6xl mb-6 bg-clip-text text-green-500">
+                Welcome To Logan Logs
+              </h1>
+              <p className="font-normal text-white text-lg sm:text-xl mb-8 max-w-xl">
                 Here I compile my software/tech knowledge and experiences.
               </p>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
+                className="mb-8"
               >
-                <h2 className="font-bold text-2xl sm:text-3xl mb-6 text-green-400">
+                <h2 className="font-bold text-2xl sm:text-3xl mb-4 text-green-400">
                   Socials
                 </h2>
-                <div className="flex justify-center space-x-6 text-white">
+                <div className="flex justify-center md:justify-start space-x-6 text-white">
                   <SocialLink
                     href="https://github.com/Logan-Fouts"
                     icon={<FaGithub className="w-8 h-8" />}
@@ -47,61 +65,44 @@ export default function Home() {
                   />
                 </div>
               </motion.div>
-            </h1>
+              <motion.a
+                href="/CV.pdf"
+                download="Logan_Fouts_CV.pdf"
+                className="relative inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors text-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaDownload className="mr-2" />
+                Resume
+              </motion.a>
+            </motion.div>
             <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: [-5, 5] }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-              }}
-              className="hidden md:block"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <Image
-                src="/jag2.png"
-                width={500}
-                height={500}
-                alt="Logan Logs Logo"
-              />
+              <motion.div
+                initial={{ rotate: 0 }}
+                animate={{ rotate: [-5, 5] }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+                className="mb-8"
+              >
+                <img
+                  src="/jag2.png"
+                  alt="Logan Logs Logo"
+                  className="mx-auto md:mx-0 p-0"
+                />
+              </motion.div>
             </motion.div>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="relative h-80 w-64 mb-4">
-              <Image
-                src="/cv.png"
-                layout="fill"
-                alt="CV Preview"
-              />
-            </div>
-            <a
-              href="/CV.pdf"
-              download="Logan_Fouts_CV.pdf"
-              className="flex items-center px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors z-10"
-            >
-              <FaDownload className="mr-2" />
-              Download CV
-            </a>
-          </div>
-        </motion.div>
+        </div>
       </main>
     </div>
   );
 }
-
-const SocialLink = ({ href, icon, label }) => (
-  <motion.a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex flex-col items-center group"
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <div className="p-3 bg-white bg-opacity-10 rounded-full group-hover:bg-opacity-20 transition-all duration-300 z-30">
-      {icon}
-    </div>
-    <span className="mt-2 text-sm">{label}</span>
-  </motion.a>
-);

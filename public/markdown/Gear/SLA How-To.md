@@ -50,4 +50,3 @@ Note this is a really simple set of instructions intended originally for my pare
 9. Put the build plate back on the printer and tighten the screw until it's firm.
 10. Once the buzzer goes off, you can grab the model and make sure no parts of it look shiny. If they are, put it back in the curing station. If not, then you can safely touch it with your hands. Any wetness is just the alcohol. You can use a blow dryer to dry that off.
 11. Now remove any supports off the model.
-
