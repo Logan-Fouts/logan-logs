@@ -50,80 +50,6 @@ const CodeBlock = ({ code, language }) => {
 };
 
 export const posts = [
-{
-    slug: "ergo-board-progress",
-    title: "Ergo Keyboard Experimentation",
-    date: "September 6, 2024",
-    tagLine: "Releving my wrists with a new layout, the process.",
-    imgSrc: "/iris.jpg",
-    imgDescription:
-      "Temp ergo keyboard for testing",
-    summary:
-      "As I begin my carreer as a developer I would like to take care of my wrists for the forseable future, so I am going ergo!",
-    content: (
-      <div className="space-y-6 mb-10">
-    <Heading size="h1">
-      Switching To My Perfect Keyboard Layout
-    </Heading>
-    <p className="italic text-gray-600">
-      Yes, I know that I already have a perfect keyboard post on
-      here but I love tinkering too much.
-    </p>
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">The Journey Begins: Testing the Iris 58</h2>
-      <p>
-        As I embark on my career as a developer, I&apos;ve become increasingly aware of the importance of ergonomics. With countless hours spent typing, taking care of my wrists has become a top priority. This realization led me down the fascinating rabbit hole of ergonomic keyboards, and I&apos;m excited to share my latest experiment with you.
-      </p>
-      <p>
-        My current project involves testing an Iris 58 layout. For those unfamiliar, the Iris is a split ergonomic keyboard design that&apos;s gained popularity in the mechanical keyboard community. The 58 refers to the number of keys, offering a compact yet functional layout.
-      </p>
-      <p>
-        To simplify the initial build and testing process, I&apos;ve connected the halves of the keyboard. This temporary setup allows me to get a feel for the layout without committing to a full, polished build just yet.
-      </p>
-    </section>
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">The Test Build: Function Over Form</h2>
-      <p>
-        My current test board might not win any beauty contests, but it serves a crucial purpose. By creating this prototype, I can thoroughly evaluate the Iris 58 layout before investing time and resources into a more refined version.
-      </p>
-      <div className="my-6">
-        <img
-          src="/handwire.jpg"
-          alt="Handwiring of the Iris 58 test board"
-          className="w-full rounded-lg shadow-md"
-        />
-        <p className="text-sm text-gray-600 mt-2 italic">
-          A peek at the handwiring of my Iris 58 test board. It&apos;s not pretty, but it gets the job done!
-        </p>
-      </div>
-      <p>
-        As you can see from the image above, I&apos;ve done some basic handwiring to get this test board functional. It&apos;s a bit messy, but it allows me to:
-      </p>
-      <ul className="list-disc pl-6">
-        <li>Assess the comfort and ergonomics of the split design</li>
-        <li>Experiment with different key mappings and layers</li>
-        <li>Determine if the 58-key layout meets all my needs as a developer</li>
-        <li>Make informed decisions about potential modifications for the final build</li>
-      </ul>
-    </section>
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Looking Ahead: The Dream Build</h2>
-      <p>
-        Assuming the test goes well, my next step will be to create a sleek, low-profile version of this keyboard. Here&apos;s what I have in mind:
-      </p>
-      <ul className="list-disc pl-6">
-        <li>A custom PCB for a clean, professional look</li>
-        <li>Full split design for maximum ergonomic benefit</li>
-        <li>Choc switches for a super-low profile</li>
-        <li>Wireless connectivity for a clutter-free desk setup</li>
-      </ul>
-      <p>
-        Stay tuned for updates as I progress through this ergonomic keyboard journey.
-        </p>
-    </section>
-  </div>
-    ),
-  },
   {
     slug: "multi-method-ndi-detection-framework",
     title: "Multi-Method NDI Detection Framework",
@@ -832,7 +758,7 @@ layered_architecture.run(test_paths)`}
           </p>
           <ul className="list-disc list-inside space-y-2">
             <li>
-              Mastering Vim motions
+              Mastering Vim motions 
             </li>
             <li>
               Customizing my Neovim setup
