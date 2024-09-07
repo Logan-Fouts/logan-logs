@@ -96,7 +96,7 @@ export default function Home() {
                 <img
                   src="/jag2.png"
                   alt="Logan Logs Logo"
-                  className="mx-auto md:mx-0 p-0"
+                  className="mx-auto md:mx-0 p-"
                 />
               </motion.div>
             </motion.div>

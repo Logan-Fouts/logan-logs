@@ -72,6 +72,7 @@ export default function NavBar(props) {
                 transition={{ duration: 0.3 }}
               >
                 <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 py-4 sm:py-0">
+                  <NavItem href="/AboutMe">About Me</NavItem>
                   <NavItem href="/projects">Projects</NavItem>
                   <NavItem href="/documentation">Documentation</NavItem>
                 </ul>
