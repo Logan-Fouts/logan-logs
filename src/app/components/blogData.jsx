@@ -54,7 +54,7 @@ export const posts = [
     slug: "ergo-board-progress",
     title: "Ergo Keyboard Experimentation",
     date: "September 6, 2024",
-    tagLine: "Releving my wrists with a new layout, the process.",
+    tagLine: "Relieving my wrists with a new layout, the process.",
     imgSrc: "/iris.jpg",
     imgDescription:
       "Temp ergo keyboard for testing",
