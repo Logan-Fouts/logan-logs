@@ -88,7 +88,7 @@ export const posts = [
             At its core, Fit Focus is about doing a few things really well:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Easy-to-use routine management, because your workout shouldn't feel like solving a puzzle</li>
+            <li>Easy-to-use routine management, because your workout shouldn&apos;t feel like solving a puzzle</li>
             <li>A straightforward exercise library, no PhD in anatomy required</li>
             <li>Simple calorie tracking, math should not be part of your diet</li>
             <li>Weekly planning that does not overcomplicate your life</li>
@@ -100,27 +100,27 @@ export const posts = [
             <Terminal className="inline-block mr-2" /> The Tech Behind the Simplicity
           </Heading>
           <p>
-            Building Fit Focus was an exercise in restraint. Here's what's under the hood:
+            Building Fit Focus was an exercise in restraint. Here&apos;s what&apos;s under the hood:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>React for a snappy, responsive frontend, because waiting for your fitness app to load doesn't count as cardio</li>
+            <li>React for a snappy, responsive frontend, because waiting for your fitness app to load doesn&apos;t count as cardio</li>
             <li>Django powering our backend, Python: the language of fitness... and everything else</li>
-            <li>SQLite for data storage, proving you don't need a heavyweight database to lift heavy</li>
+            <li>SQLite for data storage, proving you don&apos;t need a heavyweight database to lift heavy</li>
             <li>Tailwind CSS for styling, making our app look good without the bloat - if only getting in shape was this easy</li>
           </ul>
         </section>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Zap className="inline-block mr-2" /> Challenges: Keeping It Simple Isn't Always Simple
+            <Zap className="inline-block mr-2" /> Challenges: Keeping It Simple Isn&apos;t Always Simple
           </Heading>
           <p>
             The journey was not without its hurdles:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Resisting the urge to add just one more feature ,feature creep is the junk food of development</li>
-            <li>Designing an intuitive UI that doesn't need a tutorial ,turns out, simplicity is complicated</li>
-            <li>Balancing simplicity with functionality ,because too simple is just a notebook</li>
+            <li>Resisting the urge to add &quot;just one more feature&quot; (feature creep is the junk food of development)</li>
+            <li>Designing an intuitive UI that doesn&apos;t need a tutorial (turns out, simplicity is complicated)</li>
+            <li>Balancing simplicity with functionality (because too simple is just a notebook)</li>
           </ul>
         </section>
 
@@ -129,7 +129,7 @@ export const posts = [
             <Utensils className="inline-block mr-2" /> The Calorie Tracking Conundrum
           </Heading>
           <p>
-            Implementing calorie tracking without overwhelming users was like trying to count calories at a buffet - tricky, but not impossible. We opted for a straightforward input system, focusing on total daily intake rather than breaking down every macronutrient. It's not for competitive bodybuilders, but for the average Joe trying to keep an eye on their diet, it is just right.
+            Implementing calorie tracking without overwhelming users was like trying to count calories at a buffet - tricky, but not impossible. We opted for a straightforward input system, focusing on total daily intake rather than breaking down every macronutrient. It&apos;s not for competitive bodybuilders, but for the average Joe trying to keep an eye on their diet, it is just right.
           </p>
         </section>
 
@@ -141,14 +141,14 @@ export const posts = [
             As Fit Focus grows, our commitment to simplicity remains. Future plans include:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Basic progress tracking (because seeing your gains shouldn't require a statistics degree)</li>
+            <li>Basic progress tracking (because seeing your gains shouldn&apos;t require a statistics degree)</li>
             <li>Optional reminder notifications (for those who need a gentle nudge, not a drill sergeant)</li>
-            <li>A mobile app (because your fitness journey doesn't stop at your desktop)</li>
+            <li>A mobile app (because your fitness journey doesn&apos;t stop at your desktop)</li>
           </ul>
         </section>
 
         <p>
-          Fit Focus isn't just an app, it's a philosophy. It's about making fitness accessible, manageable, and maybe even enjoyable. Because at the end of the day, the best fitness app is the one you'll actually use. And if we can help more people take that first step towards a healthier lifestyle without feeling overwhelmed, well, that's a workout for the heart we can all benefit from.
+          Fit Focus isn&apos;t just an app, it&apos;s a philosophy. It&apos;s about making fitness accessible, manageable, and maybe even enjoyable. Because at the end of the day, the best fitness app is the one you&apos;ll actually use. And if we can help more people take that first step towards a healthier lifestyle without feeling overwhelmed, well, that&apos;s a workout for the heart we can all benefit from.
         </p>
       </div>
     ),
