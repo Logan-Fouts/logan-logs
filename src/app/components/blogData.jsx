@@ -6,12 +6,15 @@ import {
   Zap,
   Hammer,
   Tv,
+  Dumbbell,
+  Calendar,
   Terminal,
   Eraser,
   Keyboard,
   Server,
   Computer,
   Github,
+  Utensils,
 } from "lucide-react";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
@@ -50,7 +53,107 @@ const CodeBlock = ({ code, language }) => {
 };
 
 export const posts = [
-{
+  {
+    slug: "fit-focus",
+    title: "FitFocus: A Streamlined Exercise App",
+    date: "October 9, 2024",
+    tagLine: "Simplifying the complex fitness app world",
+    imgSrc: "/fitfocus.png",
+    imgDescription: "FitFocus user interface showcasing its streamlined design",
+    summary: "Frustrated by unnecessarily complex fitness apps, I embarked on a journey to create FitFocus - a simple, intuitive fullstack application that puts the focus back on your workout, not on navigating the app.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          Fit Focus: Simplifying Fitness Management for Everyone
+        </Heading>
+
+        <p className="italic text-gray-600">
+          In a world of complex fitness apps, Fit Focus emerges as a breath of fresh air - because getting fit shouldn't require a PhD in app navigation.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Dumbbell className="inline-block mr-2" /> The Genesis of Fit Focus
+          </Heading>
+          <p>
+            Fit Focus was born out of frustration. As someone who just wanted to track workouts and calories without needing a user manual, I found myself drowning in a sea of overcomplicated fitness apps. So, I did what any reasonable developer would do - I built my own.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> Simplicity is the Ultimate Sophistication
+          </Heading>
+          <p>
+            At its core, Fit Focus is about doing a few things really well:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Easy-to-use routine management (because your workout shouldn't feel like solving a puzzle)</li>
+            <li>A straightforward exercise library (no PhD in anatomy required)</li>
+            <li>Simple calorie tracking (math shouldn't be part of your diet)</li>
+            <li>Weekly planning that doesn't overcomplicate your life</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> The Tech Behind the Simplicity
+          </Heading>
+          <p>
+            Building Fit Focus was an exercise in restraint (pun intended). Here's what's under the hood:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>React for a snappy, responsive frontend (because waiting for your fitness app to load doesn't count as cardio)</li>
+            <li>Django powering our backend (Python: the language of fitness... and everything else)</li>
+            <li>SQLite for data storage (proving you don't need a heavyweight database to lift heavy)</li>
+            <li>Tailwind CSS for styling (making our app look good without the bloat - if only getting in shape was this easy)</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> Challenges: Keeping It Simple Isn't Always Simple
+          </Heading>
+          <p>
+            The journey wasn't without its hurdles:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Resisting the urge to add "just one more feature" (feature creep is the junk food of development)</li>
+            <li>Designing an intuitive UI that doesn't need a tutorial (turns out, simplicity is complicated)</li>
+            <li>Balancing simplicity with functionality (because too simple is just a notebook)</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Utensils className="inline-block mr-2" /> The Calorie Tracking Conundrum
+          </Heading>
+          <p>
+            Implementing calorie tracking without overwhelming users was like trying to count calories at a buffet - tricky, but not impossible. We opted for a straightforward input system, focusing on total daily intake rather than breaking down every macronutrient. It's not for competitive bodybuilders, but for the average Joe trying to keep an eye on their diet, it's just right.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Calendar className="inline-block mr-2" /> Looking Ahead: The Future of Fit Focus
+          </Heading>
+          <p>
+            As Fit Focus grows, our commitment to simplicity remains. Future plans include:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Basic progress tracking (because seeing your gains shouldn't require a statistics degree)</li>
+            <li>Optional reminder notifications (for those who need a gentle nudge, not a drill sergeant)</li>
+            <li>A mobile app (because your fitness journey doesn't stop at your desktop)</li>
+          </ul>
+        </section>
+
+        <p>
+          Fit Focus isn't just an app; it's a philosophy. It's about making fitness accessible, manageable, and maybe even enjoyable. Because at the end of the day, the best fitness app is the one you'll actually use. And if we can help more people take that first step towards a healthier lifestyle without feeling overwhelmed, well, that's a workout for the heart we can all benefit from.
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "ergo-board-progress",
     title: "Ergo Keyboard Experimentation",
     date: "September 6, 2024",
@@ -62,66 +165,66 @@ export const posts = [
       "As I begin my carreer as a developer I would like to take care of my wrists for the forseable future, so I am going ergo!",
     content: (
       <div className="space-y-6 mb-10">
-    <Heading size="h1">
-      Switching To My Perfect Keyboard Layout
-    </Heading>
-    <p className="italic text-gray-600">
-      Yes, I know that I already have a perfect keyboard post on
-      here but I love tinkering too much.
-    </p>
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">The Journey Begins: Testing the Iris 58</h2>
-      <p>
-        As I embark on my career as a developer, I&apos;ve become increasingly aware of the importance of ergonomics. With countless hours spent typing, taking care of my wrists has become a top priority. This realization led me down the fascinating rabbit hole of ergonomic keyboards, and I&apos;m excited to share my latest experiment with you.
-      </p>
-      <p>
-        My current project involves testing an Iris 58 layout. For those unfamiliar, the Iris is a split ergonomic keyboard design that&apos;s gained popularity in the mechanical keyboard community. The 58 refers to the number of keys, offering a compact yet functional layout.
-      </p>
-      <p>
-        To simplify the initial build and testing process, I&apos;ve connected the halves of the keyboard. This temporary setup allows me to get a feel for the layout without committing to a full, polished build just yet.
-      </p>
-    </section>
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">The Test Build: Function Over Form</h2>
-      <p>
-        My current test board might not win any beauty contests, but it serves a crucial purpose. By creating this prototype, I can thoroughly evaluate the Iris 58 layout before investing time and resources into a more refined version.
-      </p>
-      <div className="my-6">
-        <img
-          src="/handwire.jpg"
-          alt="Handwiring of the Iris 58 test board"
-          className="w-full rounded-lg shadow-md"
-        />
-        <p className="text-sm text-gray-600 mt-2 italic">
-          A peek at the handwiring of my Iris 58 test board. It&apos;s not pretty, but it gets the job done!
+        <Heading size="h1">
+          Switching To My Perfect Keyboard Layout
+        </Heading>
+        <p className="italic text-gray-600">
+          Yes, I know that I already have a perfect keyboard post on
+          here but I love tinkering too much.
         </p>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold">The Journey Begins: Testing the Iris 58</h2>
+          <p>
+            As I embark on my career as a developer, I&apos;ve become increasingly aware of the importance of ergonomics. With countless hours spent typing, taking care of my wrists has become a top priority. This realization led me down the fascinating rabbit hole of ergonomic keyboards, and I&apos;m excited to share my latest experiment with you.
+          </p>
+          <p>
+            My current project involves testing an Iris 58 layout. For those unfamiliar, the Iris is a split ergonomic keyboard design that&apos;s gained popularity in the mechanical keyboard community. The 58 refers to the number of keys, offering a compact yet functional layout.
+          </p>
+          <p>
+            To simplify the initial build and testing process, I&apos;ve connected the halves of the keyboard. This temporary setup allows me to get a feel for the layout without committing to a full, polished build just yet.
+          </p>
+        </section>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold">The Test Build: Function Over Form</h2>
+          <p>
+            My current test board might not win any beauty contests, but it serves a crucial purpose. By creating this prototype, I can thoroughly evaluate the Iris 58 layout before investing time and resources into a more refined version.
+          </p>
+          <div className="my-6">
+            <img
+              src="/handwire.jpg"
+              alt="Handwiring of the Iris 58 test board"
+              className="w-full rounded-lg shadow-md"
+            />
+            <p className="text-sm text-gray-600 mt-2 italic">
+              A peek at the handwiring of my Iris 58 test board. It&apos;s not pretty, but it gets the job done!
+            </p>
+          </div>
+          <p>
+            As you can see from the image above, I&apos;ve done some basic handwiring to get this test board functional. It&apos;s a bit messy, but it allows me to:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Assess the comfort and ergonomics of the split design</li>
+            <li>Experiment with different key mappings and layers</li>
+            <li>Determine if the 58-key layout meets all my needs as a developer</li>
+            <li>Make informed decisions about potential modifications for the final build</li>
+          </ul>
+        </section>
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold">Looking Ahead: The Dream Build</h2>
+          <p>
+            Assuming the test goes well, my next step will be to create a sleek, low-profile version of this keyboard. Here&apos;s what I have in mind:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>A custom PCB for a clean, professional look</li>
+            <li>Full split design for maximum ergonomic benefit</li>
+            <li>Choc switches for a super-low profile</li>
+            <li>Wireless connectivity for a clutter-free desk setup</li>
+          </ul>
+          <p>
+            Stay tuned for updates as I progress through this ergonomic keyboard journey.
+          </p>
+        </section>
       </div>
-      <p>
-        As you can see from the image above, I&apos;ve done some basic handwiring to get this test board functional. It&apos;s a bit messy, but it allows me to:
-      </p>
-      <ul className="list-disc pl-6">
-        <li>Assess the comfort and ergonomics of the split design</li>
-        <li>Experiment with different key mappings and layers</li>
-        <li>Determine if the 58-key layout meets all my needs as a developer</li>
-        <li>Make informed decisions about potential modifications for the final build</li>
-      </ul>
-    </section>
-    <section className="space-y-4">
-      <h2 className="text-2xl font-bold">Looking Ahead: The Dream Build</h2>
-      <p>
-        Assuming the test goes well, my next step will be to create a sleek, low-profile version of this keyboard. Here&apos;s what I have in mind:
-      </p>
-      <ul className="list-disc pl-6">
-        <li>A custom PCB for a clean, professional look</li>
-        <li>Full split design for maximum ergonomic benefit</li>
-        <li>Choc switches for a super-low profile</li>
-        <li>Wireless connectivity for a clutter-free desk setup</li>
-      </ul>
-      <p>
-        Stay tuned for updates as I progress through this ergonomic keyboard journey.
-        </p>
-    </section>
-  </div>
     ),
   },
   {
