@@ -41,8 +41,8 @@ export default function NavBar(props) {
                 src="/logo.png"
                 alt="Logo"
                 width={35}
-                height={50}
-                className="h-12"
+                height={15}
+                className="h-8"
               />
             </Link>
             {props.isLanding == undefined ? (
