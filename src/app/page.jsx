@@ -41,7 +41,7 @@ export default function Home() {
                 Welcome To My Portfolio
               </h1>
               <p className="font-normal text-white text-lg sm:text-xl mb-8 max-w-xl">
-                Check out my projects, including my published thesis on the Multi-Method NDI Detection Framework, which offers a novel approach to near-duplicate image detection. FitFocus, another highlight, is a fitness app designed to simplify your workout experience and it is deployed on AWS EC2. Alongside these, I've explored ergonomic keyboard layouts, building AI-driven tools, and Linux support for windows hardware.
+                Check out my projects, including my published thesis on the Multi-Method NDI Detection Framework, which offers a novel approach to near-duplicate image detection. FitFocus, another highlight, is a fitness app designed to simplify your workout experience and it is deployed on AWS EC2. Alongside these, I&pos;ve explored ergonomic keyboard layouts, building AI-driven tools, and Linux support for windows hardware.
               </p>
               <motion.div
                 initial={{ opacity: 0 }}
