@@ -38,10 +38,10 @@ export default function Home() {
               className="text-center md:text-left"
             >
               <h1 className="font-black text-5xl sm:text-6xl mb-6 bg-clip-text text-green-500">
-                Welcome To Logan Logs
+                Welcome To My Portfolio
               </h1>
               <p className="font-normal text-white text-lg sm:text-xl mb-8 max-w-xl">
-                Here I compile my software/tech knowledge and experiences.
+                Check out my projects, including my published thesis on the Multi-Method NDI Detection Framework, which offers a novel approach to near-duplicate image detection. FitFocus, another highlight, is a fitness app designed to simplify your workout experience and it is deployed on AWS EC2. Alongside these, I've explored ergonomic keyboard layouts, building AI-driven tools, and Linux support for windows hardware.
               </p>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -82,23 +82,11 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <motion.div
-                initial={{ rotate: 0 }}
-                animate={{ rotate: [-5, 5] }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                }}
-                className="mb-8"
-              >
-                <img
-                  src="/jag2.png"
-                  alt="Logan Logs Logo"
-                  className="mx-auto md:mx-0 p-"
-                />
-              </motion.div>
+              <img
+                src="/jag2.png"
+                alt="Logan Logs Logo"
+                className="mx-auto md:mx-0"
+              />
             </motion.div>
           </div>
         </div>
