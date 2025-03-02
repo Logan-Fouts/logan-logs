@@ -144,7 +144,7 @@ export const posts = [
       </Heading>
 
       <p className="italic text-gray-600">
-        What started as a simple website for a local bonsai business turned into a full-fledged cross-platform learning app for kids. Here's how I brought this project to life.
+        What started as a simple website for a local bonsai business turned into a full-fledged cross-platform learning app for kids. Here&apos;s how I brought this project to life.
       </p>
 
       <section className="space-y-4">
@@ -160,7 +160,7 @@ export const posts = [
           <li><strong>Media Management:</strong> Leveraged <strong>Cloudinary</strong> for seamless image uploads and management, making it easy for the owner to add visuals to blog posts and event updates.</li>
         </ul>
         <p>
-          The website not only showcased the business's offerings but also provided a platform for the bonsai community to stay updated on events and learn more about bonsai care.
+          The website not only showcased the business&apos;s offerings but also provided a platform for the bonsai community to stay updated on events and learn more about bonsai care.
         </p>
       </section>
 
@@ -187,7 +187,7 @@ export const posts = [
           <Zap className="inline-block mr-2" /> Challenges and Learnings
         </Heading>
         <p>
-          This project was a fantastic learning experience, but it wasn't without its challenges:
+          This project was a fantastic learning experience, but it wasn&apos;t without its challenges:
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li><strong>Content Management:</strong> Ensuring the admin panel was intuitive enough for the business owner to manage without technical expertise.</li>
@@ -200,7 +200,7 @@ export const posts = [
       </section>
 
       <p>
-        This project was a perfect blend of creativity, technical skill, and client collaboration. It reinforced my passion for building solutions that not only solve problems but also create meaningful experiences for users. Whether it's a website or a learning app, I love bringing ideas to life through code.
+        This project was a perfect blend of creativity, technical skill, and client collaboration. It reinforced my passion for building solutions that not only solve problems but also create meaningful experiences for users. Whether it&apos;s a website or a learning app, I love bringing ideas to life through code.
       </p>
     </div>
   ),
