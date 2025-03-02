@@ -56,7 +56,7 @@ export const posts = [
   {
     slug: "bonsai-business-website-and-learning-app",
     title: "Bonsai Business Website & Kids Learning App",
-    date: "November 10, 2024",
+    date: "March 2, 2025",
     tagLine: "Building a dynamic website and cross-platform learning app for a local bonsai business",
     imgSrc: "/bonsai-website.png",
     imgDescription: "Screenshot of the bonsai business website homepage",
