@@ -54,6 +54,82 @@ const CodeBlock = ({ code, language }) => {
 
 export const posts = [
   {
+    slug: "bonsai-business-website-and-learning-app",
+    title: "Bonsai Business Website & Kids Learning App",
+    date: "November 10, 2024",
+    tagLine: "Building a dynamic website and cross-platform learning app for a local bonsai business",
+    imgSrc: "/bonsai-website.png",
+    imgDescription: "Screenshot of the bonsai business website homepage",
+    summary: "Developed a modern, dynamic website for a local bonsai business, followed by a cross-platform learning app to teach kids about bonsai cultivation.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          From Website to App: Empowering a Bonsai Business with Tech
+        </Heading>
+  
+        <p className="italic text-gray-600">
+          What started as a simple website for a local bonsai business turned into a full-fledged cross-platform learning app for kids. Here&apos;s how I brought this project to life.
+        </p>
+  
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Computer className="inline-block mr-2" /> The Bonsai Business Website
+          </Heading>
+          <p>
+            The project began with the creation of a modern, dynamic website for a local bonsai business. Built with <strong>ReactJS</strong> and deployed on <strong>Vercel</strong>, the website was designed to be both visually appealing and highly functional.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Admin Panel:</strong> Integrated <strong>Clerk</strong> for authentication, allowing the business owner to easily manage and update website content, including bonsai meeting details and blog posts.</li>
+            <li><strong>Database:</strong> Used <strong>MongoDB Atlas</strong> for storing dynamic content, ensuring scalability and reliability.</li>
+            <li><strong>Media Management:</strong> Leveraged <strong>Cloudinary</strong> for seamless image uploads and management, making it easy for the owner to add visuals to blog posts and event updates.</li>
+          </ul>
+          <p>
+            The website not only showcased the business&apos;s offerings but also provided a platform for the bonsai community to stay updated on events and learn more about bonsai care.
+          </p>
+        </section>
+  
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> The Cross-Platform Learning App
+          </Heading>
+          <p>
+            After the success of the website, the client approached me with a new idea: a cross-platform learning app to teach kids about bonsai cultivation. This was an exciting challenge that allowed me to expand my skills further.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Platform:</strong> Developed the app using <strong>React Native</strong> to ensure compatibility across both iOS and Android devices.</li>
+            <li><strong>Interactive Learning:</strong> Designed engaging, interactive lessons to teach kids about bonsai care, including watering schedules, pruning techniques, and the history of bonsai.</li>
+            <li><strong>Gamification:</strong> Added gamified elements like quizzes and achievement badges to keep kids motivated and engaged.</li>
+            <li><strong>Backend Integration:</strong> Connected the app to the existing <strong>MongoDB Atlas</strong> database to sync content updates from the website, ensuring consistency across platforms.</li>
+          </ul>
+          <p>
+            The app was a hit, providing a fun and educational experience for kids while promoting the bonsai business to a new audience.
+          </p>
+        </section>
+  
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> Challenges and Learnings
+          </Heading>
+          <p>
+            This project was a fantastic learning experience, but it wasn&apos;t without its challenges:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Content Management:</strong> Ensuring the admin panel was intuitive enough for the business owner to manage without technical expertise.</li>
+            <li><strong>Cross-Platform Compatibility:</strong> Addressing differences in UI/UX between iOS and Android to provide a seamless experience on both platforms.</li>
+            <li><strong>Engaging Young Users:</strong> Designing an app that was both educational and entertaining for kids required careful planning and creativity.</li>
+          </ul>
+          <p>
+            Despite these challenges, the project was a success, and I gained valuable experience in full-stack development, cross-platform app development, and client collaboration.
+          </p>
+        </section>
+  
+        <p>
+          This project was a perfect blend of creativity, technical skill, and client collaboration. It reinforced my passion for building solutions that not only solve problems but also create meaningful experiences for users. Whether it&apos;s a website or a learning app, I love bringing ideas to life through code.
+        </p>
+      </div>
+    ),
+  },
+  {
   slug: "bonsai-business-website-and-learning-app",
   title: "Bonsai Business Website & Kids Learning App",
   date: "November 10, 2024",
