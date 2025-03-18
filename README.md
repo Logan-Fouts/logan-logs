@@ -4,7 +4,7 @@ This is my personal website / portfolio website. [Here](https://logan-logs.verce
 
 ## About
 
-Built with react to get a little more used to it.
+Built with react to get more used to it.
 
 
 ## Run With Docker
