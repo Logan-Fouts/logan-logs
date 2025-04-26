@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+/* eslint-disable-next-line react/no-unescaped-entities */
 "use client"
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
