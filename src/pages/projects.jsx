@@ -7,7 +7,7 @@ import { getAllPosts } from "../app/components/blogData";
 
 function PageSwitcher({ pages, currentPage, onPageChange }) {
   return (
-    <div className="w-1/4 bg-gray-900 text-center pb-10">
+    <div className="w-1/2 md:w-1/4 bg-gray-900 text-center pb-10">
       {Array.from({ length: pages }, (_, i) => i + 1).map((pageNum) => (
         <button
           key={pageNum}
