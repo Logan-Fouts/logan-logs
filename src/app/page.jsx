@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable-next-line react/no-unescaped-entities */
 "use client"
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -40,6 +39,7 @@ const TypingEffect = ({ text }) => {
 
   return <span>{displayText}</span>;
 };
+
 export default function Home() {
   return (
     <div className="relative w-screen h-screen overflow-auto bg-black text-white">
@@ -70,9 +70,9 @@ export default function Home() {
                 <span className="text-green-400 font-medium"> Multi-Method NDI Detection Framework</span>,
                 which offers a novel approach to near-duplicate image detection.
                 <span className="text-green-400 font-medium"> WildWood Gardens</span>, another highlight,
-                is a website I built for a local bonsai business. I've also developed a
+                is a website I built for a local bonsai business. I&apos;ve also developed a
                 <span className="text-green-400 font-medium"> full-featured mobile app</span> for Them aswell
-                using React Native. Additionally, I've explored some product development,
+                using React Native. Additionally, I&apos;ve explored some product development,
                 AI-driven tools, and Linux support for Windows hardware.
               </motion.p>
               <motion.a
