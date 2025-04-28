@@ -54,6 +54,77 @@ const CodeBlock = ({ code, language }) => {
 
 export const posts = [
   {
+    slug: "contrib-cal-github-calendar",
+    title: "Contrib Cal: Physical GitHub Contribution Tracker",
+    date: "April 28, 2025",
+    tagLine: "A 3D printed Raspberry Pi Pico project that visualizes GitHub activity with NeoPixel LEDs",
+    imgSrc: "/contrib-cal.JPG",
+    imgDescription: "Contrib Cal showing GitHub contribution LED matrix",
+    summary: "Created a physical GitHub contribution calendar using a Raspberry Pi Pico 2W and NeoPixel LEDs, housed in a custom 3D printed enclosure with MicroPython firmware.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          Contrib Cal: Bringing GitHub&apos;s Activity Graph Into the Physical World
+        </Heading>
+
+        <p className="italic text-gray-600">
+          What began as a weekend project became a tangible way to track coding habits - a 3D printed GitHub contribution calendar that lights up with your development activity.
+        </p>
+
+        <section className="space-y-4">
+          <a href="https://github.com/Logan-Fouts/Contrib_Cal" className="text-xl font-bold mb-4 text-blue-600 underline">
+            <Github className="inline-block mr-2" /> The Concept
+          </a>
+          <p>
+            Inspired by GitHub&apos;s signature contribution graph, I designed Contrib Cal to display 28 days of activity through illuminated squares. Each of the 28 NeoPixel LEDs represents a day, glowing brighter green as contributions increase - just like the digital version.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Real-time visualization:</strong> Shows today plus the previous 27 days of activity</li>
+            <li><strong>Startup animations:</strong> Playful LED sequences on power-up</li>
+            <li><strong>Hackable:</strong> Simple MicroPython code makes every bit of it easy to change</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> Technical Implementation
+          </Heading>
+          <p>
+            The project combines several technologies into a compact desktop device:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Hardware:</strong> Raspberry Pi Pico 2W with NeoPixel LEDs</li>
+            <li><strong>Enclosure:</strong> Custom opaque black resin-printed case with precise light channels</li>
+            <li><strong>Software:</strong> MicroPython for easy customization</li>
+          </ul>
+          <p>
+            The firmware fetches contribution data through GitHub&apos;s API and maps it to LED brightness values. I chose MicroPython specifically to make it accessible for others to modify - whether changing animation patterns, brightness curves, or data sources.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> Design Challenges
+          </Heading>
+          <p>
+            Creating a polished physical product presented unique challenges:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Hackability/Usability:</strong> I wanted to make it as easy to hack as possible for users so I took extra steps to make the build process from soldering to changing to code simple.</li>
+            <li><strong>Light isolation:</strong> The opaque black case required precise channel design to prevent light bleed between squares</li>
+          </ul>
+          <p>
+            The final design uses a three-part assembly - The case, LED grid, and top diffuser with an led seperator - all printed in black resin.
+          </p>
+        </section>
+
+        <p>
+          Contrib Cal bridges the digital and physical worlds, transforming abstract commit history into a tangible display. The opaque black enclosure gives it a professional look while the open-source firmware invites customization. Project files are available on GitHub for anyone interested in building their own version.
+        </p>
+      </div>
+    )
+  },
+  {
     slug: "bonsai-business-website-and-learning-app",
     title: "Bonsai Business Website & Kids Learning App",
     date: "March 2, 2025",
@@ -66,11 +137,11 @@ export const posts = [
         <Heading size="h1">
           From Website to App: Empowering a Bonsai Business with Tech
         </Heading>
-  
+
         <p className="italic text-gray-600">
           What started as a simple website for a local bonsai business turned into a full-fledged cross-platform learning app for kids. Here is how I brought this project to life.
         </p>
-  
+
         <section className="space-y-4">
           <Heading size="h2">
             <Computer className="inline-block mr-2" /> The Bonsai Business Website
@@ -87,7 +158,7 @@ export const posts = [
             The website not only showcased the business offerings but also provided a platform for the bonsai community to stay updated on events and learn more about bonsai care.
           </p>
         </section>
-  
+
         <section className="space-y-4">
           <Heading size="h2">
             <Terminal className="inline-block mr-2" /> The Cross-Platform Learning App
@@ -105,7 +176,7 @@ export const posts = [
             The app was a hit, providing a fun and educational experience for kids while promoting the bonsai business to a new audience.
           </p>
         </section>
-  
+
         <section className="space-y-4">
           <Heading size="h2">
             <Zap className="inline-block mr-2" /> Challenges and Learnings
@@ -122,7 +193,7 @@ export const posts = [
             Despite these challenges, the project was a success, and I gained valuable experience in full-stack development, cross-platform app development, and client collaboration.
           </p>
         </section>
-  
+
         <p>
           This project was a perfect blend of creativity, technical skill, and client collaboration. It reinforced my passion for building solutions that not only solve problems but also create meaningful experiences for users. Whether it is a website or a learning app, I love bringing ideas to life through code.
         </p>
