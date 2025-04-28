@@ -1,6 +1,7 @@
 # Arch Linux Installation Guide with Full Disk Encryption
 
 ### Boot into Arch Linux Live Environment
+
 1. Create a bootable USB with Arch Linux ISO
 2. Boot from the USB
 3. Verify UEFI mode:
@@ -10,6 +11,7 @@
    (This should display directory contents)
 
 ### Internet Connection
+
 - Use ethernet for easiest setup
 - For WiFi, use `iwctl`
 - Verify connection:
@@ -20,12 +22,14 @@
 ## Disk Partitioning
 
 ### Identify Disk
+
 ```bash
 lsblk
 fdisk -l
 ```
 
 ### Create Partition Table
+
 ```bash
 fdisk /dev/sdX  # Replace sdX with your disk name
 
@@ -34,11 +38,13 @@ fdisk /dev/sdX  # Replace sdX with your disk name
 ```
 
 ### Create Partitions
+
 1. EFI Partition (100M)
 2. Boot Partition (512M)
 3. Main Encrypted Partition (Remaining space)
 
 ### Format Partitions
+
 ```bash
 # EFI Partition
 mkfs.fat -F32 /dev/sdX1
@@ -50,6 +56,7 @@ mkfs.ext4 /dev/sdX2
 ## Encryption Setup
 
 ### Create Encrypted Container
+
 ```bash
 # Encrypt main partition
 cryptsetup --use-random luksFormat /dev/sdX3
@@ -57,6 +64,7 @@ cryptsetup luksOpen /dev/sdX3 cryptlvm
 ```
 
 ### LVM Setup
+
 ```bash
 # Create Physical Volume
 pvcreate /dev/mapper/cryptlvm
@@ -71,6 +79,7 @@ lvcreate -l 100%FREE vg0 -n home
 ```
 
 ### Format Logical Volumes
+
 ```bash
 mkswap /dev/vg0/swap
 mkfs.ext4 /dev/vg0/root
@@ -78,6 +87,7 @@ mkfs.ext4 /dev/vg0/home
 ```
 
 ## Mount Filesystems
+
 ```bash
 mount /dev/vg0/root /mnt
 mkdir /mnt/boot
@@ -91,6 +101,7 @@ swapon /dev/vg0/swap
 ```
 
 ## Install Base System
+
 ```bash
 pacstrap -K /mnt base linux linux-firmware \
     lvm2 networkmanager sudo vim git \
@@ -101,6 +112,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 ## Chroot and Configure
+
 ```bash
 arch-chroot /mnt
 
@@ -125,6 +137,7 @@ visudo  # Uncomment: %wheel ALL=(ALL) ALL
 ```
 
 ## Initramfs and Bootloader
+
 ```bash
 # Configure mkinitcpio
 vim /etc/mkinitcpio.conf
@@ -145,6 +158,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Finalize
+
 ```bash
 # Enable network
 systemctl enable NetworkManager
@@ -156,6 +170,7 @@ reboot
 ```
 
 ## Additional Security Tips
+
 - Backup LUKS header:
   ```bash
   sudo cryptsetup luksHeaderBackup /dev/sdX3 --header-backup-file luks-header-backup

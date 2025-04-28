@@ -57,31 +57,52 @@ export const posts = [
     slug: "contrib-cal-github-calendar",
     title: "Contrib Cal: Physical GitHub Contribution Tracker",
     date: "April 28, 2025",
-    tagLine: "A 3D printed Raspberry Pi Pico project that visualizes GitHub activity with NeoPixel LEDs",
+    tagLine:
+      "A 3D printed Raspberry Pi Pico project that visualizes GitHub activity with NeoPixel LEDs",
     imgSrc: "/contrib-cal.JPG",
     imgDescription: "Contrib Cal showing GitHub contribution LED matrix",
-    summary: "Created a physical GitHub contribution calendar using a Raspberry Pi Pico 2W and NeoPixel LEDs, housed in a custom 3D printed enclosure with MicroPython firmware.",
+    summary:
+      "Created a physical GitHub contribution calendar using a Raspberry Pi Pico 2W and NeoPixel LEDs, housed in a custom 3D printed enclosure with MicroPython firmware.",
     content: (
       <div className="space-y-6 mb-10">
         <Heading size="h1">
-          Contrib Cal: Bringing GitHub&apos;s Activity Graph Into the Physical World
+          Contrib Cal: Bringing GitHub&apos;s Activity Graph Into the Physical
+          World
         </Heading>
 
         <p className="italic text-gray-600">
-          What began as a weekend project became a tangible way to track coding habits - a 3D printed GitHub contribution calendar that lights up with your development activity.
+          What began as a weekend project became a tangible way to track coding
+          habits - a 3D printed GitHub contribution calendar that lights up with
+          your development activity.
         </p>
 
         <section className="space-y-4">
-          <a href="https://github.com/Logan-Fouts/Contrib_Cal" className="text-xl font-bold mb-4 text-blue-600 underline">
+          <a
+            href="https://github.com/Logan-Fouts/Contrib_Cal"
+            className="text-xl font-bold mb-4 text-blue-600 underline"
+          >
             <Github className="inline-block mr-2" /> The Concept
           </a>
           <p>
-            Inspired by GitHub&apos;s signature contribution graph, I designed Contrib Cal to display 28 days of activity through illuminated squares. Each of the 28 NeoPixel LEDs represents a day, glowing brighter green as contributions increase - just like the digital version.
+            Inspired by GitHub&apos;s signature contribution graph, I designed
+            Contrib Cal to display 28 days of activity through illuminated
+            squares. Each of the 28 NeoPixel LEDs represents a day, glowing
+            brighter green as contributions increase - just like the digital
+            version.
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Real-time visualization:</strong> Shows today plus the previous 27 days of activity</li>
-            <li><strong>Startup animations:</strong> Playful LED sequences on power-up</li>
-            <li><strong>Hackable:</strong> Simple MicroPython code makes every bit of it easy to change</li>
+            <li>
+              <strong>Real-time visualization:</strong> Shows today plus the
+              previous 27 days of activity
+            </li>
+            <li>
+              <strong>Startup animations:</strong> Playful LED sequences on
+              power-up
+            </li>
+            <li>
+              <strong>Hackable:</strong> Simple MicroPython code makes every bit
+              of it easy to change
+            </li>
           </ul>
         </section>
 
@@ -90,15 +111,26 @@ export const posts = [
             <Terminal className="inline-block mr-2" /> Technical Implementation
           </Heading>
           <p>
-            The project combines several technologies into a compact desktop device:
+            The project combines several technologies into a compact desktop
+            device:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Hardware:</strong> Raspberry Pi Pico 2W with NeoPixel LEDs</li>
-            <li><strong>Enclosure:</strong> Custom opaque black resin-printed case with precise light channels</li>
-            <li><strong>Software:</strong> MicroPython for easy customization</li>
+            <li>
+              <strong>Hardware:</strong> Raspberry Pi Pico 2W with NeoPixel LEDs
+            </li>
+            <li>
+              <strong>Enclosure:</strong> Custom opaque black resin-printed case
+              with precise light channels
+            </li>
+            <li>
+              <strong>Software:</strong> MicroPython for easy customization
+            </li>
           </ul>
           <p>
-            The firmware fetches contribution data through GitHub&apos;s API and maps it to LED brightness values. I chose MicroPython specifically to make it accessible for others to modify - whether changing animation patterns, brightness curves, or data sources.
+            The firmware fetches contribution data through GitHub&apos;s API and
+            maps it to LED brightness values. I chose MicroPython specifically
+            to make it accessible for others to modify - whether changing
+            animation patterns, brightness curves, or data sources.
           </p>
         </section>
 
@@ -110,28 +142,42 @@ export const posts = [
             Creating a polished physical product presented unique challenges:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Hackability/Usability:</strong> I wanted to make it as easy to hack as possible for users so I took extra steps to make the build process from soldering to changing to code simple.</li>
-            <li><strong>Light isolation:</strong> The opaque black case required precise channel design to prevent light bleed between squares</li>
+            <li>
+              <strong>Hackability/Usability:</strong> I wanted to make it as
+              easy to hack as possible for users so I took extra steps to make
+              the build process from soldering to changing to code simple.
+            </li>
+            <li>
+              <strong>Light isolation:</strong> The opaque black case required
+              precise channel design to prevent light bleed between squares
+            </li>
           </ul>
           <p>
-            The final design uses a three-part assembly - The case, LED grid, and top diffuser with an led seperator - all printed in black resin.
+            The final design uses a three-part assembly - The case, LED grid,
+            and top diffuser with an led seperator - all printed in black resin.
           </p>
         </section>
 
         <p>
-          Contrib Cal bridges the digital and physical worlds, transforming abstract commit history into a tangible display. The opaque black enclosure gives it a professional look while the open-source firmware invites customization. Project files are available on GitHub for anyone interested in building their own version.
+          Contrib Cal bridges the digital and physical worlds, transforming
+          abstract commit history into a tangible display. The opaque black
+          enclosure gives it a professional look while the open-source firmware
+          invites customization. Project files are available on GitHub for
+          anyone interested in building their own version.
         </p>
       </div>
-    )
+    ),
   },
   {
     slug: "bonsai-business-website-and-learning-app",
     title: "Bonsai Business Website & Kids Learning App",
     date: "March 2, 2025",
-    tagLine: "Building a dynamic website and cross-platform learning app for a local bonsai business",
+    tagLine:
+      "Building a dynamic website and cross-platform learning app for a local bonsai business",
     imgSrc: "/bonsai-website.png",
     imgDescription: "Screenshot of the bonsai business website homepage",
-    summary: "Developed a modern, dynamic website for a local bonsai business, followed by a cross-platform learning app to teach kids about bonsai cultivation.",
+    summary:
+      "Developed a modern, dynamic website for a local bonsai business, followed by a cross-platform learning app to teach kids about bonsai cultivation.",
     content: (
       <div className="space-y-6 mb-10">
         <Heading size="h1">
@@ -139,41 +185,82 @@ export const posts = [
         </Heading>
 
         <p className="italic text-gray-600">
-          What started as a simple website for a local bonsai business turned into a full-fledged cross-platform learning app for kids. Here is how I brought this project to life.
+          What started as a simple website for a local bonsai business turned
+          into a full-fledged cross-platform learning app for kids. Here is how
+          I brought this project to life.
         </p>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Computer className="inline-block mr-2" /> The Bonsai Business Website
+            <Computer className="inline-block mr-2" /> The Bonsai Business
+            Website
           </Heading>
           <p>
-            The project began with the creation of a modern, dynamic website for a local bonsai business. Built with <strong>ReactJS</strong> and deployed on <strong>Vercel</strong>, the website was designed to be both visually appealing and highly functional.
+            The project began with the creation of a modern, dynamic website for
+            a local bonsai business. Built with <strong>ReactJS</strong> and
+            deployed on <strong>Vercel</strong>, the website was designed to be
+            both visually appealing and highly functional.
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Admin Panel:</strong> Integrated <strong>Clerk</strong> for authentication, allowing the business owner to easily manage and update website content, including bonsai meeting details and blog posts.</li>
-            <li><strong>Database:</strong> Used <strong>MongoDB Atlas</strong> for storing dynamic content, ensuring scalability and reliability.</li>
-            <li><strong>Media Management:</strong> Leveraged <strong>Cloudinary</strong> for seamless image uploads and management, making it easy for the owner to add visuals to blog posts and event updates.</li>
+            <li>
+              <strong>Admin Panel:</strong> Integrated <strong>Clerk</strong>{" "}
+              for authentication, allowing the business owner to easily manage
+              and update website content, including bonsai meeting details and
+              blog posts.
+            </li>
+            <li>
+              <strong>Database:</strong> Used <strong>MongoDB Atlas</strong> for
+              storing dynamic content, ensuring scalability and reliability.
+            </li>
+            <li>
+              <strong>Media Management:</strong> Leveraged{" "}
+              <strong>Cloudinary</strong> for seamless image uploads and
+              management, making it easy for the owner to add visuals to blog
+              posts and event updates.
+            </li>
           </ul>
           <p>
-            The website not only showcased the business offerings but also provided a platform for the bonsai community to stay updated on events and learn more about bonsai care.
+            The website not only showcased the business offerings but also
+            provided a platform for the bonsai community to stay updated on
+            events and learn more about bonsai care.
           </p>
         </section>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Terminal className="inline-block mr-2" /> The Cross-Platform Learning App
+            <Terminal className="inline-block mr-2" /> The Cross-Platform
+            Learning App
           </Heading>
           <p>
-            After the success of the website, the client approached me with a new idea: a cross-platform learning app to teach kids about bonsai cultivation. This was an exciting challenge that allowed me to expand my skills further.
+            After the success of the website, the client approached me with a
+            new idea: a cross-platform learning app to teach kids about bonsai
+            cultivation. This was an exciting challenge that allowed me to
+            expand my skills further.
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Platform:</strong> Developed the app using <strong>React Native</strong> to ensure compatibility across both iOS and Android devices.</li>
-            <li><strong>Interactive Learning:</strong> Designed engaging, interactive lessons to teach kids about bonsai care, including watering schedules, pruning techniques, and the history of bonsai.</li>
-            <li><strong>Gamification:</strong> Added gamified elements like quizzes and achievement badges to keep kids motivated and engaged.</li>
-            <li><strong>Backend Integration:</strong> Connected the app to the existing <strong>MongoDB Atlas</strong> database to sync content updates from the website, ensuring consistency across platforms.</li>
+            <li>
+              <strong>Platform:</strong> Developed the app using{" "}
+              <strong>React Native</strong> to ensure compatibility across both
+              iOS and Android devices.
+            </li>
+            <li>
+              <strong>Interactive Learning:</strong> Designed engaging,
+              interactive lessons to teach kids about bonsai care, including
+              watering schedules, pruning techniques, and the history of bonsai.
+            </li>
+            <li>
+              <strong>Gamification:</strong> Added gamified elements like
+              quizzes and achievement badges to keep kids motivated and engaged.
+            </li>
+            <li>
+              <strong>Backend Integration:</strong> Connected the app to the
+              existing <strong>MongoDB Atlas</strong> database to sync content
+              updates from the website, ensuring consistency across platforms.
+            </li>
           </ul>
           <p>
-            The app was a hit, providing a fun and educational experience for kids while promoting the bonsai business to a new audience.
+            The app was a hit, providing a fun and educational experience for
+            kids while promoting the bonsai business to a new audience.
           </p>
         </section>
 
@@ -182,20 +269,39 @@ export const posts = [
             <Zap className="inline-block mr-2" /> Challenges and Learnings
           </Heading>
           <p>
-            This project was a fantastic learning experience, but it was not without its challenges:
+            This project was a fantastic learning experience, but it was not
+            without its challenges:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Content Management:</strong> Ensuring the admin panel was intuitive enough for the business owner to manage without technical expertise.</li>
-            <li><strong>Cross-Platform Compatibility:</strong> Addressing differences in UI/UX between iOS and Android to provide a seamless experience on both platforms.</li>
-            <li><strong>Engaging Young Users:</strong> Designing an app that was both educational and entertaining for kids required careful planning and creativity.</li>
+            <li>
+              <strong>Content Management:</strong> Ensuring the admin panel was
+              intuitive enough for the business owner to manage without
+              technical expertise.
+            </li>
+            <li>
+              <strong>Cross-Platform Compatibility:</strong> Addressing
+              differences in UI/UX between iOS and Android to provide a seamless
+              experience on both platforms.
+            </li>
+            <li>
+              <strong>Engaging Young Users:</strong> Designing an app that was
+              both educational and entertaining for kids required careful
+              planning and creativity.
+            </li>
           </ul>
           <p>
-            Despite these challenges, the project was a success, and I gained valuable experience in full-stack development, cross-platform app development, and client collaboration.
+            Despite these challenges, the project was a success, and I gained
+            valuable experience in full-stack development, cross-platform app
+            development, and client collaboration.
           </p>
         </section>
 
         <p>
-          This project was a perfect blend of creativity, technical skill, and client collaboration. It reinforced my passion for building solutions that not only solve problems but also create meaningful experiences for users. Whether it is a website or a learning app, I love bringing ideas to life through code.
+          This project was a perfect blend of creativity, technical skill, and
+          client collaboration. It reinforced my passion for building solutions
+          that not only solve problems but also create meaningful experiences
+          for users. Whether it is a website or a learning app, I love bringing
+          ideas to life through code.
         </p>
       </div>
     ),
@@ -207,7 +313,8 @@ export const posts = [
     tagLine: "Simplifying the complex fitness app world",
     imgSrc: "/fitfocus.png",
     imgDescription: "FitFocus user interface showcasing its streamlined design",
-    summary: "Frustrated by unnecessarily complex fitness apps, I embarked on a journey to create FitFocus - a simple, intuitive fullstack application that puts the focus back on your workout, not on navigating the app.",
+    summary:
+      "Frustrated by unnecessarily complex fitness apps, I embarked on a journey to create FitFocus - a simple, intuitive fullstack application that puts the focus back on your workout, not on navigating the app.",
     content: (
       <div className="space-y-6 mb-10">
         <Heading size="h1">
@@ -215,7 +322,9 @@ export const posts = [
         </Heading>
 
         <p className="italic text-gray-600">
-          In a world of complex fitness apps, Fit Focus emerges as a breath of fresh air - because getting fit should not require a PhD in app navigation.
+          In a world of complex fitness apps, Fit Focus emerges as a breath of
+          fresh air - because getting fit should not require a PhD in app
+          navigation.
         </p>
 
         <section className="space-y-4">
@@ -223,79 +332,132 @@ export const posts = [
             <Dumbbell className="inline-block mr-2" /> The Genesis of Fit Focus
           </Heading>
           <p>
-            Fit Focus was born out of frustration. As someone who just wanted to track workouts and calories without needing a user manual, I found myself drowning in a sea of overcomplicated fitness apps. So, I did what any reasonable developer would do - I built my own.
+            Fit Focus was born out of frustration. As someone who just wanted to
+            track workouts and calories without needing a user manual, I found
+            myself drowning in a sea of overcomplicated fitness apps. So, I did
+            what any reasonable developer would do - I built my own.
           </p>
         </section>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Layers className="inline-block mr-2" /> Simplicity is the Ultimate Sophistication
+            <Layers className="inline-block mr-2" /> Simplicity is the Ultimate
+            Sophistication
           </Heading>
-          <p>
-            At its core, Fit Focus is about doing a few things really well:
-          </p>
+          <p>At its core, Fit Focus is about doing a few things really well:</p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Easy-to-use routine management, because your workout shouldn&apos;t feel like solving a puzzle</li>
-            <li>A straightforward exercise library, no PhD in anatomy required</li>
-            <li>Simple calorie tracking, math should not be part of your diet</li>
+            <li>
+              Easy-to-use routine management, because your workout
+              shouldn&apos;t feel like solving a puzzle
+            </li>
+            <li>
+              A straightforward exercise library, no PhD in anatomy required
+            </li>
+            <li>
+              Simple calorie tracking, math should not be part of your diet
+            </li>
             <li>Weekly planning that does not overcomplicate your life</li>
           </ul>
         </section>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Terminal className="inline-block mr-2" /> The Tech Behind the Simplicity
+            <Terminal className="inline-block mr-2" /> The Tech Behind the
+            Simplicity
           </Heading>
           <p>
-            Building Fit Focus was an exercise in restraint. Here&apos;s what&apos;s under the hood:
+            Building Fit Focus was an exercise in restraint. Here&apos;s
+            what&apos;s under the hood:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>React for a snappy, responsive frontend, because waiting for your fitness app to load doesn&apos;t count as cardio</li>
-            <li>Django powering our backend, Python: the language of fitness... and everything else</li>
-            <li>SQLite for data storage, proving you don&apos;t need a heavyweight database to lift heavy</li>
-            <li>Tailwind CSS for styling, making our app look good without the bloat - if only getting in shape was this easy</li>
+            <li>
+              React for a snappy, responsive frontend, because waiting for your
+              fitness app to load doesn&apos;t count as cardio
+            </li>
+            <li>
+              Django powering our backend, Python: the language of fitness...
+              and everything else
+            </li>
+            <li>
+              SQLite for data storage, proving you don&apos;t need a heavyweight
+              database to lift heavy
+            </li>
+            <li>
+              Tailwind CSS for styling, making our app look good without the
+              bloat - if only getting in shape was this easy
+            </li>
           </ul>
         </section>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Zap className="inline-block mr-2" /> Challenges: Keeping It Simple Isn&apos;t Always Simple
+            <Zap className="inline-block mr-2" /> Challenges: Keeping It Simple
+            Isn&apos;t Always Simple
           </Heading>
-          <p>
-            The journey was not without its hurdles:
-          </p>
+          <p>The journey was not without its hurdles:</p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Resisting the urge to add &quot;just one more feature&quot; (feature creep is the junk food of development)</li>
-            <li>Designing an intuitive UI that doesn&apos;t need a tutorial (turns out, simplicity is complicated)</li>
-            <li>Balancing simplicity with functionality (because too simple is just a notebook)</li>
+            <li>
+              Resisting the urge to add &quot;just one more feature&quot;
+              (feature creep is the junk food of development)
+            </li>
+            <li>
+              Designing an intuitive UI that doesn&apos;t need a tutorial (turns
+              out, simplicity is complicated)
+            </li>
+            <li>
+              Balancing simplicity with functionality (because too simple is
+              just a notebook)
+            </li>
           </ul>
         </section>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Utensils className="inline-block mr-2" /> The Calorie Tracking Conundrum
+            <Utensils className="inline-block mr-2" /> The Calorie Tracking
+            Conundrum
           </Heading>
           <p>
-            Implementing calorie tracking without overwhelming users was like trying to count calories at a buffet - tricky, but not impossible. We opted for a straightforward input system, focusing on total daily intake rather than breaking down every macronutrient. It&apos;s not for competitive bodybuilders, but for the average Joe trying to keep an eye on their diet, it is just right.
+            Implementing calorie tracking without overwhelming users was like
+            trying to count calories at a buffet - tricky, but not impossible.
+            We opted for a straightforward input system, focusing on total daily
+            intake rather than breaking down every macronutrient. It&apos;s not
+            for competitive bodybuilders, but for the average Joe trying to keep
+            an eye on their diet, it is just right.
           </p>
         </section>
 
         <section className="space-y-4">
           <Heading size="h2">
-            <Calendar className="inline-block mr-2" /> Looking Ahead: The Future of Fit Focus
+            <Calendar className="inline-block mr-2" /> Looking Ahead: The Future
+            of Fit Focus
           </Heading>
           <p>
-            As Fit Focus grows, our commitment to simplicity remains. Future plans include:
+            As Fit Focus grows, our commitment to simplicity remains. Future
+            plans include:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Basic progress tracking (because seeing your gains shouldn&apos;t require a statistics degree)</li>
-            <li>Optional reminder notifications (for those who need a gentle nudge, not a drill sergeant)</li>
-            <li>A mobile app (because your fitness journey doesn&apos;t stop at your desktop)</li>
+            <li>
+              Basic progress tracking (because seeing your gains shouldn&apos;t
+              require a statistics degree)
+            </li>
+            <li>
+              Optional reminder notifications (for those who need a gentle
+              nudge, not a drill sergeant)
+            </li>
+            <li>
+              A mobile app (because your fitness journey doesn&apos;t stop at
+              your desktop)
+            </li>
           </ul>
         </section>
 
         <p>
-          Fit Focus isn&apos;t just an app, it&apos;s a philosophy. It&apos;s about making fitness accessible, manageable, and maybe even enjoyable. Because at the end of the day, the best fitness app is the one you&apos;ll actually use. And if we can help more people take that first step towards a healthier lifestyle without feeling overwhelmed, well, that&apos;s a workout for the heart we can all benefit from.
+          Fit Focus isn&apos;t just an app, it&apos;s a philosophy. It&apos;s
+          about making fitness accessible, manageable, and maybe even enjoyable.
+          Because at the end of the day, the best fitness app is the one
+          you&apos;ll actually use. And if we can help more people take that
+          first step towards a healthier lifestyle without feeling overwhelmed,
+          well, that&apos;s a workout for the heart we can all benefit from.
         </p>
       </div>
     ),
@@ -306,35 +468,51 @@ export const posts = [
     date: "September 6, 2024",
     tagLine: "Relieving my wrists with a new layout, the process.",
     imgSrc: "/iris.jpg",
-    imgDescription:
-      "Temp ergo keyboard for testing",
+    imgDescription: "Temp ergo keyboard for testing",
     summary:
       "As I begin my carreer as a developer I would like to take care of my wrists for the forseable future, so I am going ergo!",
     content: (
       <div className="space-y-6 mb-10">
-        <Heading size="h1">
-          Switching To My Perfect Keyboard Layout
-        </Heading>
+        <Heading size="h1">Switching To My Perfect Keyboard Layout</Heading>
         <p className="italic text-gray-600">
-          Yes, I know that I already have a perfect keyboard post on
-          here but I love tinkering too much.
+          Yes, I know that I already have a perfect keyboard post on here but I
+          love tinkering too much.
         </p>
         <section className="space-y-4">
-          <h2 className="text-2xl font-bold">The Journey Begins: Testing the Iris 58</h2>
+          <h2 className="text-2xl font-bold">
+            The Journey Begins: Testing the Iris 58
+          </h2>
           <p>
-            As I embark on my career as a developer, I&apos;ve become increasingly aware of the importance of ergonomics. With countless hours spent typing, taking care of my wrists has become a top priority. This realization led me down the fascinating rabbit hole of ergonomic keyboards, and I&apos;m excited to share my latest experiment with you.
+            As I embark on my career as a developer, I&apos;ve become
+            increasingly aware of the importance of ergonomics. With countless
+            hours spent typing, taking care of my wrists has become a top
+            priority. This realization led me down the fascinating rabbit hole
+            of ergonomic keyboards, and I&apos;m excited to share my latest
+            experiment with you.
           </p>
           <p>
-            My current project involves testing an Iris 58 layout. For those unfamiliar, the Iris is a split ergonomic keyboard design that&apos;s gained popularity in the mechanical keyboard community. The 58 refers to the number of keys, offering a compact yet functional layout.
+            My current project involves testing an Iris 58 layout. For those
+            unfamiliar, the Iris is a split ergonomic keyboard design
+            that&apos;s gained popularity in the mechanical keyboard community.
+            The 58 refers to the number of keys, offering a compact yet
+            functional layout.
           </p>
           <p>
-            To simplify the initial build and testing process, I&apos;ve connected the halves of the keyboard. This temporary setup allows me to get a feel for the layout without committing to a full, polished build just yet.
+            To simplify the initial build and testing process, I&apos;ve
+            connected the halves of the keyboard. This temporary setup allows me
+            to get a feel for the layout without committing to a full, polished
+            build just yet.
           </p>
         </section>
         <section className="space-y-4">
-          <h2 className="text-2xl font-bold">The Test Build: Function Over Form</h2>
+          <h2 className="text-2xl font-bold">
+            The Test Build: Function Over Form
+          </h2>
           <p>
-            My current test board might not win any beauty contests, but it serves a crucial purpose. By creating this prototype, I can thoroughly evaluate the Iris 58 layout before investing time and resources into a more refined version.
+            My current test board might not win any beauty contests, but it
+            serves a crucial purpose. By creating this prototype, I can
+            thoroughly evaluate the Iris 58 layout before investing time and
+            resources into a more refined version.
           </p>
           <div className="my-6">
             <img
@@ -343,23 +521,33 @@ export const posts = [
               className="w-full rounded-lg shadow-md"
             />
             <p className="text-sm text-gray-600 mt-2 italic">
-              A peek at the handwiring of my Iris 58 test board. It&apos;s not pretty, but it gets the job done!
+              A peek at the handwiring of my Iris 58 test board. It&apos;s not
+              pretty, but it gets the job done!
             </p>
           </div>
           <p>
-            As you can see from the image above, I&apos;ve done some basic handwiring to get this test board functional. It&apos;s a bit messy, but it allows me to:
+            As you can see from the image above, I&apos;ve done some basic
+            handwiring to get this test board functional. It&apos;s a bit messy,
+            but it allows me to:
           </p>
           <ul className="list-disc pl-6">
             <li>Assess the comfort and ergonomics of the split design</li>
             <li>Experiment with different key mappings and layers</li>
-            <li>Determine if the 58-key layout meets all my needs as a developer</li>
-            <li>Make informed decisions about potential modifications for the final build</li>
+            <li>
+              Determine if the 58-key layout meets all my needs as a developer
+            </li>
+            <li>
+              Make informed decisions about potential modifications for the
+              final build
+            </li>
           </ul>
         </section>
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">Looking Ahead: The Dream Build</h2>
           <p>
-            Assuming the test goes well, my next step will be to create a sleek, low-profile version of this keyboard. Here&apos;s what I have in mind:
+            Assuming the test goes well, my next step will be to create a sleek,
+            low-profile version of this keyboard. Here&apos;s what I have in
+            mind:
           </p>
           <ul className="list-disc pl-6">
             <li>A custom PCB for a clean, professional look</li>
@@ -368,7 +556,8 @@ export const posts = [
             <li>Wireless connectivity for a clutter-free desk setup</li>
           </ul>
           <p>
-            Stay tuned for updates as I progress through this ergonomic keyboard journey.
+            Stay tuned for updates as I progress through this ergonomic keyboard
+            journey.
           </p>
         </section>
       </div>
@@ -1081,12 +1270,8 @@ layered_architecture.run(test_paths)`}
             minimalist; it was about pushing my limits:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>
-              Mastering Vim motions
-            </li>
-            <li>
-              Customizing my Neovim setup
-            </li>
+            <li>Mastering Vim motions</li>
+            <li>Customizing my Neovim setup</li>
             <li>
               Realizing that, somehow, typing :wq feels more satisfying than
               clicking a save button

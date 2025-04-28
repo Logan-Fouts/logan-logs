@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -18,7 +18,9 @@ const SocialLink = ({ href, icon, label }) => (
     <div className="p-4 bg-green-500 bg-opacity-20 rounded-full group-hover:bg-opacity-30 group-hover:bg-green-500 transition-all duration-300">
       {icon}
     </div>
-    <span className="mt-2 text-sm font-medium opacity-80 group-hover:opacity-100">{label}</span>
+    <span className="mt-2 text-sm font-medium opacity-80 group-hover:opacity-100">
+      {label}
+    </span>
   </motion.a>
 );
 
@@ -29,8 +31,8 @@ const TypingEffect = ({ text }) => {
   useEffect(() => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prevIndex => prevIndex + 1);
+        setDisplayText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
       }, 100);
 
       return () => clearTimeout(timeout);
@@ -67,19 +69,34 @@ export default function Home() {
                 className="font-normal text-gray-300 text-lg sm:text-xl mx-auto mb-8 max-w-xl leading-relaxed"
               >
                 Check out my projects, including my published thesis on the
-                <span className="text-green-400 font-medium"> Multi-Method NDI Detection Framework</span>,
-                which offers a novel approach to near-duplicate image detection.
-                <span className="text-green-400 font-medium"> WildWood Gardens</span>, another highlight,
-                is a website I built for a local bonsai business. I&apos;ve also developed a
-                <span className="text-green-400 font-medium"> full-featured mobile app</span> for Them aswell
-                using React Native. Additionally, I&apos;ve explored some product development,
-                AI-driven tools, and Linux support for Windows hardware.
+                <span className="text-green-400 font-medium">
+                  {" "}
+                  Multi-Method NDI Detection Framework
+                </span>
+                , which offers a novel approach to near-duplicate image
+                detection.
+                <span className="text-green-400 font-medium">
+                  {" "}
+                  WildWood Gardens
+                </span>
+                , another highlight, is a website I built for a local bonsai
+                business. I&apos;ve also developed a
+                <span className="text-green-400 font-medium">
+                  {" "}
+                  full-featured mobile app
+                </span>{" "}
+                for Them aswell using React Native. Additionally, I&apos;ve
+                explored some product development, AI-driven tools, and Linux
+                support for Windows hardware.
               </motion.p>
               <motion.a
                 href="/CV.pdf"
                 download="Logan_Fouts_CV.pdf"
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 text-lg font-medium shadow-lg shadow-green-500/30"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(34, 197, 94, 0.4)" }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 10px 25px -5px rgba(34, 197, 94, 0.4)",
+                }}
                 whileTap={{ scale: 0.95 }}
               >
                 <FaDownload className="mr-3" />
@@ -88,12 +105,12 @@ export default function Home() {
                   className="absolute -right-1 -top-1 w-3 h-3 bg-white rounded-full"
                   animate={{
                     scale: [1, 1.3, 1],
-                    opacity: [1, 0.8, 1]
+                    opacity: [1, 0.8, 1],
                   }}
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    repeatType: "loop"
+                    repeatType: "loop",
                   }}
                 />
               </motion.a>
@@ -146,10 +163,12 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
             className="mt-16 text-center"
-          >
-          </motion.div>
+          ></motion.div>
         </div>
-        <p className="text-gray-400 text-sm bottom-0 text-center p-4">Built with React and Deployed on Vercel • © {new Date().getFullYear()}</p>
+        <p className="text-gray-400 text-sm bottom-0 text-center p-4">
+          Built with React and Deployed on Vercel • ©{" "}
+          {new Date().getFullYear()}
+        </p>
       </main>
     </div>
   );

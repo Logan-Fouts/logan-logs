@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react';
+import { useState } from "react";
 import Navbar from "/src/app/components/NavBar.client";
 import Post from "../app/components/post";
 import { motion } from "framer-motion";
@@ -12,10 +12,11 @@ function PageSwitcher({ pages, currentPage, onPageChange }) {
         <button
           key={pageNum}
           onClick={() => onPageChange(pageNum)}
-          className={`px-4 rounded font-bold ${pageNum === currentPage
-            ? 'text-blue-600'
-            : 'text-blue-900 hover:text-blue-600'
-            }`}
+          className={`px-4 rounded font-bold ${
+            pageNum === currentPage
+              ? "text-blue-600"
+              : "text-blue-900 hover:text-blue-600"
+          }`}
         >
           {pageNum}
         </button>
@@ -32,12 +33,12 @@ export default function Projects() {
 
   const currentPosts = allPosts.slice(
     (currentPage - 1) * numPostsPerPage,
-    currentPage * numPostsPerPage
+    currentPage * numPostsPerPage,
   );
 
   const handlePageSwitch = (pageNum) => {
     setCurrentPage(pageNum);
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   return (
