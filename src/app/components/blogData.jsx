@@ -138,19 +138,6 @@ export const posts = [
               Vercel
             </li>
           </ul>
-          <CodeBlock
-            code={`# Example MicroPython LED control
-import neopixel
-import machine
-
-# Initialize NeoPixel strip
-np = neopixel.NeoPixel(machine.Pin(0), 28)
-
-# Set first LED to medium green (GitHub color)
-np[0] = (0, 150, 0)
-np.write()`}
-            language="python"
-          />
           <p>
             The firmware fetches contribution data through GitHub&apos;s API and
             maps it to LED brightness values. I chose MicroPython specifically
