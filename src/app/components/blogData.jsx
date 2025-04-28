@@ -62,7 +62,7 @@ export const posts = [
     imgSrc: "/contrib-cal.JPG",
     imgDescription: "Contrib Cal showing GitHub contribution LED matrix",
     summary:
-      "Created a physical GitHub contribution calendar using a Raspberry Pi Pico 2W and NeoPixel LEDs, housed in a custom 3D printed enclosure with MicroPython firmware.",
+      "Created a physical GitHub contribution calendar using a Raspberry Pi Pico 2W and NeoPixel LEDs, housed in a custom 3D printed opaque black enclosure with MicroPython firmware.",
     content: (
       <div className="space-y-6 mb-10">
         <Heading size="h1">
@@ -77,12 +77,9 @@ export const posts = [
         </p>
 
         <section className="space-y-4">
-          <a
-            href="https://github.com/Logan-Fouts/Contrib_Cal"
-            className="text-xl font-bold mb-4 text-blue-600 underline"
-          >
+          <Heading size="h2">
             <Github className="inline-block mr-2" /> The Concept
-          </a>
+          </Heading>
           <p>
             Inspired by GitHub&apos;s signature contribution graph, I designed
             Contrib Cal to display 28 days of activity through illuminated
@@ -104,6 +101,17 @@ export const posts = [
               of it easy to change
             </li>
           </ul>
+          <p>
+            I created a{" "}
+            <a
+              href="https://contrib-cal.com"
+              className="text-blue-600 underline"
+            >
+              product launch website
+            </a>{" "}
+            using React and deployed on Vercel to showcase the project and
+            provide build instructions.
+          </p>
         </section>
 
         <section className="space-y-4">
@@ -125,7 +133,24 @@ export const posts = [
             <li>
               <strong>Software:</strong> MicroPython for easy customization
             </li>
+            <li>
+              <strong>Website:</strong> React-based product site deployed on
+              Vercel
+            </li>
           </ul>
+          <CodeBlock
+            code={`# Example MicroPython LED control
+import neopixel
+import machine
+
+# Initialize NeoPixel strip
+np = neopixel.NeoPixel(machine.Pin(0), 28)
+
+# Set first LED to medium green (GitHub color)
+np[0] = (0, 150, 0)
+np.write()`}
+            language="python"
+          />
           <p>
             The firmware fetches contribution data through GitHub&apos;s API and
             maps it to LED brightness values. I chose MicroPython specifically
@@ -151,19 +176,54 @@ export const posts = [
               <strong>Light isolation:</strong> The opaque black case required
               precise channel design to prevent light bleed between squares
             </li>
+            <li>
+              <strong>Website integration:</strong> Ensuring the React site
+              clearly communicated both the technical and creative aspects of
+              the project
+            </li>
           </ul>
           <p>
             The final design uses a three-part assembly - The case, LED grid,
-            and top diffuser with an led seperator - all printed in black resin.
+            and top diffuser with an LED separator - all printed in black resin.
           </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Computer className="inline-block mr-2" /> Product Website
+          </Heading>
+          <p>
+            The{" "}
+            <a
+              href="https://contrib-cal.com"
+              className="text-blue-600 underline"
+            >
+              Contrib Cal website
+            </a>{" "}
+            serves as both a showcase and documentation hub:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Built with React for a modern, responsive experience</li>
+            <li>Deployed on Vercel for optimal performance</li>
+            <li>
+              Includes detailed build guides and customization documentation
+            </li>
+            <li>Showcases the device with high-quality product photography</li>
+          </ul>
         </section>
 
         <p>
           Contrib Cal bridges the digital and physical worlds, transforming
           abstract commit history into a tangible display. The opaque black
           enclosure gives it a professional look while the open-source firmware
-          invites customization. Project files are available on GitHub for
-          anyone interested in building their own version.
+          invites customization. Project files are available on{" "}
+          <a
+            href="https://github.com/Logan-Fouts/Contrib_Cal"
+            className="text-blue-600 underline"
+          >
+            GitHub
+          </a>{" "}
+          for anyone interested in building their own version.
         </p>
       </div>
     ),
