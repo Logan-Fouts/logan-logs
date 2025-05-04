@@ -146,14 +146,14 @@ export const posts = [
             <Video className="inline-block mr-2" /> Video Learning System
           </Heading>
           <p>
-            To enhance the educational experience, I implemented a video integration system allowing seamless viewing of the client's bonsai tutorial content:
+            To enhance the educational experience, I implemented a video integration system allowing seamless viewing of the client&apos;s bonsai tutorial content:
           </p>
           <ul className="list-disc list-inside space-y-2">
             <li>
               <strong>Modular video player:</strong> React Native component supporting both embedded and full-screen playback
             </li>
             <li>
-              <strong>Progress tracking:</strong> Watched videos are marked complete and contribute to the user's learning progress
+              <strong>Progress tracking:</strong> Watched videos are marked complete and contribute to the user&apos;s learning progress
             </li>
           </ul>
         </section>
