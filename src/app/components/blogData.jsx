@@ -15,6 +15,10 @@ import {
   Computer,
   Github,
   Utensils,
+  Book,
+  Lightbulb,
+  BarChart,
+  Video
 } from "lucide-react";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
@@ -53,6 +57,130 @@ const CodeBlock = ({ code, language }) => {
 };
 
 export const posts = [
+  {
+    slug: "bonsai-for-kids-app",
+    title: "Bonsai for Kids Made Easy - Book Reading App",
+    date: "June 15, 2025",
+    tagLine: "Private educational app combining EPUB reading with gamification for young bonsai enthusiasts",
+    imgSrc: "/bonsai-app.png",
+    imgDescription: "Bonsai for Kids app showing book reading interface and virtual bonsai collection",
+    summary: "Developed a private educational app featuring EPUB reading, virtual bonsai collection, daily wisdom, and bookmark functionality using React Native and Expo.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          Bonsai for Kids: Blending Education with Gamification
+        </Heading>
+
+        <p className="italic text-gray-600">
+          A private client project that transformed a bonsai book into an interactive learning experience for children through creative app development.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Book className="inline-block mr-2" /> Project Overview
+          </Heading>
+          <p>
+            This closed-source application was developed exclusively for a client in the bonsai space. The app combines:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              <strong>EPUB reader:</strong> Full book reading experience using epubjs
+            </li>
+            <li>
+              <strong>Virtual collection:</strong> Gamified bonsai collecting system
+            </li>
+            <li>
+              <strong>Daily wisdom:</strong> Bite-sized educational content
+            </li>
+            <li>
+              <strong>Bookmarking:</strong> Reference management for young learners
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> Technical Implementation
+          </Heading>
+          <p>
+            Built with modern cross-platform technologies:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              <strong>Frontend:</strong> React Native with Expo for cross-platform compatibility
+            </li>
+            <li>
+              <strong>State Management:</strong> Context API for efficient data flow
+            </li>
+            <li>
+              <strong>EPUB Reader:</strong> @epubjs-react-native/core implementation
+            </li>
+            <li>
+              <strong>Data Persistence:</strong> AsyncStorage for offline functionality
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Lightbulb className="inline-block mr-2" /> Creative Solutions
+          </Heading>
+          <p>
+            Innovative approaches that enhanced the learning experience:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              <strong>Virtual Bonsai System:</strong> Designed a collection mechanic similar to trading cards
+            </li>
+            <li>
+              <strong>Daily Wisdom:</strong> JSON-based content system with random selection
+            </li>
+            <li>
+              <strong>Progress Tracking:</strong> Visual indicators tied to reading milestones
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Video className="inline-block mr-2" /> Video Learning System
+          </Heading>
+          <p>
+            To enhance the educational experience, I implemented a video integration system allowing seamless viewing of the client's bonsai tutorial content:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              <strong>Modular video player:</strong> React Native component supporting both embedded and full-screen playback
+            </li>
+            <li>
+              <strong>Progress tracking:</strong> Watched videos are marked complete and contribute to the user's learning progress
+            </li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <BarChart className="inline-block mr-2" /> Results
+          </Heading>
+          <p>
+            The app successfully achieved client objectives:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Increase in engagement with educational content</li>
+            <li>Positive feedback on intuitive interface</li>
+            <li>Modern design tailored to work with both adults and children</li>
+          </ul>
+          <p className="text-sm text-gray-500">
+            Note: Specific metrics shared with employer prospects under confidentiality.
+          </p>
+        </section>
+
+        <p>
+          This project delivered a polished, educational mobile experience with technical rigor and engaging design. While the codebase remains private, I can discuss architectural decisions and problem-solving approaches.
+        </p>
+      </div>
+    ),
+  },
   {
     slug: "contrib-cal-github-calendar",
     title: "Contrib Cal: Physical GitHub Contribution Tracker",
