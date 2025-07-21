@@ -51,7 +51,7 @@ export default function Post({
         </div>
         <p className="italic text-sm mt-2">{imgDescription}</p>
         <div className="w-4/4">{content}</div>
-        <Comments slug={slug} />
+        {/* <Comments slug={slug} /> */}
       </div>
     );
   };
