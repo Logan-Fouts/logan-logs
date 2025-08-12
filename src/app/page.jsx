@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "./components/NavBar.client";
@@ -125,10 +126,13 @@ export default function Home() {
                 className="relative w-4/5 md:w-1/2 mb-8"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-transparent rounded-full blur-3xl" />
-                <img
+                <Image
                   src="/jag2.png"
                   alt="Logan Logs Logo"
+                  width={400}
+                  height={400}
                   className="relative z-10 transform transition-transform duration-500 hover:scale-105 w-full h-auto max-w-md mx-auto"
+                  priority
                 />
               </motion.div>
 

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from "react";
+import Image from "next/image";
 import {
   Camera,
   Layers,
@@ -690,9 +691,11 @@ export const posts = [
             resources into a more refined version.
           </p>
           <div className="my-6">
-            <img
+            <Image
               src="/handwire.jpg"
               alt="Handwiring of the Iris 58 test board"
+              width={800}
+              height={600}
               className="w-full rounded-lg shadow-md"
             />
             <p className="text-sm text-gray-600 mt-2 italic">
@@ -788,7 +791,7 @@ export const posts = [
             table, working in harmony to spot those elusive NDIs. Some are
             faster but less accurate and other the opposite.
           </p>
-          <img src="/thesis_model.png" alt="Thesis model" className="w-2/3" />
+          <Image src="/thesis_model.png" alt="Thesis model" width={800} height={400} className="w-2/3" />
           <ul className="list-disc list-inside space-y-2">
             <li>Combines multiple algorithms for enhanced flexibility</li>
             <li>
