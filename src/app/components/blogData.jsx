@@ -129,7 +129,7 @@ nuphy_linux --set-key F1 ESC      // Remap F1 to Escape`}
             The utility provides comprehensive control over all keyboard lighting and functionality:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>22 Animation Modes:</strong> From static lighting to complex patterns like "rotating_windmill" and "colorful_waterfall"</li>
+            <li><strong>22 Animation Modes:</strong> From static lighting to complex patterns like &ldquo;rotating_windmill&rdquo; and &ldquo;colorful_waterfall&rdquo;</li>
             <li><strong>Granular Control:</strong> Independent brightness (0-4) and speed (0-4) settings</li>
             <li><strong>Key Remapping:</strong> Individual key value assignment for custom layouts</li>
           </ul>
