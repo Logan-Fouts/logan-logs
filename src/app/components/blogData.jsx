@@ -59,6 +59,297 @@ const CodeBlock = ({ code, language }) => {
 
 export const posts = [
   {
+    slug: "nuphy-linux-keyboard-control",
+    title: "NuPhy Linux: USB HID Communication for Keyboard Control",
+    date: "September 28, 2025",
+    tagLine: "Building a command-line utility for hardware control using low-level USB communication",
+    imgSrc: "/nuphy.png",
+    imgDescription: "NuPhy 75 keyboard with RGB lighting controlled via Linux command-line utility",
+    summary: "Developed a C-based command-line utility enabling full control of NuPhy 75 keyboard lighting and key mappings on Linux through direct USB HID communication.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <a href="https://github.com/Logan-Fouts/NuphyOnLinux">
+          <h1 className="text-3xl font-bold mb-4 text-blue-600 underline">
+            NuPhy Linux: Bridging Hardware Gaps Through Systems Programming
+          </h1>
+        </a>
+
+        <p className="italic text-gray-600">
+          When proprietary hardware lacks Linux support, sometimes you need to roll up your sleeves and speak directly to the hardware. This project demonstrates low-level USB communication and reverse engineering skills applied to real-world hardware compatibility challenges.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> The Challenge: Hardware Without Software
+          </Heading>
+          <p>
+            The NuPhy 75 keyboard offers impressive RGB lighting capabilities and customizable key mappings, but like many hardware manufacturers, official Linux support was an afterthought. Rather than accept limited functionality, I developed a comprehensive solution that provides full hardware control through direct USB HID communication.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Problem:</strong> No official Linux driver or control software</li>
+            <li><strong>Solution:</strong> Reverse-engineered USB HID protocol for complete hardware access</li>
+            <li><strong>Result:</strong> Full lighting and mapping control via command-line interface</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Layers className="inline-block mr-2" /> Technical Implementation
+          </Heading>
+          <p>
+            This project showcases several key technical competencies valuable in systems programming and embedded development:
+          </p>
+          
+          <Heading size="h3">Low-Level USB Communication</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>libusb-1.0 Integration:</strong> Direct USB HID device communication</li>
+            <li><strong>Protocol Analysis:</strong> Reverse-engineered proprietary communication protocols</li>
+            <li><strong>Hardware Abstraction:</strong> Clean API layer over raw USB operations</li>
+          </ul>
+
+          <Heading size="h3">Systems Programming in C</Heading>
+          <CodeBlock
+            code={`// Example usage demonstrating the clean API design
+nuphy_linux --set-mode 3 2 4      // Rainbow mode, medium brightness, fast speed
+nuphy_linux --set-key F1 ESC      // Remap F1 to Escape`}
+            language="bash"
+          />
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Memory Management:</strong> Efficient resource handling for USB operations</li>
+            <li><strong>Error Handling:</strong> Robust failure detection and recovery</li>
+            <li><strong>Cross-Platform Compatibility:</strong> Linux-focused with portable design patterns</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Keyboard className="inline-block mr-2" /> Feature Set & Capabilities
+          </Heading>
+          <p>
+            The utility provides comprehensive control over all keyboard lighting and functionality:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>22 Animation Modes:</strong> From static lighting to complex patterns like "rotating_windmill" and "colorful_waterfall"</li>
+            <li><strong>Granular Control:</strong> Independent brightness (0-4) and speed (0-4) settings</li>
+            <li><strong>Key Remapping:</strong> Individual key value assignment for custom layouts</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Hammer className="inline-block mr-2" /> Engineering Approach
+          </Heading>
+          <p>
+            This project demonstrates several important engineering principles:
+          </p>
+          
+          <Heading size="h3">Reverse Engineering Methodology</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li>USB traffic analysis to understand proprietary protocols</li>
+            <li>Systematic testing of command structures and parameters</li>
+            <li>Documentation of findings for reproducible results</li>
+          </ul>
+
+          <Heading size="h3">Software Architecture</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Modular Design:</strong> Separate concerns for USB communication, command parsing, and hardware abstraction</li>
+            <li><strong>Clean CLI Interface:</strong> Intuitive command structure following Unix conventions</li>
+            <li><strong>Maintainable Codebase:</strong> Well-structured C code with clear separation of responsibilities</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> Professional Value & Skills Demonstrated
+          </Heading>
+          <p>
+            This project showcases several competencies highly valued in systems and embedded development roles:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Hardware Communication:</strong> Direct USB/HID protocol implementation</li>
+            <li><strong>Reverse Engineering:</strong> Analyzing and documenting proprietary protocols</li>
+            <li><strong>C Programming:</strong> Low-level systems programming with proper resource management</li>
+            <li><strong>Linux Development:</strong> Native Linux application development and deployment</li>
+            <li><strong>Problem Solving:</strong> Creating solutions where none existed commercially</li>
+            <li><strong>Documentation:</strong> Comprehensive user documentation and technical specifications</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Computer className="inline-block mr-2" /> Impact & Open Source Contribution
+          </Heading>
+          <p>
+            Beyond solving a personal hardware compatibility issue, this project contributes to the broader Linux ecosystem:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Community Benefit:</strong> Enables Linux users to fully utilize their hardware investment</li>
+            <li><strong>Open Source Contribution:</strong> MIT licensed for community adoption and improvement</li>
+            <li><strong>Technical Documentation:</strong> Serves as reference for similar hardware integration projects</li>
+          </ul>
+        </section>
+
+        <p>
+          The NuPhy Linux project exemplifies the kind of technical problem-solving and systems-level programming that drives innovation in hardware compatibility and embedded systems. It demonstrates the ability to work at the intersection of hardware and software, creating robust solutions that bridge proprietary hardware with open-source ecosystems. For organizations working with custom hardware, IoT devices, or embedded systems, these skills translate directly to solving real-world integration challenges.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "contrib-cal-v2-commercial-partnership",
+    title: "Contrib Cal V2: From Open Source Project to Commercial Partnership",
+    date: "September 28, 2025",
+    tagLine: "How a weekend project became a commercial product through strategic partnership with Elecrow",
+    imgSrc: "/contrib-cal.png",
+    imgDescription: "Contrib Cal V2 showing GitHub contribution LED matrix with commercial-grade PCB and 3D printed enclosure",
+    summary: "Transformed the Contrib Cal project into a commercial product through partnership with Elecrow, complete with professional manufacturing, TDD-rewritten codebase, and streamlined installation process.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <a href="https://github.com/Logan-Fouts/CCal_V2">
+        <h1 className="text-3xl font-bold mb-4 text-blue-600 underline">
+          Contrib Cal V2: From Prototype to Product - A Commercial Partnership Success Story
+        </h1>
+        </a>
+
+        <p className="italic text-gray-600">
+          What started as a weekend hardware hack has evolved into a commercial product partnership with Elecrow. This journey showcases the path from open-source prototype to market-ready hardware product, demonstrating both technical excellence and business acumen.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Lightbulb className="inline-block mr-2" /> From Hobby to Partnership
+          </Heading>
+          <p>
+            The original Contrib Cal caught the attention of Elecrow, a leading electronics manufacturer, who reached out to establish a partnership for commercial production. This transition from personal project to commercial product required significant technical and business planning:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Partnership Role:</strong> Partner seller with Elecrow for manufacturing and distribution</li>
+            <li><strong>Technical Deliverables:</strong> Complete BOM, assembly instructions, and manufacturing files</li>
+            <li><strong>Market Positioning:</strong> DIY kit (~$70) and fully assembled version (~$100)</li>
+            <li><strong>Production Planning:</strong> Waitlist-driven demand validation before manufacturing commitment</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Terminal className="inline-block mr-2" /> Technical Evolution: V2 Improvements
+          </Heading>
+          <p>
+            Preparing for commercial production required a complete technical overhaul to ensure reliability and ease of use:
+          </p>
+          
+          <Heading size="h3">Test-Driven Development Rewrite</Heading>
+          <CodeBlock
+            code={`# Professional setup process with automated installation
+curl -sSL https://contrib-cal.com/setup.sh | bash
+
+# TDD-based codebase ensures reliability
+pytest tests/ --coverage
+# All critical functions now have comprehensive test coverage`}
+            language="bash"
+          />
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Codebase Rewrite:</strong> Complete reconstruction using Test-Driven Development methodology</li>
+            <li><strong>Automated Setup:</strong> One-line installation script for seamless deployment</li>
+            <li><strong>Enhanced Reliability:</strong> Comprehensive test coverage for production-grade stability</li>
+            <li><strong>Professional Documentation:</strong> Complete assembly guides and technical specifications</li>
+          </ul>
+
+          <Heading size="h3">Manufacturing-Ready Design</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Custom PCB Design:</strong> Professional PCB layout optimized for automated assembly</li>
+            <li><strong>3D Printing Files:</strong> Production-ready STL files with tolerance specifications</li>
+            <li><strong>Component Sourcing:</strong> Complete BOM with supplier information and alternatives</li>
+            <li><strong>Quality Control:</strong> Assembly and testing procedures for consistent product quality</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Computer className="inline-block mr-2" /> Enhanced Feature Set
+          </Heading>
+          <p>
+            Version 2 expanded far beyond the original GitHub visualization concept:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Multi-Service Integration:</strong> Pi-hole, Tailscale, and Syncthing for comprehensive utility</li>
+            <li><strong>Weather Display:</strong> Real-time weather animations and temperature display</li>
+            <li><strong>Web Interface:</strong> Browser-based configuration and control panel</li>
+            <li><strong>Modular Architecture:</strong> Easy addon system for extensibility</li>
+            <li><strong>Professional Packaging:</strong> Ready for retail distribution with comprehensive documentation</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <BarChart className="inline-block mr-2" /> Business & Technical Strategy
+          </Heading>
+          <p>
+            The commercial transition required balancing technical excellence with market viability:
+          </p>
+          
+          <Heading size="h3">Market Validation Approach</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Waitlist Strategy:</strong> Pre-launch interest gauging with 50+ signup threshold for production</li>
+            <li><strong>Dual Product Tiers:</strong> DIY kit for makers, assembled version for convenience buyers</li>
+            <li><strong>Open Source Commitment:</strong> All designs remain open-source regardless of commercial success</li>
+          </ul>
+
+          <Heading size="h3">Professional Product Website</Heading>
+          <p>
+            Developed a comprehensive product website at{" "}
+            <a href="https://contrib-cal.com" className="text-blue-600 underline">
+              contrib-cal.com
+            </a>{" "}
+            featuring:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Professional product photography and animations</li>
+            <li>Technical specifications and feature demonstrations</li>
+            <li>Waitlist management and market research integration</li>
+            <li>Comprehensive documentation and support resources</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Hammer className="inline-block mr-2" /> Professional Skills Demonstrated
+          </Heading>
+          <p>
+            This project evolution showcases competencies valuable across technical and business roles:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Product Management:</strong> Feature planning, market research, and roadmap execution</li>
+            <li><strong>Manufacturing Partnership:</strong> Technical liaison with commercial manufacturers</li>
+            <li><strong>Quality Assurance:</strong> TDD implementation and comprehensive testing strategies</li>
+            <li><strong>Technical Documentation:</strong> Production-ready assembly guides and specifications</li>
+            <li><strong>Market Strategy:</strong> Pricing analysis, demand validation, and go-to-market planning</li>
+            <li><strong>Full-Stack Development:</strong> Hardware design, firmware development, and web interface creation</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> Impact & Future Vision
+          </Heading>
+          <p>
+            The Contrib Cal partnership demonstrates the potential for open-source hardware projects to achieve commercial success while maintaining community values:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Commercial Viability:</strong> Proven market demand for developer-focused hardware</li>
+            <li><strong>Open Source Commitment:</strong> All designs remain freely available</li>
+            <li><strong>Community Building:</strong> Creating a platform for maker education and engagement</li>
+            <li><strong>Scalable Model:</strong> Framework for future hardware entrepreneurship ventures</li>
+          </ul>
+        </section>
+
+        <p>
+          The evolution of Contrib Cal from weekend project to commercial partnership exemplifies the intersection of technical excellence, market awareness, and strategic thinking. This project demonstrates not just the ability to build innovative hardware solutions, but also to recognize commercial opportunities, establish professional partnerships, and execute the complex transition from prototype to product. For organizations looking to bridge the gap between engineering innovation and market success, this project showcases the complete product development lifecycle in action.
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "bonsai-for-kids-app",
     title: "Bonsai for Kids Made Easy - Book Reading App",
     date: "June 15, 2025",
