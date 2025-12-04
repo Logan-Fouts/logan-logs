@@ -61,7 +61,7 @@ export const posts = [
   {
     slug: "meshtastic-safety-bot",
     title: "MeshBot: A Safety Assistant for Areas Without Cell Service",
-    date: "Current Date",
+    date: "December 3, 2025",
     tagLine: "A solar-powered communications device that provides wilderness safety info where phones dont work",
     imgSrc: "/meshtastic.jpg",
     imgDescription: "Simple electronics setup with antenna, ready for outdoor use",
