@@ -62,7 +62,7 @@ export const posts = [
     slug: "meshtastic-safety-bot",
     title: "MeshBot: A Safety Assistant for Areas Without Cell Service",
     date: "Current Date",
-    tagLine: "A solar-powered communications device that provides wilderness safety info where phones don't work",
+    tagLine: "A solar-powered communications device that provides wilderness safety info where phones dont work",
     imgSrc: "/meshtastic.jpg",
     imgDescription: "Simple electronics setup with antenna, ready for outdoor use",
     summary: "Built a low-cost device that lets people ask safety questions and get answers in remote areas—no internet or cell service needed.",
@@ -130,7 +130,7 @@ Bot: "Apply pressure with clean cloth.
           <ul className="list-disc list-inside space-y-2">
             <li><strong>Basic First Aid:</strong> Cuts, burns, sprains, bites</li>
             <li><strong>Wildlife Safety:</strong> What to do around bears, snakes, etc.</li>
-            <li><strong>Plant Identification:</strong> Common plants, what's poisonous</li>
+            <li><strong>Plant Identification:</strong> Common plants, whats poisonous</li>
             <li><strong>Weather Safety:</strong> Recognizing dangerous conditions</li>
             <li><strong>Emergency Procedures:</strong> How to signal for help</li>
           </ul>
@@ -184,7 +184,7 @@ Bot: "Apply pressure with clean cloth.
             Its Just a Tool, Not a Replacement
           </Heading>
           <p>
-            MeshBot doesn't replace rangers, trail signs, or emergency services. Its an extra layer of safety—like having a basic wilderness guidebook that can answer questions 24/7, even when the visitor center is closed.
+            MeshBot doesnt replace rangers, trail signs, or emergency services. Its an extra layer of safety like having a basic wilderness guidebook that can answer questions 24/7, even when the visitor center is closed.
           </p>
         </section>
 
