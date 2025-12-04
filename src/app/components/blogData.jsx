@@ -59,6 +59,154 @@ const CodeBlock = ({ code, language }) => {
 
 export const posts = [
   {
+    slug: "meshtastic-safety-bot",
+    title: "MeshBot: A Safety Assistant for Areas Without Cell Service",
+    date: "Current Date",
+    tagLine: "A solar-powered communications device that provides wilderness safety info where phones don't work",
+    imgSrc: "/meshtastic.jpg",
+    imgDescription: "Simple electronics setup with antenna, ready for outdoor use",
+    summary: "Built a low-cost device that lets people ask safety questions and get answers in remote areas—no internet or cell service needed.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <a href="https://github.com/Logan-Fouts/MeshBot">
+          <h1 className="text-3xl font-bold mb-4 text-green-700 underline">
+            MeshBot: Keeping People Safe When Theyre Off the Grid
+          </h1>
+        </a>
+
+        <p className="italic text-gray-600">
+          For rangers, hikers, or anyone working in remote areas: what happens when someone gets hurt or lost and theres no cell signal? MeshBot provides basic safety information right where its needed most.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            The Problem Were Solving
+          </Heading>
+          <p>
+            Forestry areas often have spotty or no cell service. When visitors or staff need quick information about first aid, wildlife, or local hazards—theyre completely cut off. Traditional solutions like satellite phones are expensive, and radio requires someone on the other end.
+          </p>
+          <p>
+            MeshBot sits somewhere in between: its like having a basic safety guidebook that anyone with a simple radio app can access.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            How It Works (Simply)
+          </Heading>
+          
+          <Heading size="h3">1. The Hardware</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li>A Raspberry Pi (small computer) with a LoRa radio</li>
+            <li>Powered by solar panel and battery</li>
+            <li>In a weatherproof box in a location with great line of sight</li>
+          </ul>
+
+          <Heading size="h3">2. How People Use It</Heading>
+          <p>
+            Someone with the free Meshtastic app on their phone can:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Scan a QR code at the station</li>
+            <li>Send a text question</li>
+            <li>Get a text answer within seconds</li>
+          </ul>
+
+          <CodeBlock
+            code={`Example conversation:
+
+User: "Someone got a deep cut on their leg"
+Bot: "Apply pressure with clean cloth. 
+     Elevate the leg. Dont remove anything stuck in wound.
+     Get professional help as soon as possible."`}
+            language="text"
+          />
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            What It Can Help With
+          </Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Basic First Aid:</strong> Cuts, burns, sprains, bites</li>
+            <li><strong>Wildlife Safety:</strong> What to do around bears, snakes, etc.</li>
+            <li><strong>Plant Identification:</strong> Common plants, what's poisonous</li>
+            <li><strong>Weather Safety:</strong> Recognizing dangerous conditions</li>
+            <li><strong>Emergency Procedures:</strong> How to signal for help</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            Why It Makes Sense for Forestry
+          </Heading>
+          
+          <Heading size="h3">Low Cost & Simple</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Total hardware cost: under $150</li>
+            <li>No monthly fees or subscriptions</li>
+            <li>Sets up in under an hour</li>
+            <li>Runs for months on solar power</li>
+          </ul>
+
+          <Heading size="h3">No Special Training Needed</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Visitors use their own phones with a meshtastic device</li>
+            <li>Works like texting</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            Safety First Approach
+          </Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Always reminds users: This is general info, get professional help</li>
+            <li>Knows its limits and says when something needs a real expert</li>
+            <li>Can include local emergency contact numbers</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            Good Places to Try It
+          </Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Remote trailheads:</strong> Where cell service ends</li>
+            <li><strong>Visitor centers:</strong> As an added safety resource</li>
+            <li><strong>Campgrounds:</strong> For after hours questions</li>
+            <li><strong>Research stations:</strong> Quick reference for field workers</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            Its Just a Tool, Not a Replacement
+          </Heading>
+          <p>
+            MeshBot doesn't replace rangers, trail signs, or emergency services. Its an extra layer of safety—like having a basic wilderness guidebook that can answer questions 24/7, even when the visitor center is closed.
+          </p>
+        </section>
+
+        <div className="rounded-lg border-l-4 border-green-500 pl-4">
+          <Heading size="h3" className="text-green-800">
+            Looking for Pilot Sites
+          </Heading>
+          <p>
+            Im looking to work with forestry offices to test this in real settings. Wed customize it for your specific area local plants, animals, protocols and see how visitors use it. The goal is to make it genuinely helpful without being complicated.
+          </p>
+          <p className="mt-2">
+            Interested in trying one at a trailhead or visitor center? I can help set it up and gather feedback from your team and visitors.
+          </p>
+        </div>
+
+        <p>
+          At its heart, MeshBot is about using simple, affordable technology to make wilderness areas a bit safer. It wont solve every problem, but it might help someone make better decisions when theyre miles from help.
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "nuphy-linux-keyboard-control",
     title: "NuPhy Linux: USB HID Communication for Keyboard Control",
     date: "September 28, 2025",
