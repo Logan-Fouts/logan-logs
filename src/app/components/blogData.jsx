@@ -70,12 +70,12 @@ export const posts = [
       <div className="space-y-6 mb-10">
         <a href="#speaker-repair-details">
           <h1 className="text-3xl font-bold mb-4 text-blue-700">
-            How I Fixed a $10 Pair of "Dead" Studio Monitors
+            How I Fixed a $10 Pair of Dead Studio Monitors
           </h1>
         </a>
 
         <p className="italic text-gray-600">
-          I found these M-Audio AV-40 monitors listed as "for parts/not working" on Marketplace. For $10, I figured even if I couldnt fix them, Id learn something trying.
+          I found these M-Audio AV-40 monitors listed as, for parts/not working, on Marketplace. For $10, I figured even if I couldnt fix them, Id learn something trying.
         </p>
 
         <section className="space-y-4">
@@ -109,7 +109,7 @@ export const posts = [
           </p>
           
           <p>
-            Suddenly volume! The sound jumped to normal levels. That "aha" moment told me this capacitor had failed open-circuit, blocking the audio signal while still passing DC voltage for the amplifier bias.
+            Suddenly volume! The sound jumped to normal levels. That aha moment told me this capacitor had failed open-circuit, blocking the audio signal while still passing DC voltage for the amplifier bias.
           </p>
           
           <div className="my-4">
@@ -178,7 +178,7 @@ export const posts = [
             What I Learned
           </Heading>
           <p>
-            This whole project reminded me that a lot of "dead" electronics just have common, fixable problems. In this case, it was aging capacitors first in the power supply, then in the signal path.
+            This whole project reminded me that a lot of dead electronics just have common, fixable problems. In this case, it was aging capacitors first in the power supply, then in the signal path.
           </p>
           <p>
             For about $15 total ($10 for the speakers, $5 for parts), I got a pair of solid studio monitors and a custom mounting solution. More importantly, I got that satisfaction of fixing something that someone else had written off as trash.
