@@ -59,13 +59,145 @@ const CodeBlock = ({ code, language }) => {
 
 export const posts = [
   {
+    slug: "speaker-repair",
+    title: "Repairing $10 M-Audio Studio Monitors",
+    date: "December 7, 2025",
+    tagLine: "Fixing power supply and signal path issues in used studio monitors",
+    imgSrc: "/speaker.jpg",
+    imgDescription: "M-Audio AV 40",
+    summary: "Diagnosed and repaired faulty capacitors in M-Audio AV-40 monitors, then created custom mounts for tripod installation.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <a href="#speaker-repair-details">
+          <h1 className="text-3xl font-bold mb-4 text-blue-700">
+            How I Fixed a $10 Pair of "Dead" Studio Monitors
+          </h1>
+        </a>
+
+        <p className="italic text-gray-600">
+          I found these M-Audio AV-40 monitors listed as "for parts/not working" on Marketplace. For $10, I figured even if I couldnt fix them, Id learn something trying.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            The First Problem: That Annoying Hum
+          </Heading>
+          
+          <div className="my-4">
+            <img 
+              src="/speaker-pcb.jpg" 
+              alt="M-Audio AV-40 monitors as purchased"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">The AV-40 monitors before repair</p>
+          </div>
+
+          <p>
+            When I plugged them in, all I got was a loud 60Hz hum no music, just that persistent electrical buzz. Classic symptom: bad power supply capacitors. I opened them up (fighting through way more factory glue than seemed necessary) and sure enough, found several swollen capacitors right where the AC power comes in.
+          </p>
+          <p>
+            I replaced all the power supply caps, and just like that the hum disappeared. Success! Well, partial success anyway.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            The Second Surprise: Why So Quiet?
+          </Heading>
+          <p>
+            Now the speakers worked, but they were whisper-quiet even at full volume. I was scratching my head until, while poking around with my multimeter, I accidentally shorted across a capacitor in the signal path.
+          </p>
+          
+          <p>
+            Suddenly volume! The sound jumped to normal levels. That "aha" moment told me this capacitor had failed open-circuit, blocking the audio signal while still passing DC voltage for the amplifier bias.
+          </p>
+          
+          <div className="my-4">
+            <img 
+              src="/spaker-vol-cap.jpg" 
+              alt="PCB showing replaced capacitors"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">Power supply capacitors (red) and that tricky signal path capacitor (blue) I replaced</p>
+          </div>
+
+          <p>
+            One more capacitor replacement later, and finally crisp, full-volume sound. Total parts cost: under $5. Not bad.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            While I Was in There...
+          </Heading>
+          <p>
+            Since I already had everything apart, I took care of a few things that bothered me:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Extended some internal cables that were pulled too tight</li>
+            <li>Resoldered a few joints that looked questionable</li>
+            <li>Added hot glue for strain relief on the repaired spots</li>
+            <li>Cleaned up the factory adhesive mess from my earlier struggles</li>
+          </ul>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            Making Them Fit My Space
+          </Heading>
+          
+          <div className="my-4">
+            <img 
+              src="/speaker-mount-design.jpg" 
+              alt="3D model of speaker mount"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">The mount I designed and printed</p>
+          </div>
+
+          <p>
+            I had a pair of green screen tripods sitting unused, so I designed custom brackets to mount the speakers on them. A quick 3D model, some resin printing, and suddenly I had a proper studio monitor setup.
+          </p>
+          
+          <div className="my-4">
+            <img 
+              src="/mounted-speakers.jpg" 
+              alt="Monitors mounted on tripods"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">The finished setup much better than having them on my desk</p>
+          </div>
+
+          <p>
+            Now they sit at ear level on either side of my workspace, easily adjustable thanks to the tripods. No desk space taken up, perfect positioning for mixing.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            What I Learned
+          </Heading>
+          <p>
+            This whole project reminded me that a lot of "dead" electronics just have common, fixable problems. In this case, it was aging capacitors first in the power supply, then in the signal path.
+          </p>
+          <p>
+            For about $15 total ($10 for the speakers, $5 for parts), I got a pair of solid studio monitors and a custom mounting solution. More importantly, I got that satisfaction of fixing something that someone else had written off as trash.
+          </p>
+          <p>
+            Sometimes the best gear isnt the newest or most expensive its the stuff you bring back to life yourself.
+          </p>
+        </section>
+      </div>
+    ),
+  },
+  {
     slug: "meshtastic-safety-bot",
     title: "MeshBot: A Safety Assistant for Areas Without Cell Service",
     date: "December 3, 2025",
     tagLine: "A solar-powered communications device that provides wilderness safety info where phones dont work",
     imgSrc: "/meshtastic.jpg",
     imgDescription: "Simple electronics setup with antenna, ready for outdoor use",
-    summary: "Built a low-cost device that lets people ask safety questions and get answers in remote areas—no internet or cell service needed.",
+    summary: "Built a low-cost device that lets people ask safety questions and get answers in remote areas no internet or cell service needed.",
     content: (
       <div className="space-y-6 mb-10">
         <a href="https://github.com/Logan-Fouts/MeshBot">
@@ -83,7 +215,7 @@ export const posts = [
             The Problem Were Solving
           </Heading>
           <p>
-            Forestry areas often have spotty or no cell service. When visitors or staff need quick information about first aid, wildlife, or local hazards—theyre completely cut off. Traditional solutions like satellite phones are expensive, and radio requires someone on the other end.
+            Forestry areas often have spotty or no cell service. When visitors or staff need quick information about first aid, wildlife, or local hazards theyre completely cut off. Traditional solutions like satellite phones are expensive, and radio requires someone on the other end.
           </p>
           <p>
             MeshBot sits somewhere in between: its like having a basic safety guidebook that anyone with a simple radio app can access.
@@ -1224,7 +1356,7 @@ pytest tests/ --coverage
           </Heading>
           <p>
             Enter the Multi-Method NDI Detection Framework. This approach
-            doesn&apos;t just use one algorithm—it harnesses the power of
+            doesn&apos;t just use one algorithm it harnesses the power of
             multiple detection methods in a layered architecture. Think of it as
             a team of experts, each bringing their unique strengths to the
             table, working in harmony to spot those elusive NDIs. Some are
