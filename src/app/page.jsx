@@ -69,52 +69,34 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="font-normal text-gray-300 text-lg sm:text-xl mx-auto mb-8 max-w-xl leading-relaxed"
               >
-                Check out my projects, including my published thesis on the
-                <span className="text-green-400 font-medium">
-                  {" "}
-                  Multi-Method NDI Detection Framework
-                </span>
-                , which offers a novel approach to near-duplicate image
-                detection.
-                <span className="text-green-400 font-medium">
-                  {" "}
-                  WildWood Gardens
-                </span>
-                , another highlight, is a website I built for a local bonsai
-                business. I&apos;ve also developed a
-                <span className="text-green-400 font-medium">
-                  {" "}
-                  full-featured mobile app
-                </span>{" "}
-                for Them aswell using React Native. Additionally, I&apos;ve
-                explored some product development, AI-driven tools, and Linux
-                support for Windows hardware.
+                I&apos;m a software engineer who builds things that are useful,
+                interesting, or both. My work spans full-stack web apps,
+                hardware integrations, mobile development, and AI tooling —
+                published research included.
               </motion.p>
-              <motion.a
-                href="/CV.pdf"
-                download="Logan_Fouts_CV.pdf"
-                className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 text-lg font-medium shadow-lg shadow-green-500/30"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 10px 25px -5px rgba(34, 197, 94, 0.4)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FaDownload className="mr-3" />
-                Download Resume
-                <motion.span
-                  className="absolute -right-1 -top-1 w-3 h-3 bg-white rounded-full"
-                  animate={{
-                    scale: [1, 1.3, 1],
-                    opacity: [1, 0.8, 1],
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                <motion.a
+                  href="/featured"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 text-lg font-medium shadow-lg shadow-green-500/30"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 10px 25px -5px rgba(34, 197, 94, 0.4)",
                   }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                  }}
-                />
-              </motion.a>
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View Featured Work
+                </motion.a>
+                <motion.a
+                  href="/CV.pdf"
+                  download="Logan_Fouts_CV.pdf"
+                  className="inline-flex items-center px-6 py-3 border border-green-500/50 text-green-400 rounded-full hover:bg-green-500/10 transition-all duration-300 text-lg font-medium"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaDownload className="mr-3" />
+                  Resume
+                </motion.a>
+              </div>
             </motion.div>
 
             {/* Right Column - Image and Connect Section */}

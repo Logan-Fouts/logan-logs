@@ -46,8 +46,8 @@ export default function NavBar(props) {
               />
             </Link>
             {props.isLanding == undefined ? (
-              <h2 className="text-2xl sm:text-5xl font-bold">
-                Logan Fouts <hr></hr>
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
+                Logan Fouts
               </h2>
             ) : null}
           </div>
@@ -72,8 +72,9 @@ export default function NavBar(props) {
                 transition={{ duration: 0.3 }}
               >
                 <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 py-4 sm:py-0">
-                  <NavItem href="/projects">Projects</NavItem>
-                  <NavItem href="/documentation">Documentation</NavItem>
+                  <NavItem href="/featured">Featured</NavItem>
+                  <NavItem href="/projects">All Projects</NavItem>
+                  <NavItem href="/documentation">Docs</NavItem>
                 </ul>
               </motion.nav>
             )}
@@ -88,7 +89,7 @@ const NavItem = ({ href, children }) => (
   <li>
     <Link
       href={href}
-      className="text-white hover:text-gray-300 transition-colors duration-200"
+      className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm font-medium tracking-wide"
     >
       {children}
     </Link>
