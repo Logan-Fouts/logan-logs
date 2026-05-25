@@ -59,6 +59,123 @@ const CodeBlock = ({ code, language }) => {
 
 export const posts = [
   {
+    slug: "meshtastic-mesh-tower",
+    title: "DIY Solar-Powered Meshtastic Mesh Tower",
+    date: "May 25, 2026",
+    tagLine: "Building a rainproof, solar-powered mesh tower with Heltec V3 and salvaged solar panels",
+    imgSrc: "/mesh tower.jpg",
+    imgDescription: "Completed rainproof mesh tower with solar panels and antenna",
+    summary: "Designed and 3D printed a rainproof case for a Heltec V3 mesh radio powered by salvaged solar panels. The device generates ~4W of power and includes a dedicated charge controller board for stable operation with a 1-foot 5.8 dBi fiberglass antenna.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          DIY Solar Meshtastic Tower: Scrapping Together an Outdoor Node
+        </Heading>
+
+        <p className="italic text-gray-600">
+          What started as curiosity about old crappy solar panels ended as a mesh tower capable of extending LoRa coverage across my rural area, and deep into neighboring regions. Here's how I designed and built it.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> The Concept: Always-On Mesh Coverage
+          </Heading>
+          <p>
+            Meshtastic devices are great for off-grid communication, but they typically require manual recharging or a constant power source. I wanted to create something that could run indefinitely. The goal: a ruggedized outdoor node that acts as a permanent mesh relay point.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Tv className="inline-block mr-2" /> The Design
+          </Heading>
+          <p>
+            After I had finally decided I wanted to make this a permanent solution I knew I needed to work on the case. This would be my first weatherproof (hopefully) design. So I took some ideas into FreeCAD and came up with a simple case and sled idea to minimize the number of seals needed. Everything slots in from the bottom and makes it so water would have to travel upwards to get into anything. This is the first time I can honestly say I was happy to have a resin printer as opposed to a fdm printer since it needed to be water tight. Other then that honestly I hate working with resin!
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Hammer className="inline-block mr-2" /> Whats Inside
+          </Heading>
+          
+          <Heading size="h3">Core Computing & Radio</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Heltec V3:</strong> This is the heart of the operation. Its a LoRa module with built-in display and processing power</li>
+            <li><strong>Salvaged Solar Panels:</strong> Pulled from an old portable battery charger</li>
+            <li><strong>Battery:</strong> 7000 mAh </li>
+            <li><strong>Separate Charge Controller Board:</strong> Manages charging independently from the main circuit for stability</li>
+          </ul>
+
+          <Heading size="h3">Antenna & Connectivity</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>1-foot 5.8 dBi Fiberglass Antenna:</strong> Provides excellent gain without needing a massive tower</li>
+            <li><strong>O-ring seal:</strong> Creates a weatherproof connection at the antenna pass-through</li>
+          </ul>
+
+          <div className="my-4">
+            <img 
+              src="/mesh node.jpg" 
+              alt="Close-up view of the mesh node internals"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">A closer look at the case: <i>ignore some of the printing scars</i></p>
+          </div>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <Zap className="inline-block mr-2" /> The Power System
+          </Heading>
+
+          <Heading size="h3">Salvaged Solar Panels</Heading>
+          <p>
+            I didn't want to spend $100+ on new solar panels, so I pulled these from an old portable battery charger sitting in a drawer. They are not premium by any means, but they work surprisingly well:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Estimated output: ~4 watts under ideal conditions</li>
+            <li>Enough to keep the Heltec running and charge the battery during the day</li>
+            <li>More than adequate for a relay node that doesn't need to transmit constantly</li>
+          </ul>
+
+          <Heading size="h3">Dedicated Charge Controller</Heading>
+          <p>
+            Rather than connecting solar directly to the heltec, I added a separate charge management board. This provides several benefits:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Stabilizes power delivery to the Heltec</li>
+            <li>Handles voltage regulation from the solar panels</li>
+            <li>Allows the main circuit to focus on processing and radio</li>
+          </ul>
+
+          <p>
+            The result is a suprisingly solid power system that can run nearly 24/7 with no manual intervention. Even on cloudy days, the Heltec keeps running and pulls some power to slow discharge.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">
+            <BarChart className="inline-block mr-2" /> Performance & Results
+          </Heading>
+          <p>
+            After some rainy day testing:
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Zero water intrusion even during heavy rain</li>
+            <li>Consistent 4-watt power generation during sunny days</li>
+            <li>Battery holds charge through multi-day cloudy periods</li>
+            <li>Heltec operating normally with solid mesh connectivity</li>
+            <li>Antenna providing excellent coverage for its size</li>
+          </ul>
+        </section>
+
+        <p>
+          It has been pretty neat. Ive managed to get pure rf connections around 250 kms away. It took 5 hops and two high placed nodes but it worked. Shout out to the KeyStone Amateur Radio Society and their KARS Summit Node in PA!
+        </p>
+      </div>
+    ),
+  },
+  {
     slug: "speaker-repair",
     title: "Repairing $10 M-Audio Studio Monitors",
     date: "December 7, 2025",
