@@ -73,7 +73,7 @@ export const posts = [
         </Heading>
 
         <p className="italic text-gray-600">
-          What started as curiosity about old crappy solar panels ended as a mesh tower capable of extending LoRa coverage across my rural area, and deep into neighboring regions. Here's how I designed and built it.
+          What started as curiosity about old crappy solar panels ended as a mesh tower capable of extending LoRa coverage across my rural area, and deep into neighboring regions. Here&apos;s how I designed and built it.
         </p>
 
         <section className="space-y-4">
@@ -130,12 +130,12 @@ export const posts = [
 
           <Heading size="h3">Salvaged Solar Panels</Heading>
           <p>
-            I didn't want to spend $100+ on new solar panels, so I pulled these from an old portable battery charger sitting in a drawer. They are not premium by any means, but they work surprisingly well:
+            I didn&apos;t want to spend $100+ on new solar panels, so I pulled these from an old portable battery charger sitting in a drawer. They are not premium by any means, but they work surprisingly well:
           </p>
           <ul className="list-disc list-inside space-y-2">
             <li>Estimated output: ~4 watts under ideal conditions</li>
             <li>Enough to keep the Heltec running and charge the battery during the day</li>
-            <li>More than adequate for a relay node that doesn't need to transmit constantly</li>
+            <li>More than adequate for a relay node that doesn&apos;t need to transmit constantly</li>
           </ul>
 
           <Heading size="h3">Dedicated Charge Controller</Heading>
