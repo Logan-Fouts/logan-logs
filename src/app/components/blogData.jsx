@@ -604,7 +604,7 @@ nuphy_linux --set-key F1 ESC      // Remap F1 to Escape`}
       <div className="space-y-6 mb-10">
         <a href="https://github.com/Logan-Fouts/CCal_V2">
         <h1 className="text-3xl font-bold mb-4 text-blue-600 underline">
-          Contrib Cal V2: From Prototype to Product - A Commercial Partnership Success Story
+          Contrib Cal V2: From Prototype to Product - A Commercial Partnership
         </h1>
         </a>
 
