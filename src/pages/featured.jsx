@@ -45,8 +45,8 @@ const featuredProjects = [
     title: "NuPhy Linux",
     subtitle: "USB HID Communication for Keyboard Control",
     description:
-      "Reverse-engineered the USB HID protocol for NuPhy keyboards to enable full control on Linux — something the official software doesn't support. Built a custom Python library for sending lighting and macro commands directly over USB.",
-    tags: ["Python", "USB HID", "Linux", "Reverse Engineering"],
+      "Reverse-engineered the USB HID protocol for NuPhy keyboards to enable full control on Linux — something the official software doesn't support. Built a C command-line utility for sending lighting and key-mapping commands directly over USB.",
+    tags: ["C", "USB HID", "Linux", "Reverse Engineering"],
     imgSrc: "/nuphy.png",
     category: "Linux / Hardware",
     categoryColor: "text-cyan-400 border-cyan-400/30 bg-cyan-400/10",
