@@ -59,6 +59,131 @@ const CodeBlock = ({ code, language }) => {
 
 export const posts = [
   {
+    slug: "yamaha-digital-piano-repair",
+    title: "Gutting a Yamaha Digital Piano to Fix One Tiny Board",
+    date: "November 3, 2026",
+    tagLine: "No service manual, stripped screws, a rotted volume pot, and two jumper wires",
+    imgSrc: "/PianoRepair/Piano ripped apart.jpg",
+    imgDescription: "Yamaha digital piano with the cabinet opened up and the keybed exposed",
+    summary: "Tore down a $1000+ Yamaha digital piano to reach the volume/power board, replaced a corroded volume pot, and ran jumper wires around two sketchy traces that were acting up during testing.",
+    content: (
+      <div className="space-y-6 mb-10">
+        <Heading size="h1">
+          Gutting a Yamaha Digital Piano to Fix One Tiny Board
+        </Heading>
+
+        <p className="italic text-gray-600">
+          The board I actually needed to work on is about the size of a stick of gum. Getting to it meant taking apart basically the entire piano.
+        </p>
+
+        <section className="space-y-4">
+          <Heading size="h2">No Docs, No Problem (Kind Of)</Heading>
+          <p>
+            This is a Yamaha digital piano that goes for well over a thousand dollars, so it was worth saving. The first thing I did was look for a service manual or a teardown guide. There isn&apos;t really one. You can find a few forum posts and some parts listings, but nothing that tells you what order things come apart in or where the hidden screws are. So I just started taking screws out and taking pictures of everything so I&apos;d have a shot at getting it back together.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">Someone Else Was Here First</Heading>
+          <p>
+            The volume and power switch live on a small board (Yamaha YE108) tucked up in the front of the cabinet. Normally you&apos;d expect to pull a panel and get at it from the top. Except somebody had already tried to fix this piano before me and stripped the screws I needed. They weren&apos;t coming out without making things worse.
+          </p>
+          <p>
+            So I went in from the bottom instead, which meant ripping out pretty much everything between me and that board.
+          </p>
+
+          <div className="my-4">
+            <img
+              src="/PianoRepair/Small volume pcb i needed to get to but had to go in through bottom and rip everything apart due to stripped skrews from somewhere elses pervious attempt at fixing.jpg"
+              alt="Inside of the piano cabinet viewed from below, showing the small volume board"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">Coming in from underneath. The little green board in the middle is what all this was for.</p>
+          </div>
+
+          <p>
+            On the way I got a good look at the rest of the electronics. The main board (YD988) and the power supply board sit on the back side along with the speakers. They all looked fine, which was a relief, since there&apos;s no way I&apos;m finding a schematic for that main board.
+          </p>
+
+          <div className="my-4">
+            <img
+              src="/PianoRepair/Main pcb and daughter boards including speakers.jpg"
+              alt="Yamaha main PCB and power supply board mounted inside the piano"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">Main board, power supply, and the speaker wiring</p>
+          </div>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">The Volume Pot Was Gross</Heading>
+          <p>
+            Once I finally had the board out it was pretty obvious what was going on. The volume pot was covered in what I&apos;m about 99% sure is cat piss. It had eaten through the metal housing, there was crusty brown residue all over the legs and the board around it, and the whole thing was basically falling apart in my hand.
+          </p>
+
+          <div className="my-4">
+            <img
+              src="/PianoRepair/Old volume pot covered in cat piss desintegrating.jpg"
+              alt="Corroded volume potentiometer on the Yamaha YE108 board"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">The old pot. Yeah.</p>
+          </div>
+
+          <p>
+            I desoldered it, cleaned up the board as best I could, and put a new pot in.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">Bypassing the Sketchy Traces</Heading>
+          <p>
+            Here&apos;s the annoying part. With the new pot in, I was testing it while it was still half apart, and it was still acting flaky. Wiggle the board a little and things would cut out. Whatever got spilled on it had also been sitting on the traces, and I&apos;m pretty sure a couple of them were corroded enough to be intermittent even though they looked okay-ish.
+          </p>
+          <p>
+            Rather than chase it, I ran two jumper wires to replace the traces I didn&apos;t trust. One of them is the green wire below, going from the pot&apos;s pad straight down to the connector pin. After that, the cutting out stopped.
+          </p>
+
+          <div className="my-4">
+            <img
+              src="/PianoRepair/Volume and power pcb with jumper wire replacing sketchy trace.jpg"
+              alt="Back of the volume board with a green jumper wire soldered across a trace"
+              className="w-full rounded"
+            />
+            <p className="text-sm text-gray-600 mt-2">Back of the board with one of the jumpers in place</p>
+          </div>
+
+          <p>
+            It&apos;s not the prettiest fix, but a piece of wire doesn&apos;t care how corroded the board under it is.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">Putting It Back Together</Heading>
+          <p>
+            This is where all those pictures paid off. Reassembly was mostly just going through my camera roll backwards. Since I couldn&apos;t reuse the stripped screws the way they were, I had to work around those too.
+          </p>
+          <p>
+            It works now. Volume is smooth, power switch is fine, and it doesn&apos;t cut out when you bump it.
+          </p>
+        </section>
+
+        <section className="space-y-4">
+          <Heading size="h2">If You&apos;re Trying This</Heading>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Take a picture before every step. There&apos;s no manual to fall back on.</li>
+            <li>If a screw starts to strip, stop. Finding another way in is way more work than doing it right the first time.</li>
+            <li>If something got spilled on a board, don&apos;t trust the traces just because they look fine. Test with the board flexed a little.</li>
+            <li>Jumper wires are a totally fine fix for a bad trace on a low current board like this.</li>
+          </ul>
+          <p>
+            Probably the most work I&apos;ve ever put in to replace a single potentiometer, but it beats paying for a new piano.
+          </p>
+        </section>
+      </div>
+    ),
+  },
+  {
     slug: "meshtastic-mesh-tower",
     title: "DIY Solar-Powered Meshtastic Mesh Tower",
     date: "May 25, 2026",
